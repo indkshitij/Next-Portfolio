@@ -20,6 +20,7 @@ const profileInfoSchema = new Schema(
       email: { type: String, default: "" },
       linktree: { type: String, default: "" },
     },
+    resume: { type: String, default: "" },
   },
   { timestamps: true }
 );

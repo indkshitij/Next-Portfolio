@@ -8,6 +8,7 @@ const projectSchema = new Schema(
     imageUrl: { type: String },
     inDepthDetail: { type: String },
     description: { type: String, required: true },
+    technologyUsed: { type: [String], default: [] },
   },
   { timestamps: true }
 );
