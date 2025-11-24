@@ -3,6 +3,7 @@ import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import StoreProveider from "./StoreProveider";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Kshitij",
@@ -17,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <SpeedInsights />
         <StoreProveider>
           <ThemeProvider
             attribute="class"
