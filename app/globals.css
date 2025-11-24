@@ -1,29 +1,42 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
 * {
-  font-family: "Poppins", serif;
+  font-family: "Onest", sans-serif;
 }
+
 .bg-primary {
   @apply bg-[url('@/assets/pattern.png')] bg-top bg-no-repeat bg-zinc-950 bg-cover bg-fixed;
 }
+
 .bg-admin {
   background: #191816;
 }
 
 /* custom scrollbar */
 ::-webkit-scrollbar {
-  width: 0.3vw;
+  width: 6px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #141311b1;
+  background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #f97316;
+  background-color: #3b82f6;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff4500;
+  background-color: #2563eb;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background-color: #475569;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: #334155;
 }
 
 /* shdcn UI CSS */
@@ -144,5 +157,21 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* ---------------------------- UI neccessary ----------------------------*/
+@theme inline {
+  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+}
+
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
   }
 }

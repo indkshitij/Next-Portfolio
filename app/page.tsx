@@ -1,6 +1,5 @@
 "use client";
 import { Toaster } from "react-hot-toast";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import { useEffect } from "react";
@@ -10,6 +9,7 @@ import { fetchEducation } from "@/lib/store/features/education";
 import { fetchExperience } from "@/lib/store/features/experience";
 import { fetchProfileData } from "@/lib/store/features/profileData";
 import { fetchTechnology } from "@/lib/store/features/technologies";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   const dispatch = useAppDispatch();
@@ -24,9 +24,8 @@ export default function Home() {
   console.log(selector);
   return (
     <>
-      <Toaster position="top-center" reverseOrder={false} />
       <div className="h-screen">
-        <Navbar />
+        <Navbar />        
 
         <HeroSection />
         <div className="dark:bg-black ">

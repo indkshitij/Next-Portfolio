@@ -1,9 +1,12 @@
-import React from 'react'
+import { TextHoverEffect } from "./ui/text-hover-effect";
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <div>
+      <div className="">
+      <TextHoverEffect text="Kshitij" /></div>
+    </div>
+  );
+};
 
-export default Footer
+export default Footer;
