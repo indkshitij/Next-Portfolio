@@ -3,15 +3,16 @@ import React from "react";
 interface IconProps {
   icon: string;
   className?: string;
+  size?: number;
 }
 
-const Icons = ({ icon, className }: IconProps) => {
+const Icons = ({ icon, className, size }: IconProps) => {
   switch (icon) {
     case "home":
       return (
         <svg
-          width={25}
-          height={25}
+          width={size || 25}
+          height={size || 25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
@@ -29,8 +30,8 @@ const Icons = ({ icon, className }: IconProps) => {
     case "project":
       return (
         <svg
-          width={25}
-          height={25}
+          width={size || 25}
+          height={size || 25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
@@ -47,8 +48,8 @@ const Icons = ({ icon, className }: IconProps) => {
     case "education":
       return (
         <svg
-          width={25}
-          height={25}
+          width={size || 25}
+          height={size || 25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
@@ -66,8 +67,8 @@ const Icons = ({ icon, className }: IconProps) => {
     case "experience":
       return (
         <svg
-          width={25}
-          height={25}
+          width={size || 25}
+          height={size || 25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
@@ -85,8 +86,8 @@ const Icons = ({ icon, className }: IconProps) => {
     case "skills":
       return (
         <svg
-          width={20}
-          height={20}
+          width={size || 20}
+          height={size || 20}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
@@ -113,8 +114,8 @@ const Icons = ({ icon, className }: IconProps) => {
     case "contact":
       return (
         <svg
-          width={25}
-          height={25}
+          width={size || 25}
+          height={size || 25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
@@ -131,8 +132,8 @@ const Icons = ({ icon, className }: IconProps) => {
     case "profile":
       return (
         <svg
-          width="22"
-          height="22"
+          width={size || 22}
+          height={size || 22}
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
@@ -145,8 +146,8 @@ const Icons = ({ icon, className }: IconProps) => {
     case "star-shine":
       return (
         <svg
-          width="22"
-          height="22"
+          width={size || 22}
+          height={size || 22}
           viewBox="0 0 256 256"
           fill="currentColor"
           stroke="currentColor"
@@ -162,8 +163,8 @@ const Icons = ({ icon, className }: IconProps) => {
     case "menu":
       return (
         <svg
-          width={25}
-          height={25}
+          width={size || 25}
+          height={size || 25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
@@ -179,8 +180,8 @@ const Icons = ({ icon, className }: IconProps) => {
     case "close":
       return (
         <svg
-          width="24"
-          height="24"
+          width={size || 24}
+          height={size || 24}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
@@ -197,8 +198,8 @@ const Icons = ({ icon, className }: IconProps) => {
     case "chevron-down":
       return (
         <svg
-          width="30"
-          height="30"
+          width={size || 30}
+          height={size || 30}
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -213,6 +214,26 @@ const Icons = ({ icon, className }: IconProps) => {
           />
         </svg>
       );
+
+    case "circle-right":
+      return (
+        <svg
+          width={size || 25}
+          height={size || 25}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className={className}
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 8l4 4-4 4" />
+          <path d="M8 12h8" />
+        </svg>
+      );
+
     default:
       return null;
   }

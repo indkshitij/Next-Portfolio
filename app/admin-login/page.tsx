@@ -65,7 +65,7 @@ export default function AdminLoginPage() {
         <form onSubmit={handleLogin} className="space-y-5">
           {/* EMAIL */}
           <div>
-            {/* <label className="text-sm text-gray-700">Email</label>
+            <label className="text-sm text-gray-700">Email</label>
             <Input
               type="email"
               required
@@ -73,15 +73,6 @@ export default function AdminLoginPage() {
               placeholder="admin@example.com"
               onChange={(e) => setEmail(e.target.value)}
               className="mt-1 py-5"
-            /> */}
-
-            <Input
-              label="Email"
-              // placeholder="Enter your email"
-              type="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
 
