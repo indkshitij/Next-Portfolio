@@ -160,8 +160,7 @@ html.dark ::-webkit-scrollbar-thumb:hover {
   }
 }
 
-/* ========= UI neccessary ========= */
-/* ========= TEXT COLORS ========= */
+/* ---------------------------- UI neccessary ----------------------------*/
 .text-custom-black {
   color: rgb(26, 28, 29);
 }
@@ -174,8 +173,6 @@ html.dark ::-webkit-scrollbar-thumb:hover {
 .text-green-font {
   color: rgb(0, 157, 6);
 }
-
-/* ========= BACKGROUND COLORS ========= */
 .bg-custom-black {
   background-color: rgb(26, 28, 29);
 }
@@ -187,74 +184,4 @@ html.dark ::-webkit-scrollbar-thumb:hover {
 }
 .bg-green-font {
   background-color: rgb(0, 157, 6);
-}
-
-/* ========= BORDER COLORS ========= */
-.border-custom-black {
-  border-color: rgb(26, 28, 29);
-}
-.border-light-gray {
-  border-color: rgba(0, 0, 0, 0.5);
-}
-.border-blue-font {
-  border-color: rgb(36, 99, 235);
-}
-.border-green-font {
-  border-color: rgb(0, 157, 6);
-}
-
-/* ========= HOVER TEXT COLORS ========= */
-.hover\:text-custom-black:hover {
-  color: rgb(26, 28, 29);
-}
-.hover\:text-light-gray:hover {
-  color: #00000080;
-}
-.hover\:text-blue-font:hover {
-  color: rgb(36, 99, 235);
-}
-.hover\:text-green-font:hover {
-  color: rgb(0, 157, 6);
-}
-
-/* ========= HOVER BACKGROUND COLORS ========= */
-.hover\:bg-custom-black:hover {
-  background-color: rgb(26, 28, 29);
-}
-.hover\:bg-light-gray:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.hover\:bg-blue-font:hover {
-  background-color: rgb(36, 99, 235);
-}
-.hover\:bg-green-font:hover {
-  background-color: rgb(0, 157, 6);
-}
-
-/* ========= HOVER BORDER COLORS ========= */
-.hover\:border-custom-black:hover {
-  border-color: rgb(26, 28, 29);
-}
-.hover\:border-light-gray:hover {
-  border-color: rgba(0, 0, 0, 0.5);
-}
-.hover\:border-blue-font:hover {
-  border-color: rgb(36, 99, 235);
-}
-.hover\:border-green-font:hover {
-  border-color: rgb(0, 157, 6);
-}
-
-/* ========= FOCUS STATES ========= */
-.focus\:ring-blue-font:focus {
-  box-shadow: 0 0 0 3px rgba(36, 99, 235, 0.4);
-}
-.focus\:ring-custom-black:focus {
-  box-shadow: 0 0 0 3px rgba(26, 28, 29, 0.4);
-}
-.focus\:ring-green-font:focus {
-  box-shadow: 0 0 0 3px rgba(0, 157, 6, 0.4);
-}
-.focus\:ring-light-gray:focus {
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
 }

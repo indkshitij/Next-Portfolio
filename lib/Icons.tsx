@@ -1,16 +1,17 @@
+import React from "react";
+
 interface IconProps {
   icon: string;
   className?: string;
-  size?: number;
 }
 
-const Icons = ({ icon, className, size }: IconProps) => {
+const Icons = ({ icon, className }: IconProps) => {
   switch (icon) {
     case "home":
       return (
         <svg
-          width={size || 25}
-          height={size || 25}
+          width={25}
+          height={25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
@@ -28,8 +29,8 @@ const Icons = ({ icon, className, size }: IconProps) => {
     case "project":
       return (
         <svg
-          width={size || 25}
-          height={size || 25}
+          width={25}
+          height={25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
@@ -46,8 +47,8 @@ const Icons = ({ icon, className, size }: IconProps) => {
     case "education":
       return (
         <svg
-          width={size || 25}
-          height={size || 25}
+          width={25}
+          height={25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
@@ -65,8 +66,8 @@ const Icons = ({ icon, className, size }: IconProps) => {
     case "experience":
       return (
         <svg
-          width={size || 25}
-          height={size || 25}
+          width={25}
+          height={25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
@@ -84,8 +85,8 @@ const Icons = ({ icon, className, size }: IconProps) => {
     case "skills":
       return (
         <svg
-          width={size || 20}
-          height={size || 20}
+          width={20}
+          height={20}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
@@ -112,8 +113,8 @@ const Icons = ({ icon, className, size }: IconProps) => {
     case "contact":
       return (
         <svg
-          width={size || 25}
-          height={size || 25}
+          width={25}
+          height={25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
@@ -130,8 +131,8 @@ const Icons = ({ icon, className, size }: IconProps) => {
     case "profile":
       return (
         <svg
-          width={size || 22}
-          height={size || 22}
+          width="22"
+          height="22"
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
@@ -144,8 +145,8 @@ const Icons = ({ icon, className, size }: IconProps) => {
     case "star-shine":
       return (
         <svg
-          width={size || 22}
-          height={size || 22}
+          width="22"
+          height="22"
           viewBox="0 0 256 256"
           fill="currentColor"
           stroke="currentColor"
@@ -161,8 +162,8 @@ const Icons = ({ icon, className, size }: IconProps) => {
     case "menu":
       return (
         <svg
-          width={size || 25}
-          height={size || 25}
+          width={25}
+          height={25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
@@ -178,8 +179,8 @@ const Icons = ({ icon, className, size }: IconProps) => {
     case "close":
       return (
         <svg
-          width={size || 24}
-          height={size || 24}
+          width="24"
+          height="24"
           className={className}
           viewBox="0 0 24 24"
           fill="none"
@@ -196,38 +197,22 @@ const Icons = ({ icon, className, size }: IconProps) => {
     case "chevron-down":
       return (
         <svg
-          width={size || 30}
-          height={size || 30}
+          width="30"
+          height="30"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="currentColor"
-          strokeWidth="5"
           xmlns="http://www.w3.org/2000/svg"
           className={className}
         >
-          <path d="M6 9L12 15L18 9" />
+          <path
+            d="M6 9L12 15L18 9"
+            stroke="currentColor"
+            strokeWidth="5"
+            // strokeLinecap="round"
+            // strokeLinejoin="round"
+          />
         </svg>
       );
-
-    case "circle-right":
-      return (
-        <svg
-          width={size || 25}
-          height={size || 25}
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className={className}
-        >
-          <circle cx="12" cy="12" r="10" />
-          <path d="M12 8l4 4-4 4" />
-          <path d="M8 12h8" />
-        </svg>
-      );
-
     default:
       return null;
   }

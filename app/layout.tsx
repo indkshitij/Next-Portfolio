@@ -4,7 +4,6 @@ import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import StoreProveider from "./StoreProveider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import CursorWrapper from "@/components/CursorWrapper";
 
 export const metadata: Metadata = {
   title: "Kshitij",
@@ -18,20 +17,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="cursor-none">
+      <body>
         <SpeedInsights />
         <StoreProveider>
-          <CursorWrapper>
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="system"
-              enableSystem
-              disableTransitionOnChange
-            >
-              <Toaster position="top-center" />
-              {children}
-            </ThemeProvider>
-          </CursorWrapper>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Toaster position="top-center" />
+            {children}
+          </ThemeProvider>
         </StoreProveider>
       </body>
     </html>

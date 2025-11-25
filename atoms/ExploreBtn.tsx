@@ -9,9 +9,9 @@ export default function ExploreBtn({ path }: { path?: string }) {
       href={path || "#"}
       className="flex flex-col justify-center items-center gap-2 cursor-pointer"
       initial={{ y: 0 }}
-      animate={{ y: [0, -30, 12, -10, 0] }}
+      animate={{ y: [0, -40, 12, -10, 0] }}
       transition={{
-        duration: 1.5,
+        duration: 1.1,
         repeat: Infinity,
         repeatDelay: 3,
         ease: "easeInOut",
@@ -22,7 +22,7 @@ export default function ExploreBtn({ path }: { path?: string }) {
       </p>
 
       <motion.div
-        className="bg-blue-font hover:bg-blue-font dark:bg-blue-font p-1 md:p-1.5 rounded-full shadow-lg"
+        className="bg-blue-500 hover:bg-blue-600 dark:bg-blue-400 p-1 md:p-1.5 rounded-full shadow-lg"
         animate={{ y: [0, 8, 0] }}
         transition={{
           duration: 1,
