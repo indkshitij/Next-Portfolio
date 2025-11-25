@@ -4,6 +4,7 @@ import profileReducer from "./features/profileData";
 import technologyReducer from "./features/technologies";
 import educationReducer from "./features/education";
 import experienceReducer from "./features/experience";
+import sidebarReducer from "./features/sidebar";
 
 export const makeStore = () =>
   configureStore({
@@ -13,6 +14,7 @@ export const makeStore = () =>
       technology: technologyReducer,
       education: educationReducer,
       experience: experienceReducer,
+      sidebar: sidebarReducer,
     },
   });
 

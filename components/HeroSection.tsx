@@ -7,9 +7,11 @@ import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect
 import ExploreBtn from "@/atoms/ExploreBtn";
 import { useState, useEffect } from "react";
 import Icons from "@/lib/Icons";
+import Logo from "@/atoms/Logo";
+import SocialHandle from "@/molecules/SocialHandle";
 
 export default function HeroSection() {
-  const { data, loading } = useAppSelector((state) => state.profile);
+  const { loading } = useAppSelector((state) => state.profile);
   const [time, setTime] = useState<string>("");
 
   useEffect(() => {
@@ -43,44 +45,56 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="relative w-full min-h-screen flex justify-center items-center bg-white dark:bg-black transition-colors">
-      <div
-        className="relative w-[96vw] h-[92vh] border border-gray-300 dark:border-gray-700 
-        rounded-[36px] overflow-hidden backdrop-blur-md p-10
-        bg-white/60 dark:bg-black/40 shadow-[0_0_30px_rgba(0,0,0,0.1)]"
-      >
+    <section className="relative w-full min-h-screen flex justify-center items-center">
+      <div className="relative w-[94vw] h-[92vh] border border-gray-300 dark:border-gray-700 rounded-[36px] overflow-hidden backdrop-blur-md p-1 md:p-10 shadow-xl flex flex-col justify-between items-center">
         <div className="absolute inset-0 pointer-events-none">
           <BackgroundRippleEffect />
         </div>
 
-        {/* Main Content */}
-        <div className="relative z-10 flex flex-col justify-center items-center gap-5 h-full px-4 text-center">
-          <div className="flex flex-col justify-center items-center gap-5">
-            <OpenBadge />
-            <AnimatedHeading heading={`Hi, I'm Kshitij`} />
+        <div className="h-1/4 z-50 hidden md:flex justify-between w-full">
+          <div className="w-20 h-20 ">
+            <Logo />
+          </div>
+          <div className="">
+            <SocialHandle />
+          </div>
+        </div>
 
-            <p className="text-lg sm:text-2xl max-w-3xl text-zinc-500 dark:text-gray-300 font-medium leading-relaxed">
-              Creating seamless user experiences with Next.js, TypeScript &
-              AI-driven UI . Passionate about modern web engineering.
-            </p>
+        {/* Main Content */}
+        <div className="mt-32 md:mt-0 h-2/4 px-4 relative z-10 flex flex-col justify-center items-center gap-5 text-center">
+          <div className="flex flex-col justify-center items-center gap-5 md:gap-8 text-center">
+            <OpenBadge />
+            <div className="text-center flex justify-center items-center flex-col">
+              <AnimatedHeading heading={`Hi, I'm Kshitij`} />
+
+              <p className="mt-2 text-[19px] sm:text-[22px] w-full md:max-w-3xl text-light-gray dark:text-gray-300 font-medium leading-relax text-center">
+                Creating seamless user experiences with Next.js, TypeScript &
+                AI-driven UI . Passionate about modern web engineering.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* second row */}
+        <div className="mb-10 md:mb-2.5 h-1/4 flex justify-center md:justify-between items-end w-full">
+          {/* Thought */}
+          <div className="hidden md:flex w-1/3 text-left">
+            <div className="flex items-center gap-1 w-fit bg-blue-50 rounded-2xl text-blue-600 font-semibold text-lg px-5 py-1.5">
+              <Icons icon="star-shine" />
+              <span className="inline-block">Designing through Pixels & Passion</span>
+            </div>
           </div>
 
-          {/* second row */}
-          <div className="absolute bottom-0 flex justify-between items-end w-full">
-            <div className="w-1/3 text-left">
-              <div className="w-fit bg-blue-50 rounded-2xl text-blue-600 font-semibold text-lg px-5 py-1.5 flex items-center gap-1">
-                <Icons icon="star-shine" />
-                <span className=" ">Designing through Pixels & Passion</span>
-              </div>
-            </div>
-            <div className="w-1/3">
-              <ExploreBtn />
-            </div>
-            <div className="w-1/3 text-right">
-              <span className="w-fit uppercase bg-zinc-100 rounded-2xl text-zinc-500 font-semibold text-lg px-5 py-1.5 ">
-                {time}
-              </span>
-            </div>
+          {/* explore btn */}
+          <div className="w-full md:w-1/3">
+            <ExploreBtn />
+          </div>
+
+          {/* time */}
+          <div className="w-1/3 hidden md:flex justify-end">
+            <span className="w-fit uppercase bg-zinc-100 rounded-2xl text-light-gray font-semibold text-lg px-5 py-1.5 ">
+              {time}
+            </span>
           </div>
         </div>
       </div>

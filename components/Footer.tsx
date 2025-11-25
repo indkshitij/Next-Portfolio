@@ -4,7 +4,8 @@ const Footer = () => {
   return (
     <div>
       <div className="">
-      <TextHoverEffect text="Kshitij" /></div>
+        <TextHoverEffect text="Kshitij" />
+      </div>
     </div>
   );
 };

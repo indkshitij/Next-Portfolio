@@ -10,13 +10,13 @@ const Icons = ({ icon, className }: IconProps) => {
     case "home":
       return (
         <svg
-          width={22}
-          height={22}
+          width={25}
+          height={25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.5"
+          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -29,13 +29,13 @@ const Icons = ({ icon, className }: IconProps) => {
     case "project":
       return (
         <svg
-          width={22}
-          height={22}
+          width={25}
+          height={25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.5"
+          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -47,13 +47,13 @@ const Icons = ({ icon, className }: IconProps) => {
     case "education":
       return (
         <svg
-          width={22}
-          height={22}
+          width={25}
+          height={25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.5"
+          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -66,13 +66,13 @@ const Icons = ({ icon, className }: IconProps) => {
     case "experience":
       return (
         <svg
-          width={22}
-          height={22}
+          width={25}
+          height={25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.5"
+          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -91,7 +91,7 @@ const Icons = ({ icon, className }: IconProps) => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.5"
+          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -113,13 +113,13 @@ const Icons = ({ icon, className }: IconProps) => {
     case "contact":
       return (
         <svg
-          width={22}
-          height={22}
+          width={25}
+          height={25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.5"
+          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -127,6 +127,21 @@ const Icons = ({ icon, className }: IconProps) => {
           <path d="M3 7l9 6 9-6" />
         </svg>
       );
+
+    case "profile":
+      return (
+        <svg
+          width="22"
+          height="22"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+        >
+          <circle cx="12" cy="7" r="4" />
+          <path d="M4 21c0-4 3-7 8-7s8 3 8 7" />
+        </svg>
+      );
+
     case "star-shine":
       return (
         <svg
@@ -144,6 +159,60 @@ const Icons = ({ icon, className }: IconProps) => {
         </svg>
       );
 
+    case "menu":
+      return (
+        <svg
+          width={25}
+          height={25}
+          className={className}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M3 6h18M3 12h18M3 18h18" />
+        </svg>
+      );
+
+    case "close":
+      return (
+        <svg
+          width="24"
+          height="24"
+          className={className}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      );
+
+    case "chevron-down":
+      return (
+        <svg
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className={className}
+        >
+          <path
+            d="M6 9L12 15L18 9"
+            stroke="currentColor"
+            strokeWidth="5"
+            // strokeLinecap="round"
+            // strokeLinejoin="round"
+          />
+        </svg>
+      );
     default:
       return null;
   }

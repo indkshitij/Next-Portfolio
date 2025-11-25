@@ -11,38 +11,48 @@ const letterContainer = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.05 },
+    transition: { staggerChildren: 0.04 },
   },
 };
 
 const letterAnimation = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 18 },
   visible: { opacity: 1, y: 0 },
 };
 
 export default function AnimatedHeading({ heading, className }: HeadingProps) {
+  const words = heading.split(" "); 
+  
   return (
     <motion.h1
       variants={letterContainer}
       initial="hidden"
       animate="visible"
-      className={`text-5xl sm:text-9xl font-extrabold tracking-tighter flex flex-wrap gap-1 text-zinc-900 dark:text-white select-none hover:scale-110 ease-in-out duration-300  ${className}`}
+      className={`font-extrabold text-center select-none leading-[1.1] tracking-tight 
+      text-8xl xl:text-9xl text-custom-black dark:text-white 
+      transition-transform duration-300 ${className}`}
     >
-      {heading.split("").map((char, index) => (
-        <motion.span
-          key={index}
-          variants={letterAnimation}
-          whileHover={{
-            y: -10,
-            scale: 1.2,
-            color: "#2b7fff",
-            transition: { type: "spring", stiffness: 400, damping: 12 },
-          }}
-          className="inline-block cursor-pointer"
-        >
-          {char === " " ? "\u00A0" : char}
-        </motion.span>
-      ))}
+     {words.map((word, wordIndex) => (
+  <span key={wordIndex} className="inline-block">
+    {word.split("").map((char, i) => (
+      <motion.span
+        key={i}
+        variants={letterAnimation}
+        whileHover={{
+          y: -8,
+          scale: 1.18,
+          color: "rgb(36, 99, 235)",
+          transition: { type: "spring", stiffness: 400, damping: 12 },
+        }}
+        className="inline-block cursor-default"
+      >
+        {char}
+      </motion.span>
+    ))}
+
+    <span className="inline-block">&nbsp;</span>
+  </span>
+))}
     </motion.h1>
   );
 }
