@@ -1,22 +1,25 @@
+import { calendar } from "@heroui/theme";
 import React from "react";
 
 interface IconProps {
   icon: string;
   className?: string;
+  size?: number;
+  stroke?: number;
 }
 
-const Icons = ({ icon, className }: IconProps) => {
+const Icons = ({ icon, className, size, stroke }: IconProps) => {
   switch (icon) {
     case "home":
       return (
         <svg
-          width={22}
-          height={22}
+          width={size || 25}
+          height={size || 25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.5"
+          strokeWidth={stroke || "2"}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -29,13 +32,13 @@ const Icons = ({ icon, className }: IconProps) => {
     case "project":
       return (
         <svg
-          width={22}
-          height={22}
+          width={size || 25}
+          height={size || 25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.5"
+          strokeWidth={stroke || "2"}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -47,13 +50,13 @@ const Icons = ({ icon, className }: IconProps) => {
     case "education":
       return (
         <svg
-          width={22}
-          height={22}
+          width={size || 25}
+          height={size || 25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.5"
+          strokeWidth={stroke || "2"}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -66,13 +69,13 @@ const Icons = ({ icon, className }: IconProps) => {
     case "experience":
       return (
         <svg
-          width={22}
-          height={22}
+          width={size || 25}
+          height={size || 25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.5"
+          strokeWidth={stroke || "2"}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -85,13 +88,13 @@ const Icons = ({ icon, className }: IconProps) => {
     case "skills":
       return (
         <svg
-          width={20}
-          height={20}
+          width={size || 20}
+          height={size || 20}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.5"
+          strokeWidth={stroke || "2"}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -113,13 +116,13 @@ const Icons = ({ icon, className }: IconProps) => {
     case "contact":
       return (
         <svg
-          width={22}
-          height={22}
+          width={size || 25}
+          height={size || 25}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.5"
+          strokeWidth={stroke || "2"}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -127,20 +130,179 @@ const Icons = ({ icon, className }: IconProps) => {
           <path d="M3 7l9 6 9-6" />
         </svg>
       );
+
+    case "profile":
+      return (
+        <svg
+          width={size || 22}
+          height={size || 22}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={stroke || "2"}
+        >
+          <circle cx="12" cy="7" r="4" />
+          <path d="M4 21c0-4 3-7 8-7s8 3 8 7" />
+        </svg>
+      );
+
     case "star-shine":
       return (
         <svg
-          width="22"
-          height="22"
+          width={size || 20}
+          height={size || 20}
           viewBox="0 0 256 256"
           fill="currentColor"
           stroke="currentColor"
-          strokeWidth="5"
+          strokeWidth={stroke || "2.5"}
           strokeLinecap="round"
           strokeLinejoin="round"
           className={className}
         >
           <path d="M199.77344,125.2334,149.3457,106.6543,130.7666,56.22656a19.9996,19.9996,0,0,0-37.5332,0L74.6543,106.6543,24.22656,125.2334a19.9996,19.9996,0,0,0,0,37.5332L74.6543,181.3457l18.5791,50.42774a19.9996,19.9996,0,0,0,37.5332,0l18.5791-50.42774,50.42774-18.5791a19.9996,19.9996,0,0,0,0-37.5332Zm-60.45606,34.22949a19.97179,19.97179,0,0,0-11.85449,11.85449l.001-.001L112,213.28906,96.53711,171.31738a19.96863,19.96863,0,0,0-11.85352-11.85351L42.71094,144l41.97168-15.46289a19.96863,19.96863,0,0,0,11.85351-11.85352L112,74.71094l15.46289,41.97168a19.96863,19.96863,0,0,0,11.85352,11.85351L181.28906,144ZM140,40a12.0006,12.0006,0,0,1,12-12h12V16a12,12,0,0,1,24,0V28h12a12,12,0,0,1,0,24H188V64a12,12,0,0,1-24,0V52H152A12.0006,12.0006,0,0,1,140,40ZM252,88a12.0006,12.0006,0,0,1-12,12h-4v4a12,12,0,0,1-24,0v-4h-4a12,12,0,0,1,0-24h4V72a12,12,0,0,1,24,0v4h4A12.0006,12.0006,0,0,1,252,88Z"></path>
+        </svg>
+      );
+
+    case "menu":
+      return (
+        <svg
+          width={size || 25}
+          height={size || 25}
+          className={className}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={stroke || "2"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M3 6h18M3 12h18M3 18h18" />
+        </svg>
+      );
+
+    case "close":
+      return (
+        <svg
+          width={size || 24}
+          height={size || 24}
+          className={className}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={stroke || "2.2"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      );
+
+    case "chevron-down":
+      return (
+        <svg
+          width={size || 30}
+          height={size || 30}
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className={className}
+        >
+          <path
+            d="M6 9L12 15L18 9"
+            stroke="currentColor"
+            strokeWidth={stroke || "5"}
+          />
+        </svg>
+      );
+
+    case "chevron-left":
+      return (
+        <svg
+          width={size || 24}
+          height={size || 24}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={stroke || "3"}
+          className={className}
+        >
+          <path
+            d="M15 6L9 12L15 18"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
+    case "circle-right":
+      return (
+        <svg
+          width={size || 25}
+          height={size || 25}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={stroke || "2"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className={className}
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 8l4 4-4 4" />
+          <path d="M8 12h8" />
+        </svg>
+      );
+    case "circle-right-fill":
+      return (
+        <svg
+          width={size || 30}
+          height={size || 30}
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          stroke="black"
+          strokeWidth={stroke || "2"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className={className}
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 8l4 4-4 4" />
+          <path d="M8 12h8" />
+        </svg>
+      );
+    case "calendar":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={size || 30}
+          height={size || 30}
+          className={className}
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          strokeWidth={stroke || "2"}
+        >
+          <path
+            d="M19 4h-1V2h-2v2H8V2H6v2H5C3.9 4 3 4.9 3 6v14c0 
+        1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 
+        16H5V9h14v11z"
+          />
+        </svg>
+      );
+
+    case "score-badge":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={size || 30}
+          height={size || 30}
+          className={className}
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          strokeWidth={stroke || "2"}
+        >
+          <path
+            d="M12 2a7 7 0 1 0 0 14A7 7 0 0 0 12 2zm0 
+              18l-4 2v-5.17a9 9 0 0 1 8 0V22l-4-2z"
+          />
         </svg>
       );
 
