@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import TriggerToast from "@/atoms/TriggerToast";
+import TriggerToast from "@/frontend/atoms/TriggerToast";
 import { FiLock, FiLoader } from "react-icons/fi";
 import { Input } from "@heroui/input";
 

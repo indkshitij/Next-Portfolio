@@ -10,9 +10,9 @@ import HeroSection from "@/components/HeroSection";
 // import { fetchProfileData } from "@/lib/store/features/profileData";
 // import { fetchTechnology } from "@/lib/store/features/technologies";
 import Navbar from "@/components/Navbar";
-import EducationSection from "@/molecules/EducationSection";
-import ExperienceSection from "@/molecules/ExperienceSection";
-import SkillsSection from "@/molecules/SkillsSection";
+import EducationSection from "@/frontend/organism/EducationSection";
+import ExperienceSection from "@/frontend/organism/ExperienceSection";
+import SkillsSection from "@/frontend/organism/SkillsSection";
 
 export default function Home() {
   // const dispatch = useAppDispatch();
@@ -30,11 +30,12 @@ export default function Home() {
     <>
       <div className="h-screen">
         <Navbar />
-
-        <HeroSection />
-        <EducationSection />
-        <ExperienceSection />
-        <SkillsSection />
+        <div className="bg-[#F8FAFB]">
+          <HeroSection />
+          <EducationSection />
+          <ExperienceSection />
+          <SkillsSection />
+        </div>
         <div className="dark:bg-black ">
           <Footer />
         </div>

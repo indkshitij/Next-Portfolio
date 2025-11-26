@@ -1,18 +1,16 @@
 "use client";
 
-import { useAppSelector } from "@/lib/store/hooks";
-import AnimatedHeading from "@/atoms/AnimatedHeading";
-import OpenBadge from "@/atoms/OpenBadge";
+import AnimatedHeading from "@/frontend/atoms/AnimatedHeading";
+import OpenBadge from "@/frontend/atoms/OpenBadge";
 import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
-import ExploreBtn from "@/atoms/ExploreBtn";
+import ExploreBtn from "@/frontend/atoms/ExploreBtn";
 import { useState, useEffect } from "react";
 import Icons from "@/lib/Icons";
-import Logo from "@/atoms/Logo";
-import SocialHandle from "@/molecules/SocialHandle";
-import CTAButton from "@/atoms/CTAButton";
+import Logo from "@/frontend/atoms/Logo";
+import SocialHandle from "@/frontend/molecules/SocialHandle";
+import CTAButton from "@/frontend/atoms/CTAButton";
 
 export default function HeroSection() {
-  const { loading } = useAppSelector((state) => state.profile);
   const [time, setTime] = useState<string>("");
 
   useEffect(() => {
@@ -35,19 +33,10 @@ export default function HeroSection() {
     return () => clearInterval(interval);
   }, []);
 
-  if (loading) {
-    return (
-      <div className="w-full h-screen flex justify-center items-center">
-        <p className="text-gray-600 dark:text-gray-300 animate-pulse text-lg">
-          Loading...
-        </p>
-      </div>
-    );
-  }
-
+ 
   return (
-    <section className="relative w-full min-h-[92vh] sm:min-h-screen flex justify-center items-center">
-      <div className="relative w-[94vw] h-[90vh] sm:h-[92vh] border border-gray-300 dark:border-gray-700 rounded-[36px] overflow-hidden backdrop-blur-md p-1 md:p-10 shadow-xl flex flex-col justify-between items-center">
+    <section className="relative w-full min-h-[92vh] sm:min-h-screen flex justify-center items-center bg-transparent">
+      <div className="relative w-[94vw] h-[90vh] sm:h-[92vh] bg-white border border-gray-300 dark:border-gray-700 rounded-[36px] overflow-hidden backdrop-blur-md p-1 md:p-10 shadow-xl flex flex-col justify-between items-center">
         <div className="absolute inset-0 pointer-events-none">
           <BackgroundRippleEffect />
         </div>
@@ -81,7 +70,7 @@ export default function HeroSection() {
         <div className="mb-10 md:mb-2 h-1/4 flex justify-center md:justify-between items-end w-full">
           {/* Thought */}
           <div className="hidden md:flex w-2/5 text-left">
-            <div className="flex items-center gap-1 w-fit bg-blue-50 rounded-2xl text-blue-600 font-semibold text-lg px-5 py-1.5">
+            <div className="flex items-center gap-2.5 w-fit bg-blue-50 rounded-3xl text-blue-font font-semibold text-[17px] px-4 py-1.5">
               <Icons icon="star-shine" />
               <span className="inline-block">Designing through Pixels & Passion</span>
             </div>
@@ -94,7 +83,7 @@ export default function HeroSection() {
 
           {/* time */}
           <div className="w-2/5 hidden md:flex justify-end">
-            <span className="w-fit uppercase bg-zinc-100 rounded-2xl text-light-gray font-semibold text-lg px-5 py-1.5 ">
+            <span className="w-fit uppercase bg-zinc-100 rounded-3xl text-light-gray font-semibold text-lg px-4 py-1.5 ">
               {time}
             </span>
           </div>

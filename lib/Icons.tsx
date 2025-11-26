@@ -1,12 +1,14 @@
+import { calendar } from "@heroui/theme";
 import React from "react";
 
 interface IconProps {
   icon: string;
   className?: string;
   size?: number;
+  stroke?: number;
 }
 
-const Icons = ({ icon, className, size }: IconProps) => {
+const Icons = ({ icon, className, size, stroke }: IconProps) => {
   switch (icon) {
     case "home":
       return (
@@ -17,7 +19,7 @@ const Icons = ({ icon, className, size }: IconProps) => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2"
+          strokeWidth={stroke || "2"}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -36,7 +38,7 @@ const Icons = ({ icon, className, size }: IconProps) => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2"
+          strokeWidth={stroke || "2"}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -54,7 +56,7 @@ const Icons = ({ icon, className, size }: IconProps) => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2"
+          strokeWidth={stroke || "2"}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -73,7 +75,7 @@ const Icons = ({ icon, className, size }: IconProps) => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2"
+          strokeWidth={stroke || "2"}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -92,7 +94,7 @@ const Icons = ({ icon, className, size }: IconProps) => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2"
+          strokeWidth={stroke || "2"}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -120,7 +122,7 @@ const Icons = ({ icon, className, size }: IconProps) => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2"
+          strokeWidth={stroke || "2"}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -136,7 +138,7 @@ const Icons = ({ icon, className, size }: IconProps) => {
           height={size || 22}
           fill="none"
           stroke="currentColor"
-          strokeWidth="2"
+          strokeWidth={stroke || "2"}
         >
           <circle cx="12" cy="7" r="4" />
           <path d="M4 21c0-4 3-7 8-7s8 3 8 7" />
@@ -146,12 +148,12 @@ const Icons = ({ icon, className, size }: IconProps) => {
     case "star-shine":
       return (
         <svg
-          width={size || 22}
-          height={size || 22}
+          width={size || 20}
+          height={size || 20}
           viewBox="0 0 256 256"
           fill="currentColor"
           stroke="currentColor"
-          strokeWidth="5"
+          strokeWidth={stroke || "2.5"}
           strokeLinecap="round"
           strokeLinejoin="round"
           className={className}
@@ -169,7 +171,7 @@ const Icons = ({ icon, className, size }: IconProps) => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2"
+          strokeWidth={stroke || "2"}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -186,7 +188,7 @@ const Icons = ({ icon, className, size }: IconProps) => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2.2"
+          strokeWidth={stroke || "2.2"}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -208,13 +210,29 @@ const Icons = ({ icon, className, size }: IconProps) => {
           <path
             d="M6 9L12 15L18 9"
             stroke="currentColor"
-            strokeWidth="5"
-            // strokeLinecap="round"
-            // strokeLinejoin="round"
+            strokeWidth={stroke || "5"}
           />
         </svg>
       );
 
+    case "chevron-left":
+      return (
+        <svg
+          width={size || 24}
+          height={size || 24}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={stroke || "3"}
+          className={className}
+        >
+          <path
+            d="M15 6L9 12L15 18"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
     case "circle-right":
       return (
         <svg
@@ -223,7 +241,7 @@ const Icons = ({ icon, className, size }: IconProps) => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2"
+          strokeWidth={stroke || "2"}
           strokeLinecap="round"
           strokeLinejoin="round"
           className={className}
@@ -231,6 +249,60 @@ const Icons = ({ icon, className, size }: IconProps) => {
           <circle cx="12" cy="12" r="10" />
           <path d="M12 8l4 4-4 4" />
           <path d="M8 12h8" />
+        </svg>
+      );
+    case "circle-right-fill":
+      return (
+        <svg
+          width={size || 30}
+          height={size || 30}
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          stroke="black"
+          strokeWidth={stroke || "2"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className={className}
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 8l4 4-4 4" />
+          <path d="M8 12h8" />
+        </svg>
+      );
+    case "calendar":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={size || 30}
+          height={size || 30}
+          className={className}
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          strokeWidth={stroke || "2"}
+        >
+          <path
+            d="M19 4h-1V2h-2v2H8V2H6v2H5C3.9 4 3 4.9 3 6v14c0 
+        1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 
+        16H5V9h14v11z"
+          />
+        </svg>
+      );
+
+    case "score-badge":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={size || 30}
+          height={size || 30}
+          className={className}
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          strokeWidth={stroke || "2"}
+        >
+          <path
+            d="M12 2a7 7 0 1 0 0 14A7 7 0 0 0 12 2zm0 
+              18l-4 2v-5.17a9 9 0 0 1 8 0V22l-4-2z"
+          />
         </svg>
       );
 

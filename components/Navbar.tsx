@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Menu from "../molecules/Menu";
+import Menu from "../frontend/molecules/Menu";
 import MobileNavbar from "./MobileNavbar";
 
 export default function Navbar() {

@@ -1,7 +1,7 @@
 "use client";
 
-import Sidebar from "@/molecules/Sidebar";
-import Header from "@/molecules/admin/Header";
+import Sidebar from "@/frontend/molecules/Sidebar";
+import Header from "@/frontend/molecules/admin/Header";
 import { useAppSelector } from "@/lib/store/hooks";
 import { motion } from "framer-motion";
 

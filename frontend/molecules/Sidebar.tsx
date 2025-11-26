@@ -60,7 +60,7 @@ export default function Sidebar() {
                 transition={{ duration: 0.25 }}
                 className="text-xl font-bold"
               >
-                K<span className="text-blue-500">.</span>
+                K<span className="text-font">.</span>
               </motion.h1>
             )}
           </AnimatePresence>
@@ -85,7 +85,7 @@ export default function Sidebar() {
                   className={`relative flex items-center p-4 rounded-xl cursor-pointer transition-colors duration-300
                     ${
                       active
-                        ? "bg-blue-500 text-white shadow-md"
+                        ? "bg-blue-font text-white shadow-md"
                         : "hover:bg-neutral-200/50 dark:hover:bg-neutral-800"
                     }`}
                 >

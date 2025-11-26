@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Logo from "@/atoms/Logo";
+import Logo from "@/frontend/atoms/Logo";
 import Icons from "@/lib/Icons";
 import { navItems, useSocialLinks } from "@/lib/DummyData";
 import Link from "next/link";

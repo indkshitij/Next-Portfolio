@@ -31,7 +31,7 @@ const SectionHeading = ({
 
   return (
     <div
-      className={`flex flex-col gap-2 items-center justify-center py-4 select-none ${className}`}
+      className={`flex flex-col gap-2 items-center justify-center py-4 mb-10 select-none ${className}`}
     >
       {icon && (
         <div className="text-custom-black text-white flex items-center bg-blue-500/10 rounded-full p-3.5">
