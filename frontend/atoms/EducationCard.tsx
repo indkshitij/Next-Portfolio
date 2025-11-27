@@ -66,9 +66,9 @@ const EducationCard = ({
   const glareBackground = useMotionTemplate`
   radial-gradient(
     circle at ${glareX}% ${glareY}%,
-    rgba(255, 255, 255, 0.65) 0%,
-    rgba(255, 255, 255, 0.35) 15%,
-    rgba(255, 255, 255, 0.15) 30%,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0.20) 15%,
+    rgba(255, 255, 255, 0.10) 30%,
     rgba(255, 255, 255, 0) 60%
   )
 `;
@@ -125,7 +125,7 @@ const EducationCard = ({
           <div className="h-52 px-5 sm:px-12 pt-5 sm:pt-7 pb-2">
             <div className="relative space-y-1 transition-all ">
               {/* DEGREE */}
-              <h1 className="text-2xl sm:text-3xl font-semibold leading-tight text-custom-black dark:text-white transition-colors   group-hover:text-white ">
+              <h1 className="text-2xl sm:text-3xl font-semibold leading-tight text-custom-black dark:text-white transition-colors group-hover:text-white ">
                 {edu.degree}
               </h1>
 
@@ -156,20 +156,20 @@ const EducationCard = ({
               </div>
             </div>
           </div>
-          <div className="p-3 h-60 sm:h-68 max-h-88">
+          <div className="p-2 md:p-3 h-70 sm:h-68 max-h-88">
             <div
-              className="relative overflow-hidden h-full w-full rounded-3xl p-5 "
+              className="relative overflow-hidden h-full w-full rounded-3xl p-2.5 md:p-5 "
               style={{ background: gradient }}
             >
               {/* DESCRIPTION */}
-              <div className="opacity-0 translate-y-2 group-hover:opacity-100 group-hover:text-white group-hover:translate-y-0 transition-all">
+              <div className="opacity-100 md:opacity-0 translate-x-0 md:-translate-x-[110%] group-hover:translate-x-0 translate-y-2 group-hover:opacity-100 group-hover:text-white group-hover:translate-y-0 transition-all duration-400">
                 <span className="text-base leading-relaxed text-white font-medium">
                   {edu.shortDescription}
                 </span>
               </div>
               {/* IMAGE RIGHT SIDE – FLOATS DOWN + ZOOMS */}
               {edu.image && (
-                <div className="absolute top-10 sm:top-8 -left-3 sm:left-0 w-92 md:w-128 overflow-hidden translate-y-4 group-hover:translate-y-28 transition-transform duration-500 z-[2]">
+                <div className="absolute top-24 sm:top-8 -left-3 sm:left-0 w-92 md:w-136 overflow-hidden translate-y-4 group-hover:translate-y-28 transition-transform duration-500 z-[2]">
                   <Image
                     src={edu.image}
                     alt={edu.degree || "No Image"}

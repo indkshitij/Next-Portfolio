@@ -5,7 +5,7 @@ import { educationsData } from "@/lib/DummyData";
 import Image from "next/image";
 import Icons from "@/lib/Icons";
 import { formatDateMonthYear } from "@/lib/backendUtils/helperFunction";
-import BackButton from "@/frontend/atoms/BackButton"; // Optional
+import BackButton from "@/frontend/atoms/BackButton";
 
 export default function EducationDetailTemplate() {
   const params = useParams();
