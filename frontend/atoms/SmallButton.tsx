@@ -1,10 +1,11 @@
 "use client";
 
-import CursorWrapper from "@/lib/Wrapper/CursorWrapper";
 import Link from "next/link";
-import { ReactNode, useState } from "react";
+import CursorWrapper from "@/lib/Wrapper/CursorWrapper";
+import { useState } from "react";
+import { ReactNode } from "react";
 
-interface CTAButtonProps {
+interface SmallButtonProps {
   content: string;
   path?: string;
   icon?: ReactNode;
@@ -13,13 +14,11 @@ interface CTAButtonProps {
   textColor?: string;
   hoverBubbleColor?: string;
   borderColor?: string;
-
   cursorDescription?: string;
   cursorBgColor?: string;
   cursorTextColor?: string;
 }
-
-const CTAButton = ({
+const SmallButton = ({
   content,
   path = "#",
   icon,
@@ -29,9 +28,9 @@ const CTAButton = ({
   hoverBubbleColor = "bg-[linear-gradient(180deg,#498DE6_0%,#2C62B9_50%,#103893_100%)]",
   borderColor = "border-transparent",
   cursorDescription = "Open Link",
-  cursorTextColor = "text-custom-black",
-  cursorBgColor = "bg-white",
-}: CTAButtonProps) => {
+  cursorTextColor = "text-white",
+  cursorBgColor = "bg-custom-black",
+}: SmallButtonProps) => {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -48,11 +47,11 @@ const CTAButton = ({
             color: hovered ? hoverTextColor : undefined,
           }}
           className={`
-          group relative ${bgColor} min-w-60 px-6 py-3 rounded-lg flex justify-center items-center gap-3
-          cursor-pointer overflow-hidden transition-all duration-300 ease-out
+          group relative ${bgColor} px-4 py-2.5 rounded-md flex items-center gap-3
+          cursor-pointer overflow-hidden transition-all duration-300 ease-in-out
           shadow-[0_4px_12px_rgba(0,0,0,0.25)]
-          hover:shadow-[0_5px_14px_rgba(0,0,0,0.4)]
-          hover:scale-[1.02] border-0  hover:${borderColor}
+          hover:scale-[1.02]
+          hover:shadow-[0_5px_14px_rgba(0,0,0,0.4)] border-0 hover:${borderColor}
         `}
         >
           {/* Expanding bubble */}
@@ -68,8 +67,8 @@ const CTAButton = ({
           {/* Text + Icon */}
           <span
             className={`
-            flex justify-center items-center gap-2.5 pl-5 relative z-20 font-semibold
-             text-sm sm:text-[16px] tracking-wide transition-colors duration-300
+            flex justify-center items-center gap-2.5 pl-5 relative z-20 font-medium
+            text-[16px] tracking-wide transition-colors duration-300
             ${textColor}
           `}
             style={{
@@ -79,12 +78,7 @@ const CTAButton = ({
             {content}
 
             {icon && (
-              <span
-                className="relative z-20 transition-all duration-300"
-                style={{
-                  transform: hovered ? "translateX(4px)" : "translateX(0px)",
-                }}
-              >
+              <span className="relative z-20 transition-all duration-300">
                 {icon}
               </span>
             )}
@@ -95,4 +89,4 @@ const CTAButton = ({
   );
 };
 
-export default CTAButton;
+export default SmallButton;

@@ -162,7 +162,7 @@ html.dark ::-webkit-scrollbar-thumb:hover {
 
 /* ---------------------------- UI neccessary ----------------------------*/
 .text-custom-black {
-  color: rgb(26, 28, 29);
+  color: #1a1c1d;
 }
 .text-light-gray {
   color: #00000080;

@@ -92,6 +92,7 @@ import render from "@/assets/techStack/render.svg";
 import replit from "@/assets/techStack/replit.svg";
 import cicd from "@/assets/techStack/cicd.svg";
 import resend from "@/assets/techStack/resend.svg";
+import javascript from "@/assets/techStack/js.svg";
 import safari from "@/assets/techStack/safari.svg";
 import shadcnui from "@/assets/techStack/shadcnui.svg";
 import sketch from "@/assets/techStack/sketch.svg";
@@ -115,6 +116,7 @@ import defaultIcon from "@/assets/blankProfile/img1.svg";
 export const TECH_ICONS = {
   adobe,
   adobefirefly,
+  javascript,
   ai,
   ai360,
   airtable,
@@ -224,7 +226,7 @@ export const TECH_ICONS = {
   jwt,
   clerk,
   default: defaultIcon,
-} as Record<string, any >;
+} as Record<string, any>;
 
 export function normalizeTechName(name: string = "") {
   const n = name.toLowerCase().replace(/[\s\.\-\_]/g, "");
@@ -262,7 +264,7 @@ export function normalizeTechName(name: string = "") {
 
     case "js":
     case "javascript":
-      return "js";
+      return "javascript";
 
     case "ts":
     case "typescript":
@@ -365,6 +367,10 @@ export function normalizeTechName(name: string = "") {
     case "ci/cd":
     case "continuousintegrationcontinuousdeployment":
       return "cicd";
+
+    case "cpluscplus":
+    case "c++":
+      return "cplusplus";
 
     // DEFAULT: return cleaned name
     default:

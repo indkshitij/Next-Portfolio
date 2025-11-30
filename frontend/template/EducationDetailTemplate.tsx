@@ -1,7 +1,7 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import { educationsData } from "@/lib/DummyData";
+import { EDUCATION_DATA } from "@/lib/DummyData";
 import Image from "next/image";
 import Icons from "@/lib/Icons";
 import { formatDateMonthYear } from "@/lib/backendUtils/helperFunction";
@@ -11,7 +11,7 @@ export default function EducationDetailTemplate() {
   const params = useParams();
   const educationId = params?._id;
 
-  const edu = educationsData.find((e) => e._id === educationId);
+  const edu = EDUCATION_DATA.find((e) => e._id === educationId);
 
   if (!edu)
     return (

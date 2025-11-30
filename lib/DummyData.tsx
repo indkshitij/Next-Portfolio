@@ -8,8 +8,9 @@ import AgileImg from "@/assets/experience/agile.png";
 import ForescribeImg from "@/assets/experience/forescribe.png";
 import AgileLogoImg from "@/assets/experience/agileLogo.png";
 import ForescribeLogoImg from "@/assets/experience/forescribeLogo.png";
+import { normalizeTechName, TECH_ICONS } from "@/lib/MapTechnologiesLogo";
 
-export const navItems = [
+export const NAV_ITEMS = [
   { link: "/", icon: <Icons icon="home" />, name: "Home" },
   { link: "/project", icon: <Icons icon="project" />, name: "Projects" },
   { link: "/education", icon: <Icons icon="education" />, name: "Educations" },
@@ -22,7 +23,7 @@ export const navItems = [
   { link: "/contact", icon: <Icons icon="contact" />, name: "Contact" },
 ];
 
-export const useSocialLinks = [
+export const SOCIAL_LINKS = [
   {
     name: "LinkedIn",
     icon: <FaLinkedin />,
@@ -55,7 +56,7 @@ export const useSocialLinks = [
   // },
 ];
 
-export const educationsData = [
+export const EDUCATION_DATA = [
   {
     _id: "btech_cse_ai_ml",
     image: CollegeImage,
@@ -146,7 +147,7 @@ export const educationsData = [
   },
 ];
 
-export const experiencesData = [
+export const EXPERIENCE_DATA = [
   {
     _id: "forescribe_frontend_intern",
     image: ForescribeImg,
@@ -158,8 +159,7 @@ export const experiencesData = [
     location: "Remote",
     companyURL: "https://forescribe.com",
     companyDescription:
-  "Forescribe is an AI-powered SaaS spend intelligence platform that helps enterprises optimize software usage, reduce costs, and streamline license management through advanced analytics and automation.",
-
+      "Forescribe is an AI-powered SaaS spend intelligence platform that helps enterprises optimize software usage, reduce costs, and streamline license management through advanced analytics and automation.",
 
     roleType: "Internship",
     jobLevel: "Junior",
@@ -243,8 +243,7 @@ export const experiencesData = [
     location: "Remote",
     companyURL: "https://agilesupport.com",
     companyDescription:
-  "Agile Support is a technology services company providing modern web development, product engineering, and digital solutions for global clients using Agile and MERN-based development workflows.",
-
+      "Agile Support is a technology services company providing modern web development, product engineering, and digital solutions for global clients using Agile and MERN-based development workflows.",
 
     // NEW FIELDS
     roleType: "Internship",
@@ -319,3 +318,304 @@ export const experiencesData = [
     },
   },
 ];
+
+export const EXPERTISE = [
+  {
+    slug: "dsa",
+    title: "DSA & Problem Solving",
+    desc: "Designing efficient algorithms with strong pattern and optimization skills.",
+  },
+  {
+    slug: "fullstack",
+    title: "Full-Stack Development",
+    desc: "Delivering complete features across frontend, backend, and deployment layers.",
+  },
+  {
+    slug: "backend",
+    title: "Backend Engineering",
+    desc: "Building scalable services with structured controllers, services, and clean APIs.",
+  },
+  {
+    slug: "database",
+    title: "Databases & ORM",
+    desc: "Designing optimized schemas with indexing, relations, and data integrity.",
+  },
+  {
+    slug: "auth",
+    title: "Authentication & Security",
+    desc: "Implementing secure auth flows with JWT, hashing, sessions, RBAC, and best practices.",
+  },
+
+  {
+    slug: "frontend",
+    title: "Frontend Engineering",
+    desc: "Crafting fast, accessible, and maintainable user interfaces.",
+  },
+  {
+    slug: "uiux",
+    title: "UI/UX Implementation",
+    desc: "Translating designs into intuitive, pixel-perfect, user-friendly experiences.",
+  },
+  {
+    slug: "responsive",
+    title: "Responsive Design",
+    desc: "Ensuring layouts adapt flawlessly to all device sizes and breakpoints.",
+  },
+  {
+    slug: "designsystem",
+    title: "Design Systems",
+    desc: "Creating reusable component libraries that scale across teams and products.",
+  },
+  {
+    slug: "performance",
+    title: "Performance Optimization",
+    desc: "Enhancing UI speed by minimizing re-renders, payload size, and bottlenecks.",
+  },
+
+  {
+    slug: "api",
+    title: "API Integration",
+    desc: "Connecting frontend to backend through efficient fetch patterns and caching.",
+  },
+  {
+    slug: "debug",
+    title: "Debugging Tools",
+    desc: "Identifying and fixing issues rapidly using logs, tracing, and dev tooling.",
+  },
+  {
+    slug: "testing",
+    title: "Testing",
+    desc: "Ensuring reliability with component, integration, and workflow testing.",
+  },
+
+  {
+    slug: "cloud",
+    title: "Cloud & Deployments",
+    desc: "Deploying apps with CI/CD pipelines, cloud hosting, and environment setup.",
+  },
+
+  {
+    slug: "aiapps",
+    title: "AI-powered Apps",
+    desc: "Building features with LLMs, intelligent workflows, and automation logic.",
+  },
+  {
+    slug: "aiml",
+    title: "AI/ML Fundamentals",
+    desc: "Applying model intuition, data preparation, and feature engineering basics.",
+  },
+
+  {
+    slug: "cleancode",
+    title: "Clean Coding",
+    desc: "Writing modular, maintainable code that scales across complex systems.",
+  },
+  {
+    slug: "git",
+    title: "Version Control",
+    desc: "Managing branches, reviews, commits, and automated pipelines effectively.",
+  },
+
+  {
+    slug: "product",
+    title: "Product Thinking",
+    desc: "Designing solutions rooted in user needs, impact, and real workflows.",
+  },
+  {
+    slug: "leadership",
+    title: "Ownership & Leadership",
+    desc: "Driving teams, decisions, and features with clarity and accountability.",
+  },
+];
+
+export const SKILLS_DATA = [
+  {
+    name: "C++",
+    normalized: normalizeTechName("C++"),
+    icon: TECH_ICONS[normalizeTechName("C++")],
+    description:
+      "A fast and powerful language used for algorithms and performance-critical systems.",
+  },
+  {
+    name: "JavaScript",
+    normalized: normalizeTechName("JavaScript"),
+    icon: TECH_ICONS[normalizeTechName("JavaScript")],
+    description:
+      "The core language of the web, powering dynamic and interactive interfaces.",
+  },
+  {
+    name: "TypeScript",
+    normalized: normalizeTechName("TypeScript"),
+    icon: TECH_ICONS[normalizeTechName("TypeScript")],
+    description:
+      "JavaScript with type safety — ideal for scalable and maintainable applications.",
+  },
+  {
+    name: "HTML5",
+    normalized: normalizeTechName("HTML5"),
+    icon: TECH_ICONS[normalizeTechName("HTML5")],
+    description: "Provides structure and semantic meaning to web content.",
+  },
+  {
+    name: "CSS3",
+    normalized: normalizeTechName("CSS3"),
+    icon: TECH_ICONS[normalizeTechName("CSS3")],
+    description: "Used to build modern, responsive, and visually elegant UIs.",
+  },
+
+  // Frontend
+  {
+    name: "React",
+    normalized: normalizeTechName("React"),
+    icon: TECH_ICONS[normalizeTechName("React")],
+    description: "Component-driven UI library for building dynamic frontends.",
+  },
+  {
+    name: "Next.js",
+    normalized: normalizeTechName("Next.js"),
+    icon: TECH_ICONS[normalizeTechName("Next.js")],
+    description:
+      "A full-stack React framework with SSR, routing, and API support built in.",
+  },
+  {
+    name: "Tailwind CSS",
+    normalized: normalizeTechName("Tailwind CSS"),
+    icon: TECH_ICONS[normalizeTechName("Tailwind CSS")],
+    description:
+      "A utility-first CSS framework for fast and consistent styling.",
+  },
+  {
+    name: "React Router",
+    normalized: normalizeTechName("React Router"),
+    icon: TECH_ICONS[normalizeTechName("React Router")],
+    description: "Handles client-side routing in modern React applications.",
+  },
+
+  // Backend
+  {
+    name: "Node.js",
+    normalized: normalizeTechName("Node.js"),
+    icon: TECH_ICONS[normalizeTechName("Node.js")],
+    description: "JavaScript runtime used to build scalable backend services.",
+  },
+  {
+    name: "Express.js",
+    normalized: normalizeTechName("Express.js"),
+    icon: TECH_ICONS[normalizeTechName("Express.js")],
+    description:
+      "Minimal and flexible Node.js framework for building robust REST APIs.",
+  },
+  {
+    name: "REST API",
+    normalized: normalizeTechName("REST API"),
+    icon: TECH_ICONS[normalizeTechName("REST API")],
+    description: "A standard architectural style for designing scalable APIs.",
+  },
+
+  // Database & Cloud
+  {
+    name: "MongoDB",
+    normalized: normalizeTechName("MongoDB"),
+    icon: TECH_ICONS[normalizeTechName("MongoDB")],
+    description:
+      "A NoSQL database for flexible, high-performance applications.",
+  },
+  {
+    name: "Mongoose",
+    normalized: normalizeTechName("Mongoose"),
+    icon: TECH_ICONS[normalizeTechName("Mongoose")],
+    description: "Elegant object modeling tool for MongoDB in Node.js.",
+  },
+  {
+    name: "Azure",
+    normalized: normalizeTechName("Azure"),
+    icon: TECH_ICONS[normalizeTechName("Azure")],
+    description:
+      "Microsoft’s cloud platform for deploying and scaling applications.",
+  },
+
+  // Tools
+  {
+    name: "Git",
+    normalized: normalizeTechName("Git"),
+    icon: TECH_ICONS[normalizeTechName("Git")],
+    description:
+      "Version control system that enables collaboration and tracking changes.",
+  },
+  {
+    name: "GitHub",
+    normalized: normalizeTechName("GitHub"),
+    icon: TECH_ICONS[normalizeTechName("GitHub")],
+    description:
+      "A platform for hosting repositories and streamlining team development.",
+  },
+  {
+    name: "Docker",
+    normalized: normalizeTechName("Docker"),
+    icon: TECH_ICONS[normalizeTechName("Docker")],
+    description:
+      "Containerization platform ensuring consistent development and deployments.",
+  },
+  {
+    name: "Postman",
+    normalized: normalizeTechName("Postman"),
+    icon: TECH_ICONS[normalizeTechName("Postman")],
+    description: "A powerful tool for building, testing, and managing APIs.",
+  },
+  {
+    name: "VS Code",
+    normalized: normalizeTechName("VS Code"),
+    icon: TECH_ICONS[normalizeTechName("VS Code")],
+    description:
+      "Highly customizable source-code editor for efficient development.",
+  },
+  {
+    name: "Figma",
+    normalized: normalizeTechName("Figma"),
+    icon: TECH_ICONS[normalizeTechName("Figma")],
+    description:
+      "Collaborative UI/UX design tool for building modern interfaces.",
+  },
+  {
+    name: "Linux",
+    normalized: normalizeTechName("Linux"),
+    icon: TECH_ICONS[normalizeTechName("Linux")],
+    description:
+      "Collaborative UI/UX design tool for building modern interfaces.",
+  },
+];
+
+export const SKILLS = [
+  // Programming Languages
+  "C++",
+  "JavaScript",
+  "TypeScript",
+  "HTML5",
+  "CSS3",
+
+  // Frontend
+  "React",
+  "Next.js",
+  "Tailwind CSS",
+  "React Router",
+
+  // Backend
+  "Node.js",
+  "Express.js",
+  "REST API",
+
+  // Database & Cloud
+  "MongoDB",
+  "Mongoose",
+  "Azure",
+
+  // Tools
+  "Git",
+  "GitHub",
+  "Docker",
+  "Postman",
+  "VS Code",
+  "Figma",
+];
+
+export const RESUME_LINK = "#";

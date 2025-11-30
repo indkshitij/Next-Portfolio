@@ -7,7 +7,7 @@ export default function ExploreBtn({ path }: { path?: string }) {
   return (
     <motion.a
       href={path || "#"}
-      className="flex flex-col justify-center items-center gap-2 cursor-pointer"
+      className=" group flex flex-col justify-center items-center gap-2 cursor-pointer group-hover:scale-110 transition-all duration-300"
       initial={{ y: 0 }}
       animate={{ y: [0, -30, 12, -10, 0] }}
       transition={{
@@ -17,12 +17,12 @@ export default function ExploreBtn({ path }: { path?: string }) {
         ease: "easeInOut",
       }}
     >
-      <p className="text-center text-lg tracking-tight font-bold text-light-gray">
+      <p className="text-center text-lg tracking-tight font-bold text-light-gray group-hover:scale-110 transition-all duration-300">
         Explore My Work
       </p>
 
       <motion.div
-        className="bg-blue-font hover:bg-blue-font dark:bg-blue-400 p-1 md:p-1.5 rounded-full shadow-lg"
+        className="bg-blue-font hover:bg-blue-font dark:bg-blue-400 p-1 md:p-1.5 rounded-full shadow-lg group-hover:scale-110 transition-all duration-300"
         animate={{ y: [0, 8, 0] }}
         transition={{
           duration: 1,

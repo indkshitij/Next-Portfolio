@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Logo from "@/frontend/atoms/Logo";
 import Icons from "@/lib/Icons";
-import { navItems, useSocialLinks } from "@/lib/DummyData";
+import { NAV_ITEMS, SOCIAL_LINKS } from "@/lib/DummyData";
 import Link from "next/link";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 
@@ -64,7 +64,7 @@ export default function MobileNavbar() {
             transition={{ duration: 0.25 }}
             className="w-full max-w-[90vw] rounded-2xl bg-custom-black dark:bg-custom-black text-white shadow-xl backdrop-blur-xl px-4 py-5 space-y-2"
           >
-            {navItems.map((item, index) => (
+            {NAV_ITEMS.map((item, index) => (
               <Link
                 key={index}
                 href={item.link}
@@ -78,7 +78,7 @@ export default function MobileNavbar() {
             ))}
 
             <div className="mt-5 mb-2.5 flex flex-wrap justify-center items-center gap-5">
-              {useSocialLinks.map((social, index) => {
+              {SOCIAL_LINKS.map((social, index) => {
                 return (
                   <Link
                     key={index}
