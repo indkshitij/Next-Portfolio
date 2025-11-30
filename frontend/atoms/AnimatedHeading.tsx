@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-
+import { Cover } from "@/components/ui/cover";
 interface HeadingProps {
-  heading: string;
+  heading?: string;
+  name?: string;
   className?: string;
 }
 
@@ -20,38 +21,55 @@ const letterAnimation = {
   visible: { opacity: 1, y: 0 },
 };
 
-export default function AnimatedHeading({ heading, className }: HeadingProps) {
+export default function AnimatedHeading({
+  heading = "Hi, I'm ",
+  name = "Kshitij",
+  className,
+}: HeadingProps) {
   const words = heading.split(" ");
   return (
-    <motion.h1
-      variants={letterContainer}
-      initial="hidden"
-      animate="visible"
-      className={`font-extrabold text-center select-none leading-[1.1] tracking-tight 
+    <>
+      <div className="flex items-center flex-col sm:flex-row ">
+        <motion.h1
+          variants={letterContainer}
+          initial="hidden"
+          animate="visible"
+          className={`font-extrabold text-center select-none leading-[1.1] tracking-tight 
       text-7xl xl:text-9xl text-custom-black dark:text-white 
-      transition-transform duration-300 ${className}`}
-    >
-      {words.map((word, wordIndex) => (
-        <span key={wordIndex} className="inline-block">
-          {word.split("").map((char, i) => (
-            <motion.span
-              key={i}
-              variants={letterAnimation}
-              whileHover={{
-                y: -8,
-                scale: 1.18,
-                color: "rgb(36, 99, 235)",
-                transition: { type: "spring", stiffness: 400, damping: 12 },
-              }}
-              className="inline-block cursor-default"
-            >
-              {char}
-            </motion.span>
-          ))}
+      transition-transform duration-300 ${className} sm:-mr-8 mr-0`}
+        >
+          {words.map((word, wordIndex) => {
+            const innerLetters = word.split("").map((char, i) => (
+              <motion.span
+                key={i}
+                variants={letterAnimation}
+                whileHover={{
+                  y: -8,
+                  scale: 1.18,
+                  color: "rgb(36, 99, 235)",
+                  transition: { type: "spring", stiffness: 400, damping: 12 },
+                }}
+                className="inline-block cursor-default"
+              >
+                {char}
+              </motion.span>
+            ));
 
-          <span className="inline-block">&nbsp;</span>
-        </span>
-      ))}
-    </motion.h1>
+            return (
+              <span key={wordIndex} className="inline-block">
+                {innerLetters}
+                <span className="inline-block">&nbsp;</span>
+              </span>
+            );
+          })}
+        </motion.h1>
+        <Cover
+          className="font-extrabold text-center select-none leading-[1.1] tracking-tight 
+      text-7xl xl:text-9xl "
+        >
+          {name}
+        </Cover>
+      </div>
+    </>
   );
 }

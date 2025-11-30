@@ -9,7 +9,7 @@ import ForescribeImg from "@/assets/experience/forescribe.png";
 import AgileLogoImg from "@/assets/experience/agileLogo.png";
 import ForescribeLogoImg from "@/assets/experience/forescribeLogo.png";
 
-export const navItems = [
+export const NAV_ITEMS = [
   { link: "/", icon: <Icons icon="home" />, name: "Home" },
   { link: "/project", icon: <Icons icon="project" />, name: "Projects" },
   { link: "/education", icon: <Icons icon="education" />, name: "Educations" },
@@ -22,7 +22,7 @@ export const navItems = [
   { link: "/contact", icon: <Icons icon="contact" />, name: "Contact" },
 ];
 
-export const useSocialLinks = [
+export const SOCIAL_LINKS = [
   {
     name: "LinkedIn",
     icon: <FaLinkedin />,
@@ -55,7 +55,7 @@ export const useSocialLinks = [
   // },
 ];
 
-export const educationsData = [
+export const EDUCATION_DATA = [
   {
     _id: "btech_cse_ai_ml",
     image: CollegeImage,
@@ -146,7 +146,7 @@ export const educationsData = [
   },
 ];
 
-export const experiencesData = [
+export const EXPERIENCE_DATA = [
   {
     _id: "forescribe_frontend_intern",
     image: ForescribeImg,
@@ -319,3 +319,147 @@ export const experiencesData = [
     },
   },
 ];
+
+export const EXPERTISE = [
+  {
+    slug: "dsa",
+    title: "DSA & Problem Solving",
+    desc: "Designing efficient algorithms with strong pattern and optimization skills.",
+  },
+  {
+    slug: "fullstack",
+    title: "Full-Stack Development",
+    desc: "Delivering complete features across frontend, backend, and deployment layers.",
+  },
+  {
+    slug: "backend",
+    title: "Backend Engineering",
+    desc: "Building scalable services with structured controllers, services, and clean APIs.",
+  },
+  {
+    slug: "database",
+    title: "Databases & ORM",
+    desc: "Designing optimized schemas with indexing, relations, and data integrity.",
+  },
+  {
+    slug: "auth",
+    title: "Authentication & Security",
+    desc: "Implementing secure auth flows with JWT, hashing, sessions, RBAC, and best practices.",
+  },
+
+  {
+    slug: "frontend",
+    title: "Frontend Engineering",
+    desc: "Crafting fast, accessible, and maintainable user interfaces.",
+  },
+  {
+    slug: "uiux",
+    title: "UI/UX Implementation",
+    desc: "Translating designs into intuitive, pixel-perfect, user-friendly experiences.",
+  },
+  {
+    slug: "responsive",
+    title: "Responsive Design",
+    desc: "Ensuring layouts adapt flawlessly to all device sizes and breakpoints.",
+  },
+  {
+    slug: "designsystem",
+    title: "Design Systems",
+    desc: "Creating reusable component libraries that scale across teams and products.",
+  },
+  {
+    slug: "performance",
+    title: "Performance Optimization",
+    desc: "Enhancing UI speed by minimizing re-renders, payload size, and bottlenecks.",
+  },
+
+  {
+    slug: "api",
+    title: "API Integration",
+    desc: "Connecting frontend to backend through efficient fetch patterns and caching.",
+  },
+  {
+    slug: "debug",
+    title: "Debugging Tools",
+    desc: "Identifying and fixing issues rapidly using logs, tracing, and dev tooling.",
+  },
+  {
+    slug: "testing",
+    title: "Testing",
+    desc: "Ensuring reliability with component, integration, and workflow testing.",
+  },
+
+  {
+    slug: "cloud",
+    title: "Cloud & Deployments",
+    desc: "Deploying apps with CI/CD pipelines, cloud hosting, and environment setup.",
+  },
+
+  {
+    slug: "aiapps",
+    title: "AI-powered Apps",
+    desc: "Building features with LLMs, intelligent workflows, and automation logic.",
+  },
+  {
+    slug: "aiml",
+    title: "AI/ML Fundamentals",
+    desc: "Applying model intuition, data preparation, and feature engineering basics.",
+  },
+
+  {
+    slug: "cleancode",
+    title: "Clean Coding",
+    desc: "Writing modular, maintainable code that scales across complex systems.",
+  },
+  {
+    slug: "git",
+    title: "Version Control",
+    desc: "Managing branches, reviews, commits, and automated pipelines effectively.",
+  },
+
+  {
+    slug: "product",
+    title: "Product Thinking",
+    desc: "Designing solutions rooted in user needs, impact, and real workflows.",
+  },
+  {
+    slug: "leadership",
+    title: "Ownership & Leadership",
+    desc: "Driving teams, decisions, and features with clarity and accountability.",
+  },
+];
+
+export const SKILLS = [
+  // Programming Languages
+  "C++",
+  "JavaScript",
+  "TypeScript",
+  "HTML5",
+  "CSS3",
+
+  // Frontend
+  "React",
+  "Next.js",
+  "Tailwind CSS",
+  "React Router",
+
+  // Backend
+  "Node.js",
+  "Express.js",
+  "REST API",
+
+  // Database & Cloud
+  "MongoDB",
+  "Mongoose",
+  "Azure",
+
+  // Tools
+  "Git",
+  "GitHub",
+  "Docker",
+  "Postman",
+  "VS Code",
+  "Figma",
+];
+
+export const RESUME_LINK = "#"

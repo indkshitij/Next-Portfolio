@@ -17,6 +17,7 @@ import {
 import { cn } from "@/lib/utils";
 import { GRADIENTS } from "@/lib/UIUtils";
 import Link from "next/link";
+import Badge from "../atoms/Badge";
 
 const EducationCard = ({
   edu,
@@ -100,10 +101,7 @@ const EducationCard = ({
 
   return (
     <CursorWrapper
-      startIcon={
-        <Image src={GraduationCap} alt="Loading" className="w-8 h-8" />
-      }
-      description="View Details"
+      description="View Details 👀"
     >
       <Link href={`/education/education-detail/${edu._id}`}>
         <motion.div
@@ -114,67 +112,67 @@ const EducationCard = ({
           initial={{ scale: 1 }}
           whileHover={{ scale: 1.02 }}
           className={cn(
-            `group min-h-88 sm:min-h-120 relative overflow-hidden rounded-3xl bg-white dark:bg-custom-black shadow-xl border border-gray-200 dark:border-white/10 transition-all hover:shadow-2xl perspective-distant transform-3d flex flex-col justify-center`
+            `group min-h-fit sm:min-h-full relative overflow-hidden rounded-3xl bg-white dark:bg-custom-black shadow-xl border border-gray-200 dark:border-white/10 transition-all hover:shadow-2xl perspective-distant transform-3d flex flex-col justify-between`
           )}
         >
           <motion.div
             style={{ background: glareBackground }}
-            className="pointer-events-none  absolute inset-0  rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[2] "
+            className="pointer-events-none  absolute inset-0  rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-2"
           />
 
-          <div className="h-52 px-5 sm:px-12 pt-5 sm:pt-7 pb-2">
-            <div className="relative space-y-1 transition-all ">
+          <div className="h-56 px-5 sm:px-12 pt-5 sm:pt-8 pb-2 ">
+            <div className="relative space-y-1.5 transition-all ">
               {/* DEGREE */}
-              <h1 className="text-2xl sm:text-3xl font-semibold leading-tight text-custom-black dark:text-white transition-colors group-hover:text-white ">
+              <h1 className="text-2xl sm:text-3xl font-semibold leading-tight text-custom-black dark:text-white">
                 {edu.degree}
               </h1>
 
               {/* SPECIALIZATION */}
-              <p className="text-medium sm:text-lg font-medium text-custom-black dark:text-gray-300 transition-colors group-hover:text-blue-100 ">
+              <p className="text-medium sm:text-lg font-medium text-custom-black dark:text-gray-300">
                 {edu.specialization}
               </p>
 
               {/* INSTITUTE */}
-              <p className="text-medium sm:text-lg font-medium text-light-gray transition-colors group-hover:text-blue-200">
+              <p className="text-medium sm:text-lg font-medium text-light-gray">
                 {edu.institute}
               </p>
 
               {/* BADGES */}
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-1 sm:pt-2.5">
+              <div className="flex flex-col items-start sm:items-center sm:flex-row gap-2 sm:gap-3 pt-1 sm:pt-2">
                 {/* DATE BADGE */}
-                <p className=" flex items-center gap-2 w-fit uppercase bg-blue-50 rounded-3xl text-blue-700  font-semibold text-sm px-3 py-1.5 transition-all ">
-                  <Icons icon="calendar" size={16} />
-                  {formatDateMonthYear(edu.startDate)} —{" "}
-                  {formatDateMonthYear(edu.endDate)}
-                </p>
+                <Badge
+                  icon={<Icons icon="calendar" size={16} />}
+                  content={`${formatDateMonthYear(edu.startDate)} —
+                  ${formatDateMonthYear(edu.endDate)}`}
+                />
 
-                {/* GRADE BADGE */}
-                <p className=" flex items-center gap-2 w-fit uppercase bg-green-50 rounded-3xl text-green-600  font-semibold text-sm px-3 py-1.5 transition-all ">
-                  <Icons icon="score-badge" size={16} />
-                  {edu.grade?.type}: {edu.grade?.value}
-                </p>
+                <Badge
+                  icon={<Icons icon="score-badge" size={16} />}
+                  content={`${edu.grade?.type} —
+                  ${edu.grade?.value}`}
+                />
               </div>
             </div>
           </div>
-          <div className="p-2 md:p-3 h-70 sm:h-68 max-h-88">
+
+          <div className="p-2 md:p-3 h-70 sm:h-80">
             <div
               className="relative overflow-hidden h-full w-full rounded-3xl p-2.5 md:p-5 "
               style={{ background: gradient }}
             >
               {/* DESCRIPTION */}
-              <div className="opacity-100 md:opacity-0 translate-x-0 md:-translate-x-[110%] group-hover:translate-x-0 translate-y-2 group-hover:opacity-100 group-hover:text-white group-hover:translate-y-0 transition-all duration-400">
+              <div className="opacity-100 md:opacity-0 md:translate-y-70 group-hover:opacity-100 text-white group-hover:translate-y-0 transition-all ease-in-out duration-700">
                 <span className="text-base leading-relaxed text-white font-medium">
                   {edu.shortDescription}
                 </span>
               </div>
-              {/* IMAGE RIGHT SIDE – FLOATS DOWN + ZOOMS */}
+
+              {/* IMAGE RIGHT SIDE  */}
               {edu.image && (
-                <div className="absolute top-24 sm:top-8 -left-3 sm:left-0 w-92 md:w-136 overflow-hidden translate-y-4 group-hover:translate-y-28 transition-transform duration-500 z-[2]">
+                <div className="absolute top-24 sm:top-8 -left-3 w-92 md:w-150 overflow-hidden translate-y-4 group-hover:translate-y-28 transition-transform duration-500 z-2">
                   <Image
                     src={edu.image}
                     alt={edu.degree || "No Image"}
-                    width={400}
-                    height={400}
                     className="object-cover w-full h-full rounded-2xl group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>

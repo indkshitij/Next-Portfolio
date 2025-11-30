@@ -1,5 +1,5 @@
 import SectionHeading from "@/frontend/atoms/SectionHeading";
-import Icons from "@/lib/Icons";
+
 import SectionContainer from "@/lib/Wrapper/SectionContainer";
 
 const SkillsSection = () => {
@@ -7,8 +7,10 @@ const SkillsSection = () => {
     <SectionContainer>
       <div>
         <SectionHeading
-          icon={<Icons icon="skills" className="w-6 h-6 md:w-10 md:h-10" />}
-          heading="Skills Section"
+          badge="Skills"
+          badgeColor="bg-emerald-600"
+          heading="My Skillset"
+          description="A clear overview of the technologies and tools I work with to build modern, scalable solutions."
         />
         Skills
       </div>

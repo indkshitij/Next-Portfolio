@@ -3,22 +3,22 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { navItems } from "@/lib/DummyData";
+import { NAV_ITEMS } from "@/lib/DummyData";
 
 const Menu = () => {
   const pathname = usePathname();
 
   return (
     <>
-      <div className=" flex gap-2 p-3 rounded-full bg-custom-black text-white border border-zinc-700 shadow-xl backdrop-blur-xl w-fit ">
-        {navItems.map((item, index) => {
+      <div className=" flex gap-2 p-2.5 rounded-xl bg-custom-black text-white border border-zinc-700 shadow-xl backdrop-blur-xl w-fit ">
+        {NAV_ITEMS.map((item, index) => {
           const isActive = pathname === item.link;
 
           return (
             <Link key={index} href={item.link}>
               <div
                 className={cn(
-                  "group flex items-center gap-0 px-2 py-2.5 rounded-full transition-all duration-300 ease-linear cursor-pointer overflow-hidden",
+                  "group flex items-center gap-0 px-2 py-2.5 rounded-lg transition-all duration-300 ease-linear cursor-pointer overflow-hidden",
                   isActive
                     ? "bg-white text-custom-black shadow-md"
                     : "hover:bg-white/10 text-white"

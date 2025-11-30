@@ -10,8 +10,10 @@ import HeroSection from "@/components/HeroSection";
 // import { fetchProfileData } from "@/lib/store/features/profileData";
 // import { fetchTechnology } from "@/lib/store/features/technologies";
 import Navbar from "@/components/Navbar";
+import SkillsCarousel from "@/frontend/molecules/SkillsCarousel";
 import EducationSection from "@/frontend/organism/EducationSection";
 import ExperienceSection from "@/frontend/organism/ExperienceSection";
+import ExpertiseSecction from "@/frontend/organism/ExpertiseSection";
 import SkillsSection from "@/frontend/organism/SkillsSection";
 
 export default function Home() {
@@ -32,8 +34,10 @@ export default function Home() {
         <Navbar />
         <div className="bg-[#F8FAFB]">
           <HeroSection />
+          <SkillsCarousel />
           <EducationSection />
           <ExperienceSection />
+          <ExpertiseSecction />
           <SkillsSection />
         </div>
         <div className="dark:bg-black ">

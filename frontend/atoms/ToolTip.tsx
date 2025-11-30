@@ -11,6 +11,7 @@ interface TooltipProps {
   children: React.ReactNode;
   position?: "top" | "bottom";
   className?: string;
+  background?:string;
 }
 
 export default function Tooltip({
@@ -19,6 +20,7 @@ export default function Tooltip({
   children,
   position = "top",
   className,
+  background="bg-custom-black",
 }: TooltipProps) {
   const [coords, setCoords] = useState({ top: 0, left: 0 });
   const [show, setShow] = useState(false);
@@ -58,8 +60,9 @@ export default function Tooltip({
               exit={{ opacity: 0, y: 4, scale: 0.96 }}
               transition={{ duration: 0.15, ease: "easeOut" }}
               className={cn(
-                "fixed z-[9999] px-3 py-1.5 bg-custom-black text-white rounded-md text-sm shadow-lg",
+                "fixed z-[9999] px-3 py-1.5 text-white rounded-md text-sm shadow-lg",
                 "transform -translate-x-1/2 max-w-80 whitespace-normal",
+                background,
                 className
               )}
               style={{
