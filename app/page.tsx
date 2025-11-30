@@ -11,6 +11,7 @@ import HeroSection from "@/components/HeroSection";
 // import { fetchTechnology } from "@/lib/store/features/technologies";
 import Navbar from "@/components/Navbar";
 import SkillsCarousel from "@/frontend/molecules/SkillsCarousel";
+import ContactSection from "@/frontend/organism/ContactSection";
 import EducationSection from "@/frontend/organism/EducationSection";
 import ExperienceSection from "@/frontend/organism/ExperienceSection";
 import ExpertiseSecction from "@/frontend/organism/ExpertiseSection";
@@ -34,6 +35,7 @@ export default function Home() {
         <Navbar />
         <div className="bg-[#F8FAFB]">
           <HeroSection />
+          <ContactSection />
           <SkillsCarousel />
           <EducationSection />
           <ExperienceSection />

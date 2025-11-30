@@ -834,6 +834,66 @@ const Icons = ({ icon, className, size = 25, stroke }: IconProps) => {
         </svg>
       );
 
+    case "name":
+      return (
+        <svg
+          viewBox="0 0 24 24"
+          width={size}
+          height={size}
+          fill="currentColor"
+          className={className}
+        >
+          <rect x="3" y="4" width="18" height="16" rx="2" />
+          <circle cx="12" cy="10" r="3" fill="white" />
+          <path d="M7 17c0-2 2.5-3.5 5-3.5s5 1.5 5 3.5" fill="white" />
+        </svg>
+      );
+
+    case "mail":
+      return (
+        <svg
+          viewBox="0 0 24 24"
+          width={size}
+          height={size}
+          fill="currentColor"
+          className={className}
+        >
+          <rect x="3" y="5" width="18" height="14" rx="2" />
+          <polyline points="3,7 12,13 21,7" fill="white" />
+        </svg>
+      );
+
+    case "subject":
+      return (
+        <svg
+          viewBox="0 0 24 24"
+          width={size}
+          height={size}
+          fill="currentColor"
+          className={className}
+        >
+          <rect x="4" y="6" width="16" height="12" rx="2" />
+          <rect x="7" y="9" width="10" height="2" fill="white" />
+          <rect x="7" y="12" width="7" height="2" fill="white" />
+        </svg>
+      );
+
+    case "message":
+      return (
+        <svg
+          viewBox="0 0 24 24"
+          width={size}
+          height={size}
+          fill="currentColor"
+          className={className}
+        >
+          <rect x="3" y="4" width="18" height="14" rx="2" />
+          <path d="M8 18 L8 20 L11 18" fill="currentColor" />
+          <rect x="7" y="8" width="10" height="2" fill="white" />
+          <rect x="7" y="11" width="6" height="2" fill="white" />
+        </svg>
+      );
+
     default:
       return null;
   }

@@ -16,7 +16,7 @@ interface SectionHeadingProps {
   descriptionColor?: string;
 }
 
-const chars = "!<>-_\\/[]{}—=+*^?#____";
+const chars = "!<>-_\\/[]{}—=+*^?#_!<>--_-______";
 
 const SectionHeading = ({
   icon,
@@ -79,7 +79,7 @@ const SectionHeading = ({
 
       {badge && (
         <motion.div
-          animate={{ scale: [1, 1.25, 1] }} 
+          animate={{ scale: [1, 1.15, 1] }} 
           transition={{
             duration: 1.25,
             repeat: Infinity,

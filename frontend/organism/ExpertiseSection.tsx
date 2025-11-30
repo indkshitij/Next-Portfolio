@@ -30,7 +30,7 @@ export default function ExpertiseSection() {
           badgePosition="rotate-5"
         />
 
-        <div className="mt-14 rounded-[28px] border border-white/10 overflow-hidden">
+        <div className="mt-14 rounded-lg border border-white/10 overflow-hidden">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {EXPERTISE.map((item, idx) => (
               <ExpertiseCard key={idx} item={item} idx={idx} />

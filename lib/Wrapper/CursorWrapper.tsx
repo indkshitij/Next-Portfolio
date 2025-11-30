@@ -30,7 +30,7 @@ const CursorWrapper = ({
 
   return (
     <div
-      className={` relative w-fit h-fit ${
+      className={`hidden sm:flex relative w-fit h-fit ${
         hovering ? "cursor-none" : "cursor-default"
       }`}
       onMouseEnter={() => setHovering(true)}

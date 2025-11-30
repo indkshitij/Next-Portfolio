@@ -8,6 +8,7 @@ import SmallButton from "@/frontend/atoms/SmallButton";
 import Icons from "@/lib/Icons";
 import { RESUME_LINK } from "@/lib/DummyData";
 import SocialHandle from "@/frontend/molecules/SocialHandle";
+import Typewriter from "@/frontend/atoms/Typewriter";
 
 const Footer = () => {
   const email = "ind.kshitijsingh@gmail.com";
@@ -41,7 +42,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-start gap-10 sm:gap-20">
             {/* LEFT SECTION */}
             <div className="md:w-1/2 w-full flex flex-col items-start gap-4">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl  font-extrabold tracking-wide">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl  font-bold tracking-wide">
                 Let’s <br /> Connect
               </h1>
 
@@ -53,7 +54,7 @@ const Footer = () => {
             </div>
 
             <div className="md:w-1/2 w-full flex flex-col items-start gap-4">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-wide select-none">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-wide select-none">
                 Open For <br />{" "}
                 <span className="w-fit">
                   <ContainerTextFlip
@@ -105,7 +106,8 @@ const Footer = () => {
                   className="sm:min-w-69 text-lg text-gray-500 whitespace-nowrap overflow-hidden border-r-2 border-blue-font select-none "
                   style={{ width: email.length * 10 + "px" }}
                 >
-                  {email}
+                  <Typewriter text={email}/>
+                  {/* {email} */}
                 </p>
                 <CursorWrapper description="📧 Click to copy my email">
                   <button

@@ -8,6 +8,7 @@ import AgileImg from "@/assets/experience/agile.png";
 import ForescribeImg from "@/assets/experience/forescribe.png";
 import AgileLogoImg from "@/assets/experience/agileLogo.png";
 import ForescribeLogoImg from "@/assets/experience/forescribeLogo.png";
+import { normalizeTechName, TECH_ICONS } from "@/lib/MapTechnologiesLogo";
 
 export const NAV_ITEMS = [
   { link: "/", icon: <Icons icon="home" />, name: "Home" },
@@ -158,8 +159,7 @@ export const EXPERIENCE_DATA = [
     location: "Remote",
     companyURL: "https://forescribe.com",
     companyDescription:
-  "Forescribe is an AI-powered SaaS spend intelligence platform that helps enterprises optimize software usage, reduce costs, and streamline license management through advanced analytics and automation.",
-
+      "Forescribe is an AI-powered SaaS spend intelligence platform that helps enterprises optimize software usage, reduce costs, and streamline license management through advanced analytics and automation.",
 
     roleType: "Internship",
     jobLevel: "Junior",
@@ -243,8 +243,7 @@ export const EXPERIENCE_DATA = [
     location: "Remote",
     companyURL: "https://agilesupport.com",
     companyDescription:
-  "Agile Support is a technology services company providing modern web development, product engineering, and digital solutions for global clients using Agile and MERN-based development workflows.",
-
+      "Agile Support is a technology services company providing modern web development, product engineering, and digital solutions for global clients using Agile and MERN-based development workflows.",
 
     // NEW FIELDS
     roleType: "Internship",
@@ -429,6 +428,163 @@ export const EXPERTISE = [
   },
 ];
 
+export const SKILLS_DATA = [
+  {
+    name: "C++",
+    normalized: normalizeTechName("C++"),
+    icon: TECH_ICONS[normalizeTechName("C++")],
+    description:
+      "A fast and powerful language used for algorithms and performance-critical systems.",
+  },
+  {
+    name: "JavaScript",
+    normalized: normalizeTechName("JavaScript"),
+    icon: TECH_ICONS[normalizeTechName("JavaScript")],
+    description:
+      "The core language of the web, powering dynamic and interactive interfaces.",
+  },
+  {
+    name: "TypeScript",
+    normalized: normalizeTechName("TypeScript"),
+    icon: TECH_ICONS[normalizeTechName("TypeScript")],
+    description:
+      "JavaScript with type safety — ideal for scalable and maintainable applications.",
+  },
+  {
+    name: "HTML5",
+    normalized: normalizeTechName("HTML5"),
+    icon: TECH_ICONS[normalizeTechName("HTML5")],
+    description: "Provides structure and semantic meaning to web content.",
+  },
+  {
+    name: "CSS3",
+    normalized: normalizeTechName("CSS3"),
+    icon: TECH_ICONS[normalizeTechName("CSS3")],
+    description: "Used to build modern, responsive, and visually elegant UIs.",
+  },
+
+  // Frontend
+  {
+    name: "React",
+    normalized: normalizeTechName("React"),
+    icon: TECH_ICONS[normalizeTechName("React")],
+    description: "Component-driven UI library for building dynamic frontends.",
+  },
+  {
+    name: "Next.js",
+    normalized: normalizeTechName("Next.js"),
+    icon: TECH_ICONS[normalizeTechName("Next.js")],
+    description:
+      "A full-stack React framework with SSR, routing, and API support built in.",
+  },
+  {
+    name: "Tailwind CSS",
+    normalized: normalizeTechName("Tailwind CSS"),
+    icon: TECH_ICONS[normalizeTechName("Tailwind CSS")],
+    description:
+      "A utility-first CSS framework for fast and consistent styling.",
+  },
+  {
+    name: "React Router",
+    normalized: normalizeTechName("React Router"),
+    icon: TECH_ICONS[normalizeTechName("React Router")],
+    description: "Handles client-side routing in modern React applications.",
+  },
+
+  // Backend
+  {
+    name: "Node.js",
+    normalized: normalizeTechName("Node.js"),
+    icon: TECH_ICONS[normalizeTechName("Node.js")],
+    description: "JavaScript runtime used to build scalable backend services.",
+  },
+  {
+    name: "Express.js",
+    normalized: normalizeTechName("Express.js"),
+    icon: TECH_ICONS[normalizeTechName("Express.js")],
+    description:
+      "Minimal and flexible Node.js framework for building robust REST APIs.",
+  },
+  {
+    name: "REST API",
+    normalized: normalizeTechName("REST API"),
+    icon: TECH_ICONS[normalizeTechName("REST API")],
+    description: "A standard architectural style for designing scalable APIs.",
+  },
+
+  // Database & Cloud
+  {
+    name: "MongoDB",
+    normalized: normalizeTechName("MongoDB"),
+    icon: TECH_ICONS[normalizeTechName("MongoDB")],
+    description:
+      "A NoSQL database for flexible, high-performance applications.",
+  },
+  {
+    name: "Mongoose",
+    normalized: normalizeTechName("Mongoose"),
+    icon: TECH_ICONS[normalizeTechName("Mongoose")],
+    description: "Elegant object modeling tool for MongoDB in Node.js.",
+  },
+  {
+    name: "Azure",
+    normalized: normalizeTechName("Azure"),
+    icon: TECH_ICONS[normalizeTechName("Azure")],
+    description:
+      "Microsoft’s cloud platform for deploying and scaling applications.",
+  },
+
+  // Tools
+  {
+    name: "Git",
+    normalized: normalizeTechName("Git"),
+    icon: TECH_ICONS[normalizeTechName("Git")],
+    description:
+      "Version control system that enables collaboration and tracking changes.",
+  },
+  {
+    name: "GitHub",
+    normalized: normalizeTechName("GitHub"),
+    icon: TECH_ICONS[normalizeTechName("GitHub")],
+    description:
+      "A platform for hosting repositories and streamlining team development.",
+  },
+  {
+    name: "Docker",
+    normalized: normalizeTechName("Docker"),
+    icon: TECH_ICONS[normalizeTechName("Docker")],
+    description:
+      "Containerization platform ensuring consistent development and deployments.",
+  },
+  {
+    name: "Postman",
+    normalized: normalizeTechName("Postman"),
+    icon: TECH_ICONS[normalizeTechName("Postman")],
+    description: "A powerful tool for building, testing, and managing APIs.",
+  },
+  {
+    name: "VS Code",
+    normalized: normalizeTechName("VS Code"),
+    icon: TECH_ICONS[normalizeTechName("VS Code")],
+    description:
+      "Highly customizable source-code editor for efficient development.",
+  },
+  {
+    name: "Figma",
+    normalized: normalizeTechName("Figma"),
+    icon: TECH_ICONS[normalizeTechName("Figma")],
+    description:
+      "Collaborative UI/UX design tool for building modern interfaces.",
+  },
+  {
+    name: "Linux",
+    normalized: normalizeTechName("Linux"),
+    icon: TECH_ICONS[normalizeTechName("Linux")],
+    description:
+      "Collaborative UI/UX design tool for building modern interfaces.",
+  },
+];
+
 export const SKILLS = [
   // Programming Languages
   "C++",
@@ -462,4 +618,4 @@ export const SKILLS = [
   "Figma",
 ];
 
-export const RESUME_LINK = "#"
+export const RESUME_LINK = "#";
