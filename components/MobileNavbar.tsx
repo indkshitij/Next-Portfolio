@@ -15,8 +15,8 @@ const menuVariants: Variants = {
       type: "spring",
       stiffness: 140,
       damping: 18,
-      mass: 0.6, 
-      delayChildren: 0.05, 
+      mass: 0.6,
+      delayChildren: 0.05,
       staggerChildren: 0.04,
     },
   },
@@ -38,10 +38,14 @@ export default function MobileNavbar() {
 
   return (
     <>
-      <div className="h-fit flex items-center justify-between w-[90vw] px-4 py-2 rounded-full bg-custom-black text-white  shadow-xl backdrop-blur-xl">
+      <div className="h-fit flex items-center justify-between w-[95vw] px-5 py-2 rounded-xl bg-custom-black text-white  shadow-xl backdrop-blur-xl">
         {/* Logo */}
         <motion.div whileTap={{ scale: 0.9 }} className="w-fit h-auto">
-          <Logo />
+          <div
+            className="mb-1.5 font-logo text-4xl sm:text-5xl font-bold tracking-tight text-white tracking-relaxed sm:text-custom-black dark:text-white relative"
+          >
+            KS
+          </div>
         </motion.div>
 
         <motion.button
@@ -62,7 +66,7 @@ export default function MobileNavbar() {
             exit="closed"
             variants={menuVariants}
             transition={{ duration: 0.25 }}
-            className="w-full max-w-[90vw] rounded-2xl bg-custom-black dark:bg-custom-black text-white shadow-xl backdrop-blur-xl px-4 py-5 space-y-2"
+            className="w-full max-w-[95vw] rounded-2xl bg-custom-black dark:bg-custom-black text-white shadow-xl backdrop-blur-xl px-4 py-5 space-y-2"
           >
             {NAV_ITEMS.map((item, index) => (
               <Link
