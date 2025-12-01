@@ -7,117 +7,150 @@ interface ContactEmailProps {
   message?: string;
 }
 
-export function ContactEmail({ name, email, subject, message }: ContactEmailProps) {
+export function ContactEmail({
+  name,
+  email,
+  subject,
+  message,
+}: ContactEmailProps) {
   return (
     <div
       style={{
-        fontFamily: "'Segoe UI', Tahoma, sans-serif",
-        backgroundColor: "#f5f7fa",
-        padding: "20px",
+        width: "100%",
+        background: "linear-gradient(to bottom, #eff6ff, #e0f2fe)",
+
+        fontFamily: "Poppins, sans-serif",
         color: "#1a1a1a",
       }}
     >
       <div
         style={{
-          maxWidth: "600px",
+          padding: "0 5px",
           margin: "0 auto",
           backgroundColor: "#ffffff",
-          borderRadius: "12px",
+          borderRadius: "14px",
           overflow: "hidden",
-          boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
+          boxShadow: "0 10px 32px rgba(0,0,0,0.12)",
+          border: "1px solid #e5e7eb",
         }}
       >
-        {/* Header Bar */}
+        {/* HEADER */}
         <div
           style={{
-            background: "linear-gradient(135deg, #3b82f6, #06b6d4)",
-            padding: "18px 24px",
+            background:
+              "linear-gradient(135deg, #4f46e5, #6366f1, #3b82f6, #0ea5e9)",
+            padding: "24px 28px",
             color: "white",
+            borderRadius: "14px 14px 0 0",
+            textAlign: "center",
+            boxShadow: "0 4px 16px rgba(0,0,0,0.18)",
           }}
         >
-          <h2 style={{ margin: 0, fontSize: "20px", fontWeight: 600 }}>
-            📨 New Message
+          <h2
+            style={{
+              margin: 0,
+              fontSize: "22px",
+              fontWeight: 700,
+              letterSpacing: "0.5px",
+              fontFamily: "Onest, Poppins, sans-serif",
+            }}
+          >
+            📨 New Message Received
           </h2>
         </div>
 
-        {/* Content */}
-        <div style={{ padding: "24px" }}>
-          <p style={{ fontSize: "16px", marginBottom: "14px" }}>
-            You have received a new message from your website contact form.
+        {/* CONTENT */}
+        <div style={{ padding: "10px" }}>
+          <p
+            style={{
+              fontSize: "16px",
+              marginBottom: "22px",
+              color: "#374151",
+            }}
+          >
+            You have received a new message from your portfolio contact form.
           </p>
 
-          {/* Fields */}
-          <div style={{ marginBottom: "14px" }}>
-            <strong style={{ color: "#374151" }}>Name:</strong>
-            <p
-              style={{
-                margin: "4px 0",
-                padding: "10px",
-                backgroundColor: "#f3f4f6",
-                borderRadius: "8px",
-              }}
-            >
-              {name}
-            </p>
-          </div>
+          {/* FIELD BLOCK FUNCTION */}
+          {[
+            { label: "Name", value: name },
+            { label: "Email", value: email },
+            { label: "Subject", value: subject },
+          ].map((item, index) => (
+            <div key={index} style={{ marginBottom: "18px" }}>
+              <strong
+                style={{
+                  fontSize: "11px",
+                  color: "#4b5563",
+                  letterSpacing: "0.4px",
+                }}
+              >
+                {item.label}:
+              </strong>
+              <p
+                style={{
+                  margin: "6px 0",
+                  padding: "12px",
+                  backgroundColor: "#f1f5f9",
+                  border: "1px solid #dbeafe",
 
-          <div style={{ marginBottom: "14px" }}>
-            <strong style={{ color: "#374151" }}>Email:</strong>
-            <p
-              style={{
-                margin: "4px 0",
-                padding: "10px",
-                backgroundColor: "#f3f4f6",
-                borderRadius: "8px",
-              }}
-            >
-              {email}
-            </p>
-          </div>
+                  borderRadius: "10px",
+                  fontSize: "15px",
+                  color: "#1f2937",
+                }}
+              >
+                {item.value}
+              </p>
+            </div>
+          ))}
 
-          <div style={{ marginBottom: "14px" }}>
-            <strong style={{ color: "#374151" }}>Subject:</strong>
-            <p
-              style={{
-                margin: "4px 0",
-                padding: "10px",
-                backgroundColor: "#f3f4f6",
-                borderRadius: "8px",
-              }}
-            >
-              {subject}
-            </p>
-          </div>
+          {/* MESSAGE BOX */}
+          <strong
+            style={{
+              fontSize: "11px",
+              color: "#4b5563",
+              letterSpacing: "0.4px",
+            }}
+          >
+            Message:
+          </strong>
 
-          {/* Message Box */}
-          <strong style={{ color: "#374151" }}>Message:</strong>
           <div
             style={{
-              marginTop: "6px",
-              padding: "14px",
-              backgroundColor: "#eef2ff",
-              borderLeft: "4px solid #6366f1",
-              borderRadius: "8px",
+              marginTop: "8px",
+              padding: "16px 18px",
+              background:
+                "linear-gradient(to bottom right, #eff6ff, #dbeafe, #bfdbfe)",
+              borderLeft: "4px solid #3b82f6",
+              boxShadow: "0 2px 10px rgba(59,130,246,0.2)",
+              borderRadius: "10px",
               whiteSpace: "pre-line",
+              fontSize: "15px",
+              color: "#1e293b",
+              lineHeight: "1.6",
             }}
           >
             {message}
           </div>
         </div>
 
-        {/* Footer */}
+        {/* FOOTER */}
         <div
           style={{
-            padding: "16px 24px",
-            backgroundColor: "#f9fafb",
+            padding: "20px 24px",
+            background: "#f9fafb",
             borderTop: "1px solid #e5e7eb",
             textAlign: "center",
             fontSize: "13px",
-            color: "#6b7280",
+            color: "#4b5563",
           }}
         >
-          Sent from your website contact form.<br />
-          Please do not reply to this automated email.
+          <span style={{ display: "block", fontWeight: 600 }}>
+            Sent securely via your portfolio website
+          </span>
+          <span style={{ fontSize: "12px", color: "#6b7280" }}>
+            — Kshitij Singh
+          </span>
         </div>
       </div>
     </div>

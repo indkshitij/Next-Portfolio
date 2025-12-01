@@ -6,7 +6,6 @@ import Icons from "@/lib/Icons";
 import axios from "axios";
 const ContactForm = () => {
   const [sending, setSending] = useState(false);
-  const [sent, setSent] = useState(false);
   const [hovered, setHovered] = useState(false);
 
   const [form, setForm] = useState({
@@ -26,25 +25,26 @@ const ContactForm = () => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     if (sending) return;
     e.preventDefault();
-    setSending(true);
 
     if (!form.name || !form.email || !form.subject || !form.message) {
       setSending(false);
-      setSent(false);
       return TriggerToast({
         message: "⚠️ Please fill all fields!",
         type: "error",
-        variant: "outline",
+        variant: "solid",
       });
     }
 
     try {
+      setSending(true);
+
       const { data } = await axios.post("/api/email/send", form);
 
       if (data.success) {
         TriggerToast({
           message: "📨 Message Sent Successfully!",
           type: "success",
+          variant: "solid",
         });
 
         setForm({ name: "", email: "", subject: "", message: "" });
@@ -52,7 +52,7 @@ const ContactForm = () => {
         TriggerToast({
           message: "❌ Failed to send email!",
           type: "error",
-          variant: "outline",
+          variant: "glass",
         });
       }
     } catch (err) {
@@ -60,15 +60,10 @@ const ContactForm = () => {
       TriggerToast({
         message: "❌ Server Error. Try again!",
         type: "error",
-        variant: "outline",
+        variant: "solid",
       });
     } finally {
       setSending(false);
-      setSent(true);
-
-      setTimeout(() => {
-        setSent(false);
-      }, 3000);
     }
   };
 
@@ -160,68 +155,25 @@ const ContactForm = () => {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             disabled={sending}
-            className={`
-      relative bg-custom-black px-5 py-2.5 rounded-md flex items-center gap-3
-      overflow-hidden transition-all duration-300 ease-in-out
-      shadow-[0_4px_12px_rgba(0,0,0,0.25)]
-      hover:scale-[1.02] hover:shadow-[0_5px_14px_rgba(0,0,0,0.4)]
-      border border-transparent backdrop-blur-md
-      ${sending ? "opacity-80 cursor-not-allowed" : "cursor-pointer"}
-    `}
+            className={` relative bg-custom-black px-5 py-2 rounded-md overflow-hidden transition-all duration-300 ease-in-out shadow-[0_4px_12px_rgba(0,0,0,0.25)] hover:scale-[1.02] hover:shadow-[0_5px_14px_rgba(0,0,0,0.4)] border border-transparent backdrop-blur-md ${sending ? "opacity-80 cursor-not-allowed" : "cursor-pointer"} `}
             style={{ color: "#ffffff" }}
           >
-            {!sending && !sent && (
+            {!sending && (
               <span
-                className={`
-          absolute left-5 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full z-10
-          bg-[linear-gradient(180deg,#498DE6_0%,#2C62B9_50%,#103893_100%)]
-          transition-transform duration-500 ease-in-out
-          ${hovered ? "scale-[45]" : "scale-0"}
-        `}
+                className={` absolute left-5 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full z-10 bg-[linear-gradient(180deg,#498DE6_0%,#2C62B9_50%,#103893_100%)] transition-transform duration-500 ease-in-out ${hovered ? "scale-[45]" : "scale-0"}`}
               ></span>
             )}
 
             {/* Idle Text */}
-            <span
-              className={`
-                flex items-center gap-2.5 pl-5 relative z-30 font-medium text-[16px]
-                tracking-wide transition-all duration-300
-                ${sending || sent ? "opacity-0 -translate-y-2" : "opacity-100"}
-                `}
+            <div
+              className={`min-w-40  flex justify-center items-center gap-2 relative z-30 font-mono text-md tracking-wide transition-all duration-300 ${sending && "flex-row-reverse"}`}
             >
-              Send Message
+              {sending ? "Sending ..." : "Send Message"}
+
               <span className="relative z-20 transition-all duration-300">
-                <Icons icon="send-mail" size={18} />
+                <Icons icon={`${sending ? "loader" : "send-mail"}`} size={18} />
               </span>
-            </span>
-
-            {sending && (
-              <span
-                className="absolute top-1/2 -translate-y-1/2 z-30"
-                style={{
-                  animation: "planeFly 2s forwards ease-out",
-                }}
-              >
-                <Icons icon="send-mail" size={20} />
-              </span>
-            )}
-
-            <style>
-              {`
-                @keyframes planeFly {
-                  0% {
-                    left: 0%;
-                    opacity: 1;
-                    transform: translateY(-50%) rotate(-10deg);
-                  }
-                  100% {
-                    left: 100%;
-                    opacity: 0.3;
-                    transform: translateY(-50%) rotate(20deg);
-                  }
-                }
-              `}
-            </style>
+            </div>
           </button>
         </div>
       </form>
