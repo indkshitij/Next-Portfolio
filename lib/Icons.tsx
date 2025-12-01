@@ -159,6 +159,24 @@ const Icons = ({ icon, className, size = 25, stroke }: IconProps) => {
         </svg>
       );
 
+    case "loader":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={size || 30}
+          height={size || 30}
+          viewBox="0 0 50 50"
+          className={`${className} animate-spin`}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={stroke || 3}
+          strokeLinecap="round"
+        >
+          <circle cx="25" cy="25" r="20" stroke="currentColor" opacity="0.2" />
+          <path d="M45 25a20 20 0 0 1-20 20" stroke="currentColor" />
+        </svg>
+      );
+
     case "menu":
       return (
         <svg
