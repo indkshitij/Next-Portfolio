@@ -18,21 +18,21 @@ const Menu = () => {
             <Link key={index} href={item.link}>
               <div
                 className={cn(
-                  "group flex items-center gap-0 px-2 py-2.5 rounded-lg transition-all duration-300 ease-linear cursor-pointer overflow-hidden",
+                  "group flex items-center gap-0 px-2 py-2.5 rounded-lg transition-all duration-300 ease-in-out cursor-pointer overflow-hidden",
                   isActive
                     ? "bg-white text-custom-black shadow-md"
                     : "hover:bg-white/10 text-white"
                 )}
               >
                 <span
-                  className={`text-2xl transition-all duration-300 ease-linear px-1 group-hover:px-3 font-black",
+                  className={`text-2xl transition-all duration-300 ease-in-out px-1 group-hover:px-3 font-black",
                     ${!isActive && "group-hover:-translate-x-2"}`}
                 >
                   {item.icon}
                 </span>
 
                 <span
-                  className={`text-md opacity-0 font-semibold whitespace-nowrap overflow-hidden transition-all duration-300 ease-linear max-w-0 group-hover:opacity-100 group-hover:max-w-[120px]`}
+                  className={`text-md opacity-0 font-semibold whitespace-nowrap overflow-hidden transition-all duration-200 ease-in-out max-w-0 group-hover:opacity-100 group-hover:max-w-[120px]`}
                 >
                   {item.name}
                 </span>

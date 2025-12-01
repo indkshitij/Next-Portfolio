@@ -13,7 +13,7 @@ export const SocialHandle = () => {
               style={{
                 ["--bg" as string]: getColorByName(s.name.toLowerCase()),
               }}
-              className="group relative flex items-center gap-0 px-2 hover:px-3 py-2.5 rounded-lg cursor-pointer bg-white dark:border-zinc-400 text-custom-black dark:text-gray-200 overflow-hidden transition-all duration-300 ease-linear hover:text-white hover:shadow-lg "
+              className="group relative flex items-center gap-0 px-2 hover:px-3 py-2.5 rounded-lg cursor-pointer bg-white dark:border-zinc-400 text-custom-black dark:text-gray-200 overflow-hidden transition-all duration-300 ease-in-out hover:text-white hover:shadow-lg "
             >
               <span
                 className="absolute inset-0 rounded-lg scale-0 opacity-0 transition-all duration-0 group-hover:scale-110 group-hover:opacity-100"
@@ -24,7 +24,7 @@ export const SocialHandle = () => {
                 {s.icon}
               </span>
 
-              <span className="relative text-md whitespace-nowrap font-semibold text-white max-w-0 opacity-0 overflow-hidden transition-all duration-300 ease-linear group-hover:max-w-[120px] group-hover:opacity-100">
+              <span className="relative text-md whitespace-nowrap font-semibold text-white max-w-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out group-hover:max-w-[120px] group-hover:opacity-100">
                 {s.name}
               </span>
             </div>

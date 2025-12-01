@@ -48,7 +48,7 @@ const SmallButton = ({
 
           {/* Text + Icon */}
           <span
-            className={`min-w-48 flex justify-center items-center gap-2.5 px-5 relative z-20 font-medium text-[16px] tracking-wide transition-colors duration-300 ${textColor} `}
+            className={`min-w-30 sm:min-w-48 flex justify-center items-center gap-2.5 px-2 sm:px-5 relative z-20 font-medium text-[14px] sm:text-[16px] transition-all duration-300 ${textColor} `}
             style={{
               color: hovered ? hoverTextColor : undefined,
             }}

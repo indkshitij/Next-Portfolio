@@ -48,7 +48,7 @@ const CTAButton = ({
           className={`
             absolute left-5 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full z-10
             ${hoverBubbleColor}
-            transition-transform duration-500 ease-in-out
+            transition-transform duration-300 ease-in-out
             scale-0 group-hover:scale-[45]
             
           `}
@@ -57,8 +57,8 @@ const CTAButton = ({
         {/* Text + Icon */}
         <span
           className={`
-            flex justify-center items-center gap-2.5 pl-5 relative z-20 font-semibold
-             text-sm sm:text-[16px] tracking-wide transition-colors duration-300
+            flex justify-center items-center gap-2.5 pl-5 relative z-10 font-semibold
+             text-sm sm:text-[16px] tracking-wide transition-all duration-0
             ${textColor}
           `}
           style={{

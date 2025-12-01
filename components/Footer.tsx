@@ -39,7 +39,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-start gap-10 sm:gap-20">
             {/* LEFT SECTION */}
             <div className="md:w-1/2 w-full flex flex-col items-start gap-4">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl  font-bold tracking-wide">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-wide">
                 Let’s <br /> Connect
               </h1>
 
@@ -69,7 +69,7 @@ const Footer = () => {
               </h1>
 
               {/* Resume Button */}
-              <div className="flex flex-col sm:flex-row justify-center items-center gap-2.5 sm:gap-5 mt-2">
+              <div className="flex flex-wrap flex-row justify-between sm:justify-center items-center gap-2.5 sm:gap-5 mt-2">
                 <SmallButton
                   content="Let's Connect"
                   path="/contact"
@@ -97,7 +97,7 @@ const Footer = () => {
               </div>
 
               <div className="flex items-center gap-4 bg-gray-100 rounded-lg py-1.5 pl-3 pr-1.5 sm:py-2 sm:pl-4 sm:pr-2 w-fit">
-                <p className="min-w-62 sm:min-w-86 text-md sm:text-lg text-gray-500 whitespace-nowrap overflow-hidden border-r-2 border-blue-font select-none">
+                <p className="min-w-60 sm:min-w-86 text-md sm:text-lg text-gray-500 whitespace-nowrap overflow-hidden border-r-2 border-blue-font select-none">
                   <Typewriter text={email} />
                   {/* {email} */}
                 </p>
