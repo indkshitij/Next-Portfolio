@@ -3,7 +3,7 @@ export default function Logo() {
     <div className="group w-fit h-auto flex justify-center items-center cursor-pointer transition-all duration-300">
       <div className="
         font-logo text-4xl sm:text-5xl font-bold tracking-tight 
-        text-custom-black dark:text-white
+        text-white tracking-relaxed sm:text-custom-black dark:text-white
         relative
       ">
         KS

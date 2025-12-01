@@ -36,9 +36,9 @@ export default function HeroSection() {
 
   return (
     <section className="relative w-full min-h-[92vh] sm:min-h-screen flex justify-center items-center bg-transparent">
-      <div className="relative w-[96vw] h-[90vh] sm:h-[92vh] bg-white border border-gray-300 dark:border-gray-700 rounded-[20px] overflow-hidden backdrop-blur-md p-1 md:p-6 shadow-xl flex flex-col justify-between items-center">
+      <div className="relative w-[97vw] h-[90vh] sm:h-[95vh] bg-white border border-gray-300 dark:border-gray-700 rounded-[20px] overflow-hidden backdrop-blur-md p-1 md:p-6 shadow-xl flex flex-col justify-between items-center">
         <div className="absolute inset-0 pointer-events-none">
-          <BackgroundRippleEffect />
+          <BackgroundRippleEffect  rows={12} cols={27} cellSize={60} />
         </div>
 
         <div className="h-1/4 sm:h-1/5 z-50 hidden md:flex justify-between w-full">

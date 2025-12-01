@@ -69,7 +69,7 @@ const SectionHeading = ({
   return (
     <div
       ref={ref}
-      className={`flex flex-col gap-2 items-center justify-center py-4 mb-10 select-none ${className}`}
+      className={`flex flex-col gap-2 items-center justify-center py-4 mb-10 select-none  ${className}`}
     >
       {icon && (
         <div className="text-white flex items-center bg-blue-500/10 rounded-full p-3.5">

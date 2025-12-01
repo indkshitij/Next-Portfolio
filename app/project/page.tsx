@@ -2,9 +2,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeading from "@/frontend/atoms/PageHeading";
 import SectionContainer from "@/lib/Wrapper/SectionContainer";
-import { Metadata } from "next";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Projects',
 };
 

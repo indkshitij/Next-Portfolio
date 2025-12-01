@@ -18,6 +18,7 @@ const Footer = () => {
       TriggerToast({
         message: "📧 Email copied!",
         type: "success",
+        variant:"solid",
       });
     } catch (err) {
       console.log(err);
@@ -102,7 +103,7 @@ const Footer = () => {
 
               <div className="flex items-center gap-4 bg-gray-100 rounded-lg py-1.5 pl-3 pr-1.5 sm:py-2 sm:pl-4 sm:pr-2 w-fit">
                 <p
-                  className="min-w-70 sm:min-w-86 text-md sm:text-lg text-gray-500 whitespace-nowrap overflow-hidden border-r-2 border-blue-font select-none"
+                  className="min-w-62 sm:min-w-86 text-md sm:text-lg text-gray-500 whitespace-nowrap overflow-hidden border-r-2 border-blue-font select-none"
                 >
                   <Typewriter text={email}/>
                   {/* {email} */}

@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import StoreProveider from "../lib/Wrapper/StoreProveider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-export const metadata: Metadata = {
+export const metadata= {
   title: {
     default: "Kshitij Singh",
     template: "%s | Kshitij Singh",

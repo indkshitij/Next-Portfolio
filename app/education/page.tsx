@@ -4,9 +4,8 @@ import { EDUCATION_DATA } from "@/lib/DummyData";
 import EducationCard from "@/frontend/molecules/EducationCard";
 import PageHeading from "@/frontend/atoms/PageHeading";
 import SectionContainer from "@/lib/Wrapper/SectionContainer";
-import { Metadata } from "next";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Education',
 };
 
@@ -18,7 +17,7 @@ const page = () => {
         heading="Education & Learning Journey"
         subheading="A foundation built on continuous learning, technical curiosity, and a passion for problem-solving."
       />
-      <div className="bg-[#F8FAFB] pt-5 pb-10">
+      <div className="bg-[#F8FAFB] sm:pt-5 pb-10">
         <SectionContainer>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-5 md:px-15">
             {EDUCATION_DATA.map((edu, index) => (

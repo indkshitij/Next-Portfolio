@@ -77,7 +77,7 @@ export default function MobileNavbar() {
               </Link>
             ))}
 
-            <div className="mt-5 mb-2.5 flex flex-wrap justify-center items-center gap-5">
+            <div className="mt-6 mb-2.5 flex flex-wrap justify-center items-center gap-5">
               {SOCIAL_LINKS.map((social, index) => {
                 return (
                   <Link
