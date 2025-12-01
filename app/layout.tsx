@@ -504,14 +504,14 @@ export const metadata= {
     url: "https://kshitijsingh.vercel.app",
     siteName: "Kshitij Singh Portfolio",
     type: "website",
-    // images: [
-    //   {
-    //     url: "/og-image.png", // optional if you add OG image
-    //     width: 1200,
-    //     height: 630,
-    //     alt: "Kshitij Singh Portfolio Preview",
-    //   },
-    // ],
+    images: [
+      {
+        url: "/heroSection.png", 
+        width: 1200,
+        height: 630,
+        alt: "Kshitij Singh Portfolio Preview",
+      },
+    ],
   },
 
   // Your social + dev links
