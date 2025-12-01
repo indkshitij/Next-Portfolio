@@ -152,6 +152,7 @@ const ContactForm = () => {
         <div className="flex justify-end">
           <button
             type="submit"
+  
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             disabled={sending}
