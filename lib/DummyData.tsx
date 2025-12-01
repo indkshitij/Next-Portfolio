@@ -428,194 +428,761 @@ export const EXPERTISE = [
   },
 ];
 
+// export const SKILLS_DATA = [
+//   {
+//     name: "C++",
+//     normalized: normalizeTechName("C++"),
+//     icon: TECH_ICONS[normalizeTechName("C++")],
+//     description:
+//       "A fast and powerful language used for algorithms and performance-critical systems.",
+//   },
+//   {
+//     name: "JavaScript",
+//     normalized: normalizeTechName("JavaScript"),
+//     icon: TECH_ICONS[normalizeTechName("JavaScript")],
+//     description:
+//       "The core language of the web, powering dynamic and interactive interfaces.",
+//   },
+//   {
+//     name: "TypeScript",
+//     normalized: normalizeTechName("TypeScript"),
+//     icon: TECH_ICONS[normalizeTechName("TypeScript")],
+//     description:
+//       "JavaScript with type safety — ideal for scalable and maintainable applications.",
+//   },
+//   {
+//     name: "HTML5",
+//     normalized: normalizeTechName("HTML5"),
+//     icon: TECH_ICONS[normalizeTechName("HTML5")],
+//     description: "Provides structure and semantic meaning to web content.",
+//   },
+//   {
+//     name: "CSS3",
+//     normalized: normalizeTechName("CSS3"),
+//     icon: TECH_ICONS[normalizeTechName("CSS3")],
+//     description: "Used to build modern, responsive, and visually elegant UIs.",
+//   },
+
+//   // Frontend
+//   {
+//     name: "React",
+//     normalized: normalizeTechName("React"),
+//     icon: TECH_ICONS[normalizeTechName("React")],
+//     description: "Component-driven UI library for building dynamic frontends.",
+//   },
+//   {
+//     name: "Next.js",
+//     normalized: normalizeTechName("Next.js"),
+//     icon: TECH_ICONS[normalizeTechName("Next.js")],
+//     description:
+//       "A full-stack React framework with SSR, routing, and API support built in.",
+//   },
+//   {
+//     name: "Tailwind CSS",
+//     normalized: normalizeTechName("Tailwind CSS"),
+//     icon: TECH_ICONS[normalizeTechName("Tailwind CSS")],
+//     description:
+//       "A utility-first CSS framework for fast and consistent styling.",
+//   },
+//   {
+//     name: "React Router",
+//     normalized: normalizeTechName("React Router"),
+//     icon: TECH_ICONS[normalizeTechName("React Router")],
+//     description: "Handles client-side routing in modern React applications.",
+//   },
+
+//   // Backend
+//   {
+//     name: "Node.js",
+//     normalized: normalizeTechName("Node.js"),
+//     icon: TECH_ICONS[normalizeTechName("Node.js")],
+//     description: "JavaScript runtime used to build scalable backend services.",
+//   },
+//   {
+//     name: "Express.js",
+//     normalized: normalizeTechName("Express.js"),
+//     icon: TECH_ICONS[normalizeTechName("Express.js")],
+//     description:
+//       "Minimal and flexible Node.js framework for building robust REST APIs.",
+//   },
+//   {
+//     name: "REST API",
+//     normalized: normalizeTechName("REST API"),
+//     icon: TECH_ICONS[normalizeTechName("REST API")],
+//     description: "A standard architectural style for designing scalable APIs.",
+//   },
+
+//   // Database & Cloud
+//   {
+//     name: "MongoDB",
+//     normalized: normalizeTechName("MongoDB"),
+//     icon: TECH_ICONS[normalizeTechName("MongoDB")],
+//     description:
+//       "A NoSQL database for flexible, high-performance applications.",
+//   },
+//   {
+//     name: "Mongoose",
+//     normalized: normalizeTechName("Mongoose"),
+//     icon: TECH_ICONS[normalizeTechName("Mongoose")],
+//     description: "Elegant object modeling tool for MongoDB in Node.js.",
+//   },
+//   {
+//     name: "Azure",
+//     normalized: normalizeTechName("Azure"),
+//     icon: TECH_ICONS[normalizeTechName("Azure")],
+//     description:
+//       "Microsoft’s cloud platform for deploying and scaling applications.",
+//   },
+
+//   // Tools
+//   {
+//     name: "Git",
+//     normalized: normalizeTechName("Git"),
+//     icon: TECH_ICONS[normalizeTechName("Git")],
+//     description:
+//       "Version control system that enables collaboration and tracking changes.",
+//   },
+//   {
+//     name: "GitHub",
+//     normalized: normalizeTechName("GitHub"),
+//     icon: TECH_ICONS[normalizeTechName("GitHub")],
+//     description:
+//       "A platform for hosting repositories and streamlining team development.",
+//   },
+//   {
+//     name: "Docker",
+//     normalized: normalizeTechName("Docker"),
+//     icon: TECH_ICONS[normalizeTechName("Docker")],
+//     description:
+//       "Containerization platform ensuring consistent development and deployments.",
+//   },
+//   {
+//     name: "Postman",
+//     normalized: normalizeTechName("Postman"),
+//     icon: TECH_ICONS[normalizeTechName("Postman")],
+//     description: "A powerful tool for building, testing, and managing APIs.",
+//   },
+//   {
+//     name: "VS Code",
+//     normalized: normalizeTechName("VS Code"),
+//     icon: TECH_ICONS[normalizeTechName("VS Code")],
+//     description:
+//       "Highly customizable source-code editor for efficient development.",
+//   },
+//   {
+//     name: "Figma",
+//     normalized: normalizeTechName("Figma"),
+//     icon: TECH_ICONS[normalizeTechName("Figma")],
+//     description:
+//       "Collaborative UI/UX design tool for building modern interfaces.",
+//   },
+//   {
+//     name: "Linux",
+//     normalized: normalizeTechName("Linux"),
+//     icon: TECH_ICONS[normalizeTechName("Linux")],
+//     description:
+//       "Collaborative UI/UX design tool for building modern interfaces.",
+//   },
+// ];
+
 export const SKILLS_DATA = [
-  {
-    name: "C++",
-    normalized: normalizeTechName("C++"),
-    icon: TECH_ICONS[normalizeTechName("C++")],
-    description:
-      "A fast and powerful language used for algorithms and performance-critical systems.",
-  },
+  // ---------------------------
+  // 1. LANGUAGES
+  // ---------------------------
   {
     name: "JavaScript",
     normalized: normalizeTechName("JavaScript"),
     icon: TECH_ICONS[normalizeTechName("JavaScript")],
-    description:
-      "The core language of the web, powering dynamic and interactive interfaces.",
+    description: "Dynamic programming language powering the modern web.",
   },
   {
     name: "TypeScript",
     normalized: normalizeTechName("TypeScript"),
     icon: TECH_ICONS[normalizeTechName("TypeScript")],
-    description:
-      "JavaScript with type safety — ideal for scalable and maintainable applications.",
+    description: "Strongly typed JavaScript for scalable applications.",
+  },
+  {
+    name: "Python",
+    normalized: normalizeTechName("Python"),
+    icon: TECH_ICONS[normalizeTechName("Python")],
+    description: "High-level language for automation, AI, and backend APIs.",
   },
   {
     name: "HTML5",
     normalized: normalizeTechName("HTML5"),
     icon: TECH_ICONS[normalizeTechName("HTML5")],
-    description: "Provides structure and semantic meaning to web content.",
+    description: "Semantic markup for structuring modern web content.",
   },
   {
     name: "CSS3",
     normalized: normalizeTechName("CSS3"),
     icon: TECH_ICONS[normalizeTechName("CSS3")],
-    description: "Used to build modern, responsive, and visually elegant UIs.",
+    description: "Stylesheet language for responsive and elegant UI.",
   },
 
-  // Frontend
+  // ---------------------------
+  // 2. FRONTEND
+  // ---------------------------
   {
-    name: "React",
-    normalized: normalizeTechName("React"),
-    icon: TECH_ICONS[normalizeTechName("React")],
-    description: "Component-driven UI library for building dynamic frontends.",
+    name: "React.js",
+    normalized: normalizeTechName("React.js"),
+    icon: TECH_ICONS[normalizeTechName("React.js")],
+    description: "Component-driven UI library for dynamic interfaces.",
   },
   {
     name: "Next.js",
     normalized: normalizeTechName("Next.js"),
     icon: TECH_ICONS[normalizeTechName("Next.js")],
-    description:
-      "A full-stack React framework with SSR, routing, and API support built in.",
+    description: "React framework with SSR, routing, and API routes.",
   },
   {
     name: "Tailwind CSS",
     normalized: normalizeTechName("Tailwind CSS"),
     icon: TECH_ICONS[normalizeTechName("Tailwind CSS")],
-    description:
-      "A utility-first CSS framework for fast and consistent styling.",
+    description: "Utility-first CSS framework for fast styling.",
+  },
+  {
+    name: "Material UI",
+    normalized: normalizeTechName("Material UI"),
+    icon: TECH_ICONS[normalizeTechName("Material UI")],
+    description: "Google’s component library for polished UIs.",
+  },
+  {
+    name: "Chakra UI",
+    normalized: normalizeTechName("Chakra UI"),
+    icon: TECH_ICONS[normalizeTechName("Chakra UI")],
+    description: "Accessible React components for clean interfaces.",
+  },
+  {
+    name: "shadcn/ui",
+    normalized: normalizeTechName("shadcn/ui"),
+    icon: TECH_ICONS[normalizeTechName("shadcn/ui")],
+    description: "Beautifully crafted UI components built on Radix.",
+  },
+  {
+    name: "Headless UI",
+    normalized: normalizeTechName("Headless UI"),
+    icon: TECH_ICONS[normalizeTechName("Headless UI")],
+    description: "Unstyled UI primitives for complete design freedom.",
+  },
+  {
+    name: "Radix UI",
+    normalized: normalizeTechName("Radix UI"),
+    icon: TECH_ICONS[normalizeTechName("Radix UI")],
+    description: "Accessible React primitives for custom UIs.",
+  },
+  {
+    name: "Framer Motion",
+    normalized: normalizeTechName("Framer Motion"),
+    icon: TECH_ICONS[normalizeTechName("Framer Motion")],
+    description: "Production-grade animation library for React.",
+  },
+  {
+    name: "Redux Toolkit",
+    normalized: normalizeTechName("Redux Toolkit"),
+    icon: TECH_ICONS[normalizeTechName("Redux Toolkit")],
+    description: "State management for predictable and scalable apps.",
   },
   {
     name: "React Router",
     normalized: normalizeTechName("React Router"),
     icon: TECH_ICONS[normalizeTechName("React Router")],
-    description: "Handles client-side routing in modern React applications.",
+    description: "Client-side routing for React applications.",
   },
 
-  // Backend
+  // ---------------------------
+  // 3. BACKEND
+  // ---------------------------
   {
     name: "Node.js",
     normalized: normalizeTechName("Node.js"),
     icon: TECH_ICONS[normalizeTechName("Node.js")],
-    description: "JavaScript runtime used to build scalable backend services.",
+    description: "JavaScript runtime for building fast server-side logic.",
   },
   {
     name: "Express.js",
     normalized: normalizeTechName("Express.js"),
     icon: TECH_ICONS[normalizeTechName("Express.js")],
-    description:
-      "Minimal and flexible Node.js framework for building robust REST APIs.",
+    description: "Minimalist framework for building REST APIs.",
   },
   {
     name: "REST API",
     normalized: normalizeTechName("REST API"),
     icon: TECH_ICONS[normalizeTechName("REST API")],
-    description: "A standard architectural style for designing scalable APIs.",
+    description: "Standard architecture for scalable web services.",
+  },
+  {
+    name: "Socket.IO",
+    normalized: normalizeTechName("Socket.IO"),
+    icon: TECH_ICONS[normalizeTechName("Socket.IO")],
+    description: "Real-time, event-based communication engine.",
+  },
+  {
+    name: "JWT",
+    normalized: normalizeTechName("JWT"),
+    icon: TECH_ICONS[normalizeTechName("JWT")],
+    description: "Secure token-based authentication method.",
+  },
+  {
+    name: "OpenAI API",
+    normalized: normalizeTechName("OpenAI API"),
+    icon: TECH_ICONS[normalizeTechName("OpenAI API")],
+    description: "AI-powered APIs for chat, text, and embeddings.",
   },
 
-  // Database & Cloud
+  // ---------------------------
+  // 4. FULLSTACK / DATABASES
+  // ---------------------------
   {
     name: "MongoDB",
     normalized: normalizeTechName("MongoDB"),
     icon: TECH_ICONS[normalizeTechName("MongoDB")],
-    description:
-      "A NoSQL database for flexible, high-performance applications.",
+    description: "Document-based NoSQL database for flexible schemas.",
   },
   {
     name: "Mongoose",
     normalized: normalizeTechName("Mongoose"),
     icon: TECH_ICONS[normalizeTechName("Mongoose")],
-    description: "Elegant object modeling tool for MongoDB in Node.js.",
-  },
-  {
-    name: "Azure",
-    normalized: normalizeTechName("Azure"),
-    icon: TECH_ICONS[normalizeTechName("Azure")],
-    description:
-      "Microsoft’s cloud platform for deploying and scaling applications.",
+    description: "ODM library for MongoDB in Node.js applications.",
   },
 
-  // Tools
+  // ---------------------------
+  // 5. LIBRARIES / UTILITIES
+  // ---------------------------
+  {
+    name: "Axios",
+    normalized: normalizeTechName("Axios"),
+    icon: TECH_ICONS[normalizeTechName("Axios")],
+    description: "Promise-based HTTP client for API communication.",
+  },
+  {
+    name: "Fetch API",
+    normalized: normalizeTechName("Fetch API"),
+    icon: TECH_ICONS[normalizeTechName("Fetch API")],
+    description: "Native browser API for network requests.",
+  },
+  {
+    name: "Zod",
+    normalized: normalizeTechName("Zod"),
+    icon: TECH_ICONS[normalizeTechName("Zod")],
+    description: "Schema validation for TypeScript applications.",
+  },
+  {
+    name: "Prettier",
+    normalized: normalizeTechName("Prettier"),
+    icon: TECH_ICONS[normalizeTechName("Prettier")],
+    description: "Code formatter ensuring consistent style.",
+  },
+
+  // ---------------------------
+  // 6. VERSION CONTROL
+  // ---------------------------
   {
     name: "Git",
     normalized: normalizeTechName("Git"),
     icon: TECH_ICONS[normalizeTechName("Git")],
-    description:
-      "Version control system that enables collaboration and tracking changes.",
+    description: "Distributed version control for tracking changes.",
   },
   {
     name: "GitHub",
     normalized: normalizeTechName("GitHub"),
     icon: TECH_ICONS[normalizeTechName("GitHub")],
-    description:
-      "A platform for hosting repositories and streamlining team development.",
+    description: "Platform for hosting repositories and collaboration.",
+  },
+
+  // ---------------------------
+  // 7. CLOUD
+  // ---------------------------
+  {
+    name: "Amazon Web Services",
+    normalized: normalizeTechName("Amazon Web Services"),
+    icon: TECH_ICONS[normalizeTechName("Amazon Web Services")],
+    description: "Cloud platform for deployment and scaling apps.",
+  },
+  {
+    name: "Google Cloud",
+    normalized: normalizeTechName("Google Cloud"),
+    icon: TECH_ICONS[normalizeTechName("Google Cloud")],
+    description: "Google’s ecosystem for cloud-based infrastructure.",
+  },
+  {
+    name: "Cloudinary",
+    normalized: normalizeTechName("Cloudinary"),
+    icon: TECH_ICONS[normalizeTechName("Cloudinary")],
+    description: "Media optimization and image hosting platform.",
+  },
+
+  // ---------------------------
+  // 8. DEPLOYMENT / HOSTING
+  // ---------------------------
+  {
+    name: "Vercel",
+    normalized: normalizeTechName("Vercel"),
+    icon: TECH_ICONS[normalizeTechName("Vercel")],
+    description: "Optimal hosting for Next.js and frontend apps.",
+  },
+  {
+    name: "Render",
+    normalized: normalizeTechName("Render"),
+    icon: TECH_ICONS[normalizeTechName("Render")],
+    description: "Full-service cloud for web services and APIs.",
+  },
+  {
+    name: "Replit",
+    normalized: normalizeTechName("Replit"),
+    icon: TECH_ICONS[normalizeTechName("Replit")],
+    description: "Online IDE and hosting for rapid prototyping.",
+  },
+  {
+    name: "PNPM",
+    normalized: normalizeTechName("PNPM"),
+    icon: TECH_ICONS[normalizeTechName("PNPM")],
+    description: "Fast and disk-efficient package manager.",
   },
   {
     name: "Docker",
     normalized: normalizeTechName("Docker"),
     icon: TECH_ICONS[normalizeTechName("Docker")],
-    description:
-      "Containerization platform ensuring consistent development and deployments.",
+    description: "Containerization for consistent development environments.",
+  },
+  {
+    name: "Kubernetes",
+    normalized: normalizeTechName("Kubernetes"),
+    icon: TECH_ICONS[normalizeTechName("Kubernetes")],
+    description: "Orchestration system for deploying and scaling containers.",
+  },
+
+  // ---------------------------
+  // 9. OS
+  // ---------------------------
+  {
+    name: "Linux",
+    normalized: normalizeTechName("Linux"),
+    icon: TECH_ICONS[normalizeTechName("Linux")],
+    description: "Open-source OS widely used in servers and development.",
+  },
+  {
+    name: "Microsoft Windows",
+    normalized: normalizeTechName("Microsoft Windows"),
+    icon: TECH_ICONS[normalizeTechName("Microsoft Windows")],
+    description: "Popular operating system for development and productivity.",
+  },
+
+  // ---------------------------
+  // 10. BROWSERS
+  // ---------------------------
+  {
+    name: "Google Chrome",
+    normalized: normalizeTechName("Google Chrome"),
+    icon: TECH_ICONS[normalizeTechName("Google Chrome")],
+    description: "Most widely used browser for development and testing.",
+  },
+  {
+    name: "Brave Browser",
+    normalized: normalizeTechName("Brave Browser"),
+    icon: TECH_ICONS[normalizeTechName("Brave Browser")],
+    description: "Privacy-focused web browser with built-in shields.",
+  },
+  {
+    name: "Safari",
+    normalized: normalizeTechName("Safari"),
+    icon: TECH_ICONS[normalizeTechName("Safari")],
+    description: "Apple’s fast and privacy-focused web browser.",
+  },
+
+  // ---------------------------
+  // 11. TOOLS / OTHER
+  // ---------------------------
+  {
+    name: "Figma",
+    normalized: normalizeTechName("Figma"),
+    icon: TECH_ICONS[normalizeTechName("Figma")],
+    description: "Collaborative tool for designing UI/UX.",
+  },
+  {
+    name: "Firebase",
+    normalized: normalizeTechName("Firebase"),
+    icon: TECH_ICONS[normalizeTechName("Firebase")],
+    description: "Backend-as-a-service for authentication and databases.",
+  },
+  {
+    name: "Google Colab",
+    normalized: normalizeTechName("Google Colab"),
+    icon: TECH_ICONS[normalizeTechName("Google Colab")],
+    description: "Notebook environment for ML and Python scripting.",
   },
   {
     name: "Postman",
     normalized: normalizeTechName("Postman"),
     icon: TECH_ICONS[normalizeTechName("Postman")],
-    description: "A powerful tool for building, testing, and managing APIs.",
+    description: "API testing and documentation platform.",
+  },
+  {
+    name: "PowerShell",
+    normalized: normalizeTechName("PowerShell"),
+    icon: TECH_ICONS[normalizeTechName("PowerShell")],
+    description: "Powerful shell and scripting language by Microsoft.",
+  },
+  {
+    name: "Slack",
+    normalized: normalizeTechName("Slack"),
+    icon: TECH_ICONS[normalizeTechName("Slack")],
+    description: "Team messaging and collaboration platform.",
+  },
+  {
+    name: "Canva",
+    normalized: normalizeTechName("Canva"),
+    icon: TECH_ICONS[normalizeTechName("Canva")],
+    description: "Design tool for marketing visuals and branding.",
+  },
+  {
+    name: "Adobe",
+    normalized: normalizeTechName("Adobe"),
+    icon: TECH_ICONS[normalizeTechName("Adobe")],
+    description: "Suite of tools for creative and design workflows.",
+  },
+  {
+    name: "Adobe Firefly",
+    normalized: normalizeTechName("Adobe Firefly"),
+    icon: TECH_ICONS[normalizeTechName("Adobe Firefly")],
+    description: "AI-powered creative assistant for generating assets.",
+  },
+  {
+    name: "HeroUI",
+    normalized: normalizeTechName("HeroUI"),
+    icon: TECH_ICONS[normalizeTechName("HeroUI")],
+    description: "Component library built on Tailwind CSS.",
+  },
+  {
+    name: "Google Gemini",
+    normalized: normalizeTechName("Google Gemini"),
+    icon: TECH_ICONS[normalizeTechName("Google Gemini")],
+    description: "Google’s multimodal AI model for advanced reasoning.",
+  },
+  {
+    name: "Gemma AI",
+    normalized: normalizeTechName("Gemma AI"),
+    icon: TECH_ICONS[normalizeTechName("Gemma AI")],
+    description: "Open-source lightweight AI model by Google.",
   },
   {
     name: "VS Code",
     normalized: normalizeTechName("VS Code"),
     icon: TECH_ICONS[normalizeTechName("VS Code")],
-    description:
-      "Highly customizable source-code editor for efficient development.",
+    description: "Feature-rich code editor for rapid development.",
+  },
+
+  {
+    name: "GitHub Copilot",
+    normalized: normalizeTechName("GitHub Copilot"),
+    icon: TECH_ICONS[normalizeTechName("GitHub Copilot")],
+    description: "AI coding assistant powered by GitHub and OpenAI.",
   },
   {
-    name: "Figma",
-    normalized: normalizeTechName("Figma"),
-    icon: TECH_ICONS[normalizeTechName("Figma")],
-    description:
-      "Collaborative UI/UX design tool for building modern interfaces.",
+    name: "Resend",
+    normalized: normalizeTechName("Resend"),
+    icon: TECH_ICONS[normalizeTechName("Resend")],
+    description: "Modern email API for sending and tracking emails.",
   },
   {
-    name: "Linux",
-    normalized: normalizeTechName("Linux"),
-    icon: TECH_ICONS[normalizeTechName("Linux")],
-    description:
-      "Collaborative UI/UX design tool for building modern interfaces.",
+    name: "Bash",
+    normalized: normalizeTechName("Bash"),
+    icon: TECH_ICONS[normalizeTechName("Bash")],
+    description: "Command-line shell for automation and scripting.",
   },
 ];
 
 export const SKILLS = [
-  // Programming Languages
-  "C++",
+  // 1. LANGUAGES
   "JavaScript",
   "TypeScript",
+  "Python",
   "HTML5",
   "CSS3",
 
-  // Frontend
-  "React",
+  // 2. FRONTEND
+  "React.js",
   "Next.js",
   "Tailwind CSS",
+  "Material UI",
+  "Chakra UI",
+  "shadcn/ui",
+  "Headless UI",
+  "Radix UI",
+  "Framer Motion",
+  "Redux Toolkit",
   "React Router",
 
-  // Backend
+  // 3. BACKEND
   "Node.js",
   "Express.js",
   "REST API",
+  "Socket.IO",
+  "JWT",
+  "OpenAI API",
 
-  // Database & Cloud
+  // 4. FULLSTACK / DATABASES
   "MongoDB",
   "Mongoose",
-  "Azure",
 
-  // Tools
+  // 5. LIBRARIES / UTILITIES
+  "Axios",
+  "Fetch API",
+  "Zod",
+  "Prettier",
+
+  // 6. VERSION CONTROL
   "Git",
   "GitHub",
+
+  // 7. CLOUD
+  "Amazon Web Services",
+  "Google Cloud",
+  "Cloudinary",
+
+  // 8. DEPLOYMENT / HOSTING
+  "Vercel",
+  "Render",
+  "Replit",
+  "PNPM",
   "Docker",
-  "Postman",
-  "VS Code",
+  "Kubernetes",
+
+  // 9. OS
+  "Linux",
+  "Microsoft Windows",
+
+  // 10. BROWSERS
+  "Google Chrome",
+  "Brave Browser",
+  "Safari",
+
+  // 11. TOOLS / OTHER
   "Figma",
+  "Firebase",
+  "Google Colab",
+  "Postman",
+  "PowerShell",
+  "Slack",
+  "Canva",
+  "Adobe",
+  "Adobe Firefly",
+  "HeroUI",
+  "Google Gemini",
+  "Gemma AI",
+  "VS Code",
+  "AI 360",
+  "GitHub Copilot",
+  "Resend",
+  "Bash",
 ];
+// TOTAL: 62 SKILLS
 
 export const RESUME_LINK = "#";
+
+export const myskills = [
+  // ---------------------------
+  // 1. LANGUAGES
+  // ---------------------------
+  { _id: 1, key: "javascript", label: "JavaScript" },
+  { _id: 2, key: "typescript", label: "TypeScript" },
+  { _id: 3, key: "python", label: "Python" },
+  { _id: 5, key: "html", label: "HTML5" },
+  { _id: 6, key: "css3", label: "CSS3" },
+
+  // ---------------------------
+  // 2. FRONTEND
+  // ---------------------------
+  { _id: 7, key: "react", label: "React.js" },
+  { _id: 8, key: "nextjs", label: "Next.js" },
+  { _id: 9, key: "tailwindcss", label: "Tailwind CSS" },
+  { _id: 10, key: "materialui", label: "Material UI" },
+  { _id: 11, key: "chakraui", label: "Chakra UI" },
+  { _id: 12, key: "shadcnui", label: "shadcn/ui" },
+  { _id: 13, key: "headlessui", label: "Headless UI" },
+  { _id: 14, key: "radixui", label: "Radix UI" },
+  { _id: 15, key: "framer", label: "Framer Motion" },
+  { _id: 16, key: "redux", label: "Redux Toolkit" },
+  { _id: 17, key: "reactrouter", label: "React Router" },
+
+  // ---------------------------
+  // 3. BACKEND
+  // ---------------------------
+  { _id: 18, key: "nodejs", label: "Node.js" },
+  { _id: 19, key: "express", label: "Express.js" },
+  { _id: 20, key: "restapi", label: "REST API" },
+  { _id: 21, key: "socketio", label: "Socket.IO" },
+  { _id: 22, key: "jwt", label: "JWT" },
+  { _id: 23, key: "openai", label: "OpenAI API" },
+
+  // ---------------------------
+  // 4. FULLSTACK / DATABASES
+  // ---------------------------
+  { _id: 24, key: "mongodb", label: "MongoDB" },
+  { _id: 25, key: "mongoose", label: "Mongoose" },
+
+  // ---------------------------
+  // 5. LIBRARIES / UTILITIES
+  // ---------------------------
+  { _id: 26, key: "axios", label: "Axios" },
+  { _id: 27, key: "fetch", label: "Fetch API" },
+  { _id: 28, key: "zod", label: "Zod" },
+  { _id: 29, key: "prettier", label: "Prettier" },
+
+  // ---------------------------
+  // 6. VERSION CONTROL
+  // ---------------------------
+  { _id: 30, key: "git", label: "Git" },
+  { _id: 31, key: "github", label: "GitHub" },
+
+  // ---------------------------
+  // 7. CLOUD
+  // ---------------------------
+  { _id: 32, key: "aws", label: "Amazon Web Services (AWS)" },
+  { _id: 33, key: "gcloud", label: "Google Cloud" },
+  { _id: 34, key: "cloudinary", label: "Cloudinary" },
+
+  // ---------------------------
+  // 8. DEPLOYMENT / HOSTING
+  // ---------------------------
+  { _id: 35, key: "vercel", label: "Vercel" },
+  { _id: 36, key: "render", label: "Render" },
+  { _id: 37, key: "replit", label: "Replit" },
+  { _id: 38, key: "pnpm", label: "PNPM" },
+  { _id: 39, key: "docker", label: "Docker" },
+  { _id: 40, key: "kubernetes", label: "Kubernetes" },
+
+  // ---------------------------
+  // 9. OS
+  // ---------------------------
+  { _id: 41, key: "linux", label: "Linux" },
+  { _id: 42, key: "microsoft", label: "Microsoft Windows" },
+
+  // ---------------------------
+  // 10. BROWSERS
+  // ---------------------------
+  { _id: 43, key: "chrome", label: "Google Chrome" },
+  { _id: 44, key: "brave", label: "Brave Browser" },
+
+  // ---------------------------
+  // 11. TOOLS / OTHER
+  // ---------------------------
+  { _id: 45, key: "figma", label: "Figma" },
+  { _id: 46, key: "firebase", label: "Firebase" },
+  { _id: 47, key: "colab", label: "Google Colab" },
+  { _id: 48, key: "postman", label: "Postman" },
+  { _id: 49, key: "powershell", label: "PowerShell" },
+  { _id: 50, key: "slack", label: "Slack" },
+  { _id: 51, key: "canva", label: "Canva" },
+  { _id: 52, key: "adobe", label: "Adobe" },
+  { _id: 53, key: "adobe-firefly", label: "Adobe Firefly" },
+  { _id: 54, key: "heroui", label: "HeroUI" },
+  { _id: 55, key: "gemini", label: "Google Gemini" },
+  { _id: 56, key: "gemma", label: "Gemma AI" },
+  { _id: 57, key: "vscode", label: "VS Code" },
+  { _id: 58, key: "ai360", label: "AI 360" },
+  { _id: 59, key: "ai", label: "Artificial Intelligence" },
+  { _id: 60, key: "copilotgithub", label: "GitHub Copilot" },
+  { _id: 61, key: "resend", label: "Resend" },
+  { _id: 62, key: "bash", label: "Bash" },
+];

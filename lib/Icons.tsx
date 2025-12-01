@@ -1,6 +1,3 @@
-import { calendar } from "@heroui/theme";
-import React from "react";
-
 interface IconProps {
   icon: string;
   className?: string;
@@ -891,6 +888,41 @@ const Icons = ({ icon, className, size = 25, stroke }: IconProps) => {
           <path d="M8 18 L8 20 L11 18" fill="currentColor" />
           <rect x="7" y="8" width="10" height="2" fill="white" />
           <rect x="7" y="11" width="6" height="2" fill="white" />
+        </svg>
+      );
+
+    case "send-mail":
+      return (
+        <svg
+          width={size || 25}
+          height={size || 25}
+          className={className}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={stroke || "2"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M22 2L11 13" />
+          <path d="M22 2L15 22l-4-9-9-4L22 2z" />
+        </svg>
+      );
+
+    case "done":
+      return (
+        <svg
+          width={size || 25}
+          height={size || 25}
+          className={className}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={stroke || "2"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M5 13l4 4L19 7" />
         </svg>
       );
 
