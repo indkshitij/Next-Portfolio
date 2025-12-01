@@ -22,7 +22,7 @@ const CursorWrapper = ({
   textSize = "text-md",
 }: CursorWrapperProps) => {
   const [hovering, setHovering] = useState(false);
-  const [pos, setPos] = useState({ x: 0, y: 0 });
+  const [pos, setPos] = useState({ x: -50, y: -50 });
 
   const handleMove = (e: React.MouseEvent) => {
     setPos({ x: e.clientX + 80, y: e.clientY + 40 });
@@ -30,7 +30,7 @@ const CursorWrapper = ({
 
   return (
     <div
-      className={`hidden sm:flex relative w-fit h-fit ${
+      className={`relative  ${
         hovering ? "cursor-none" : "cursor-default"
       }`}
       onMouseEnter={() => setHovering(true)}

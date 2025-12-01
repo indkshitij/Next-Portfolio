@@ -9,6 +9,11 @@ import { useRouter } from "next/navigation";
 import TriggerToast from "@/frontend/atoms/TriggerToast";
 import { FiLock, FiLoader } from "react-icons/fi";
 import { Input } from "@heroui/input";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Admin Login',
+};
 
 export default function AdminLoginPage() {
   const router = useRouter();

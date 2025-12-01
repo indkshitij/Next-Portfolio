@@ -16,13 +16,13 @@ interface SectionHeadingProps {
   descriptionColor?: string;
 }
 
-const chars = "!<>-_\\/[]{}—=+*^?#_!<>--_-______";
+const chars = "!<>-_\\/[]{}—=+*^?#_ ";
 
 const SectionHeading = ({
   icon,
   heading,
   className = "",
-  speed = 160,
+  speed = 200,
   textColor = "text-custom-black",
   description,
   badge,
@@ -34,7 +34,7 @@ const SectionHeading = ({
   const ref = useRef(null);
 
   const isInView = useInView(ref, {
-    margin: "-15% 0px",
+    margin: "0% 0px",
     once: true,
   });
 

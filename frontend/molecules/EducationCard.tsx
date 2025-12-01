@@ -5,15 +5,8 @@ import { EducationInterface } from "@/interfaces/interface";
 import { formatDateMonthYear } from "@/lib/backendUtils/helperFunction";
 import Image from "next/image";
 import Icons from "@/lib/Icons";
-import GraduationCap from "@/assets/education/graduation-cap.png";
 import React, { useRef } from "react";
-import {
-  motion,
-  useMotionValue,
-  useSpring,
-  useTransform,
-  useMotionTemplate,
-} from "motion/react";
+import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { cn } from "@/lib/utils";
 import { GRADIENTS } from "@/lib/UIUtils";
 import Link from "next/link";
@@ -28,16 +21,25 @@ const EducationCard = ({
 }) => {
   const gradient = index % 2 === 0 ? GRADIENTS.orange : GRADIENTS.blue;
   /** ------------- ALL HOOKS MUST COME FIRST ------------- */
-  const rotateDepth = 17.5;
-  const translateDepth = 20;
+  const rotateDepth = 14.5;
+  const translateDepth = 18;
 
   const ref = useRef<HTMLDivElement>(null);
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
-  const mouseXSpring = useSpring(x, { stiffness: 300, damping: 25, mass: 0.5 });
-  const mouseYSpring = useSpring(y, { stiffness: 300, damping: 25, mass: 0.5 });
+  const mouseXSpring = useSpring(x, {
+    stiffness: 180,
+    damping: 24,
+    mass: 0.6,
+  });
+
+  const mouseYSpring = useSpring(y, {
+    stiffness: 180,
+    damping: 24,
+    mass: 0.6,
+  });
 
   const rotateX = useTransform(
     mouseYSpring,
@@ -60,19 +62,6 @@ const EducationCard = ({
     [-0.5, 0.5],
     [`${translateDepth}px`, `-${translateDepth}px`]
   );
-
-  const glareX = useTransform(mouseXSpring, [-0.5, 0.5], [0, 100]);
-  const glareY = useTransform(mouseYSpring, [-0.5, 0.5], [0, 100]);
-
-  const glareBackground = useMotionTemplate`
-  radial-gradient(
-    circle at ${glareX}% ${glareY}%,
-    rgba(255, 255, 255, 0.35) 0%,
-    rgba(255, 255, 255, 0.20) 15%,
-    rgba(255, 255, 255, 0.10) 30%,
-    rgba(255, 255, 255, 0) 60%
-  )
-`;
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!ref.current) return;
@@ -100,40 +89,34 @@ const EducationCard = ({
   if (!edu) return null;
 
   return (
-    <CursorWrapper
-      description="View Details 👀"
-    >
-      <Link href={`/education/education-detail/${edu._id}`}>
-        <motion.div
-          ref={ref}
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-          style={{ rotateX, rotateY, translateX, translateY }}
-          initial={{ scale: 1 }}
-          whileHover={{ scale: 1.02 }}
-          className={cn(
-            `group min-h-fit sm:min-h-full relative overflow-hidden rounded-3xl bg-white dark:bg-custom-black shadow-xl border border-gray-200 dark:border-white/10 transition-all hover:shadow-2xl perspective-distant transform-3d flex flex-col justify-between`
-          )}
-        >
-          <motion.div
-            style={{ background: glareBackground }}
-            className="pointer-events-none  absolute inset-0  rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-2"
-          />
-
-          <div className="h-56 px-5 sm:px-12 pt-5 sm:pt-8 pb-2 ">
+    <CursorWrapper description="View Details 👀">
+      <motion.div
+        ref={ref}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={{ rotateX, rotateY, translateX, translateY }}
+        initial={{ scale: 1 }}
+        whileHover={{ scale: 1.015 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+        className={cn(
+          `m-1 group min-h-fit sm:min-h-full relative overflow-hidden rounded-xl bg-white dark:bg-custom-black shadow-xl border border-gray-200 dark:border-white/10 transition-all hover:shadow-2xl perspective-distant transform-3d flex flex-col justify-between`
+        )}
+      >
+        <Link href={`/education/education-detail/${edu._id}`}>
+          <div className="h-fit px-5 sm:px-12 pt-5 sm:pt-8 pb-4">
             <div className="relative space-y-1.5 transition-all ">
               {/* DEGREE */}
-              <h1 className="text-2xl sm:text-3xl font-semibold leading-tight text-custom-black dark:text-white">
+              <h1 className="mb-2.5 text-xl sm:text-2xl font-medium leading-tight text-custom-black dark:text-white">
                 {edu.degree}
               </h1>
 
               {/* SPECIALIZATION */}
-              <p className="text-medium sm:text-lg font-medium text-custom-black dark:text-gray-300">
+              <p className="text-md sm:text-md font-medium text-custom-black dark:text-gray-300">
                 {edu.specialization}
               </p>
 
               {/* INSTITUTE */}
-              <p className="text-medium sm:text-lg font-medium text-light-gray">
+              <p className="text-md sm:text-md font-medium text-light-gray">
                 {edu.institute}
               </p>
 
@@ -154,10 +137,9 @@ const EducationCard = ({
               </div>
             </div>
           </div>
-
           <div className="p-2 md:p-3 h-70 sm:h-80">
             <div
-              className="relative overflow-hidden h-full w-full rounded-3xl p-2.5 md:p-5 "
+              className="relative overflow-hidden h-full w-full rounded-xl p-2.5 md:p-5 "
               style={{ background: gradient }}
             >
               {/* DESCRIPTION */}
@@ -173,14 +155,14 @@ const EducationCard = ({
                   <Image
                     src={edu.image}
                     alt={edu.degree || "No Image"}
-                    className="object-cover w-full h-full rounded-2xl group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
               )}
             </div>
-          </div>
-        </motion.div>
-      </Link>
+          </div>{" "}
+        </Link>
+      </motion.div>
     </CursorWrapper>
   );
 };

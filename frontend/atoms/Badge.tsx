@@ -14,10 +14,15 @@ const Badge = ({ icon, content, className }: BadgeProps) => {
     <>
       <div
         className={cn(
-          "relative flex items-center gap-2 px-3 py-1.5 rounded-lg select-none group",
-          "bg-white/20 dark:bg-white/10 backdrop-blur-md",
+          "relative flex items-center gap-2 px-3 py-1.5 rounded-md select-none group",
+          // Glass background
+          "bg-white/15 dark:bg-white/10 backdrop-blur-lg",
+          // Premium border
           "border border-white/40 dark:border-white/20",
-          "shadow-[inset_0_0_4px_rgba(255,255,255,0.45),_0_3px_10px_rgba(0,0,0,0.15)] transition-all duration-300 ease-in-out hover:scale-[1.05] hover:-translate-y-0.5 hover:transform-3d group-hover:animate-spin-slow",
+          // Soft shadows
+          "shadow-[0_4px_14px_rgba(0,0,0,0.12),_inset_0_1px_1.5px_rgba(255,255,255,0.35)]",
+          // Interaction
+          "transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.18)]",
           className
         )}
       >
@@ -30,53 +35,40 @@ const Badge = ({ icon, content, className }: BadgeProps) => {
 
         {/* TEXT */}
         {content && (
-          <span className="text-sm font-semibold text-black dark:text-white tracking-wide">
+          <span className="text-sm font-medium text-black dark:text-white tracking-wide">
             {content}
           </span>
         )}
 
-        {/* SHINE EFFECT */}
-        <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-70 transition-all duration-500 pointer-events-none shine" />
+        {/* Shine Sweep */}
+        <span className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none shine" />
 
-        {/* PULSE WAVE */}
-        <span className="absolute inset-0 rounded-full scale-0 group-hover:scale-[2] group-hover:opacity-0 opacity-20 bg-white/30 blur-md transition-all duration-500" />
+        {/* Soft Pulse */}
+        <span className="absolute inset-0 rounded-xl scale-0 group-hover:scale-125 group-hover:opacity-0 opacity-20 bg-white/30 dark:bg-white/10 blur-xl transition-all duration-700" />
       </div>
 
       {/* Internal Animations */}
       <style jsx>{`
-        .animate-spin-slow {
-          animation: spin 5s linear infinite;
-        }
-
         .shine {
           background: linear-gradient(
             120deg,
             rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.65) 45%,
-            rgba(255, 255, 255, 0) 80%
+            rgba(255, 255, 255, 0.8) 50%,
+            rgba(255, 255, 255, 0) 100%
           );
-          transform: translateX(-150%);
+          transform: translateX(-180%);
         }
 
         .group:hover .shine {
-          animation: shineMove 1s ease-in-out forwards;
+          animation: shineMove 0.8s ease-out forwards;
         }
 
         @keyframes shineMove {
           from {
-            transform: translateX(-150%);
+            transform: translateX(-180%);
           }
           to {
-            transform: translateX(150%);
-          }
-        }
-
-        @keyframes spin {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
+            transform: translateX(180%);
           }
         }
       `}</style>

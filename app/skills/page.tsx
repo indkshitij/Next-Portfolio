@@ -5,6 +5,12 @@ import { SKILLS_DATA } from "@/lib/DummyData";
 import PageHeading from "@/frontend/atoms/PageHeading";
 import SectionContainer from "@/lib/Wrapper/SectionContainer";
 import ExpertiseSection from "@/frontend/organism/ExpertiseSection";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Skills & Expertise',
+};
+
 const page = () => {
   return (
     <div className="h-screen">

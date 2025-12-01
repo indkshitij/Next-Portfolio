@@ -2,7 +2,7 @@ interface IconProps {
   icon: string;
   className?: string;
   size?: number;
-  stroke?: number;
+  stroke?: number | string;
 }
 
 const Icons = ({ icon, className, size = 25, stroke }: IconProps) => {
@@ -142,6 +142,26 @@ const Icons = ({ icon, className, size = 25, stroke }: IconProps) => {
         </svg>
       );
 
+    case "clock":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={size || 30}
+          height={size || 30}
+          viewBox="0 0 24 24"
+          className={className}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={stroke || 2}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 12L12 7" />
+          <path d="M12 12L15 14" />
+        </svg>
+      );
+
     case "star-shine":
       return (
         <svg
@@ -150,7 +170,7 @@ const Icons = ({ icon, className, size = 25, stroke }: IconProps) => {
           viewBox="0 0 256 256"
           fill="currentColor"
           stroke="currentColor"
-          strokeWidth={stroke || "2.5"}
+          strokeWidth={stroke || "1"}
           strokeLinecap="round"
           strokeLinejoin="round"
           className={className}

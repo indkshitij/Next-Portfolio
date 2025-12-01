@@ -18,7 +18,7 @@ export default function SkillsSection() {
         />
 
         <div className="mt-14 rounded-lg border border-gray/10 overflow-hidden">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+          <div className="grid grid-cols-2  lg:grid-cols-5">
             {SKILLS_DATA.map((skill, idx) => (
               <SkillCard key={idx} skill={skill} />
             ))}

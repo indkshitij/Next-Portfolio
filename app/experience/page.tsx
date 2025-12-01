@@ -4,6 +4,11 @@ import PageHeading from "@/frontend/atoms/PageHeading";
 import SectionContainer from "@/lib/Wrapper/SectionContainer";
 import ExperienceCard from "@/frontend/molecules/ExperienceCard";
 import { EXPERIENCE_DATA } from "@/lib/DummyData";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Experience',
+};
 
 const page = () => {
   return (
@@ -15,7 +20,7 @@ const page = () => {
       />
       <div className="bg-[#F8FAFB] pt-5 pb-10">
         <SectionContainer>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-5 md:px-15">
             {EXPERIENCE_DATA.map((exp, index) => (
               <ExperienceCard experience={exp} key={index} />
             ))}

@@ -4,6 +4,11 @@ import Sidebar from "@/frontend/molecules/Sidebar";
 import Header from "@/frontend/molecules/admin/Header";
 import { useAppSelector } from "@/lib/store/hooks";
 import { motion } from "framer-motion";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Profile | Admin',
+};
 
 const Page = () => {
   const open = useAppSelector((state) => state.sidebar.open);

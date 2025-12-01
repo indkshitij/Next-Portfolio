@@ -34,9 +34,7 @@ export default function AnimatedHeading({
           variants={letterContainer}
           initial="hidden"
           animate="visible"
-          className={`font-extrabold text-center select-none leading-[1.1] tracking-tight 
-      text-7xl xl:text-9xl text-custom-black dark:text-white 
-      transition-transform duration-300 ${className} sm:-mr-8 mr-0`}
+          className={`font-bold text-center select-none leading-[1.1] tracking-tight text-7xl xl:text-9xl text-custom-black dark:text-white  transition-transform duration-300 ${className} sm:-mr-8 mr-0`}
         >
           {words.map((word, wordIndex) => {
             const innerLetters = word.split("").map((char, i) => (
@@ -63,10 +61,7 @@ export default function AnimatedHeading({
             );
           })}
         </motion.h1>
-        <Cover
-          className="font-extrabold text-center select-none leading-[1.1] tracking-tight 
-      text-7xl xl:text-9xl "
-        >
+        <Cover className="font-bold text-center select-none leading-[1.1] tracking-tight text-7xl xl:text-9xl ">
           {name}
         </Cover>
       </div>

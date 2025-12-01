@@ -2,6 +2,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeading from "@/frontend/atoms/PageHeading";
 import SectionContainer from "@/lib/Wrapper/SectionContainer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Projects',
+};
 
 const page = () => {
   return (
@@ -14,9 +19,8 @@ const page = () => {
       />
       <div className="bg-[#F8FAFB]">
         <SectionContainer>
-          <div className="my-24 text-center text-5xl font-bold">
-            {" "}
-            Working...
+          <div className="font-logo my-24 text-center text-9xl font-bold text-black">
+            {" "}Working...
           </div>
         </SectionContainer>
       </div>

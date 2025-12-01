@@ -156,7 +156,7 @@ const ContactForm = () => {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             disabled={sending}
-            className={` relative bg-custom-black px-5 py-2 rounded-md overflow-hidden transition-all duration-300 ease-in-out shadow-[0_4px_12px_rgba(0,0,0,0.25)] hover:scale-[1.02] hover:shadow-[0_5px_14px_rgba(0,0,0,0.4)] border border-transparent backdrop-blur-md ${sending ? "opacity-80 cursor-not-allowed" : "cursor-pointer"} `}
+            className={`min-w-full sm:min-w-52 relative bg-custom-black px-5 py-2 rounded-md overflow-hidden transition-all duration-300 ease-in-out shadow-[0_4px_12px_rgba(0,0,0,0.25)] hover:scale-[1.02] hover:shadow-[0_5px_14px_rgba(0,0,0,0.4)] backdrop-blur-md ${sending ? "opacity-80 cursor-not-allowed" : "cursor-pointer"} `}
             style={{ color: "#ffffff" }}
           >
             {!sending && (
@@ -167,7 +167,7 @@ const ContactForm = () => {
 
             {/* Idle Text */}
             <div
-              className={`min-w-40  flex justify-center items-center gap-2 relative z-30 font-mono text-md tracking-wide transition-all duration-300 ${sending && "flex-row-reverse"}`}
+              className={`flex justify-center items-center gap-2 relative z-30 font-mono text-md tracking-wide transition-all duration-300 ${sending && "flex-row-reverse"}`}
             >
               {sending ? "Sending ..." : "Send Message"}
 

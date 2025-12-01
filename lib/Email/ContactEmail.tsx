@@ -18,6 +18,7 @@ export function ContactEmail({
       style={{
         width: "100%",
         borderRadius: "14px",
+        overflow: "hidden",
         fontFamily: "Poppins, sans-serif",
       }}
     >
@@ -35,6 +36,7 @@ export function ContactEmail({
         {/* HEADER */}
         <div
           style={{
+            width: "100%",
             background:
               "linear-gradient(135deg, #4f46e5, #6366f1, #3b82f6, #0ea5e9)",
             padding: "24px 28px",
@@ -48,7 +50,7 @@ export function ContactEmail({
             style={{
               margin: 0,
               fontSize: "22px",
-              fontWeight: 600,
+              fontWeight: 500,
               fontFamily: "Onest, Poppins, sans-serif",
             }}
           >
@@ -116,14 +118,13 @@ export function ContactEmail({
             style={{
               marginTop: "8px",
               padding: "16px 18px",
-              background:
-                "linear-gradient(to bottom right, #eff6ff, #dbeafe, #bfdbfe)",
+              backgroundColor: "#f1f5f9",
               borderLeft: "4px solid #3b82f6",
               boxShadow: "0 2px 10px rgba(59,130,246,0.2)",
               borderRadius: "10px",
               whiteSpace: "pre-line",
               fontSize: "15px",
-              color: "#1e293b",
+              color: "#1f2937",
               lineHeight: "1.6",
             }}
           >
@@ -134,6 +135,7 @@ export function ContactEmail({
         {/* FOOTER */}
         <div
           style={{
+            width: "100%",
             padding: "20px 24px",
             background: "#f9fafb",
             borderTop: "1px solid #e5e7eb",

@@ -14,7 +14,7 @@ export default function SkillCard({
   };
 }) {
   return (
-    <div className="group relative h-44 w-full px-4 py-4 border border-gray/10 flex flex-col items-center justify-center gap-3 transition-all duration-500 hover:bg-gray/5 overflow-hidden cursor-pointer hover:bg-gray-200/50">
+    <div className="group relative h-30 sm:h-44 w-full px-4 py-4 border border-gray/10 flex flex-col items-center justify-center gap-3 transition-all duration-500 hover:bg-gray/5 overflow-hidden cursor-pointer hover:bg-gray-200/50">
       {/* ICON */}
       <motion.div
         animate={{ y: [0, -4, 0] }}
@@ -25,7 +25,7 @@ export default function SkillCard({
           ease: "easeInOut",
         }}
         whileHover={{ scale: 1.15, y: -6 }}
-        className="p-4 sm:mt-10 group-hover:py-0 group-hover:mt-0 transition-all duration-500"
+        className="p-0 sm:p-4 sm:mt-10 group-hover:py-0 group-hover:mt-0 transition-all duration-500"
       >
         
           <Image
@@ -39,7 +39,7 @@ export default function SkillCard({
       </motion.div>
 
       {/* TITLE */}
-      <h3 className=" text-custom-black text-md font-medium leading-tight text-center select-none">
+      <h3 className=" text-custom-black text-sm md:text-md font-medium leading-tight text-center select-none">
         {skill.name}
       </h3>
 
