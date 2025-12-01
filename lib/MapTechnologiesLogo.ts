@@ -77,6 +77,7 @@ import postman from "@/assets/techStack/postman.svg";
 import powershell from "@/assets/techStack/powershell.svg";
 import prettier from "@/assets/techStack/prettier.svg";
 import prisma from "@/assets/techStack/prisma.svg";
+import linux from "@/assets/techStack/linux.png";
 import python from "@/assets/techStack/python.svg";
 import pytorch from "@/assets/techStack/pytorch.svg";
 import pytorch3d from "@/assets/techStack/pytorch3d.svg";
@@ -109,6 +110,13 @@ import vscode from "@/assets/techStack/vscode.svg";
 import webpack from "@/assets/techStack/webpack.svg";
 import zod from "@/assets/techStack/zod.svg";
 import restapi from "@/assets/techStack/api.png";
+import socketio from "@/assets/techStack/socketIo.png";
+
+import heroui from "@/assets/techStack/socketIo.png";
+import axios from "@/assets/techStack/axios.png";
+import fetch from "@/assets/techStack/fetch.png";
+import pnpm from "@/assets/techStack/pnpm.png";
+import vercel from "@/assets/techStack/vercel.png";
 
 // Fallback icon (add this file)
 import defaultIcon from "@/assets/blankProfile/img1.svg";
@@ -141,6 +149,13 @@ export const TECH_ICONS = {
   chrome,
   cloudflare,
   cloudinary,
+  socketio,
+  heroui,
+  axios,
+  fetch,
+  pnpm,
+  linux,
+  vercel,
   colab,
   copilotgithub,
   css3,
@@ -232,6 +247,95 @@ export function normalizeTechName(name: string = "") {
   const n = name.toLowerCase().replace(/[\s\.\-\_]/g, "");
 
   switch (n) {
+    case "aws":
+    case "amazonwebservices":
+    case "amazonwebservice":
+    case "amazonwebserviceaws":
+      return "aws";
+
+    case "googlechrome":
+    case "chrome":
+      return "chrome";
+
+    case "safari":
+      return "safari";
+
+    case "brave":
+    case "bravebrowser":
+      return "brave";
+
+    case "colab":
+      
+    case "googlecolab":
+      return "colab";
+
+    case "microsoft":
+    case "microsoftwindows":
+      return "microsoft";
+
+    case "socketio":
+      return "socketio";
+
+    case "heroui":
+      return "heroui";
+
+    case "axios":
+      return "axios";
+
+    case "fetch":
+    case "fetchapi":
+    case "fetchapi":
+      return "fetch";
+
+    case "githubcopilot":
+    case "copilotgithub":
+      return "copilotgithub";
+
+    case "shadcnui":
+    case "shadcn/ui":
+    case "shadcn":
+      return "shadcnui";
+
+    case "linux":
+    case "gnu/linux":
+    case "gnulinux":
+    case "linuxos":
+    case "linuxsystem":
+    case "unix":
+    case "unixlike":
+    case "ubuntu": // popular distro
+    case "debian":
+    case "arch":
+    case "archlinux":
+    case "manjaro":
+    case "fedora":
+    case "centos":
+    case "kali":
+    case "kalilinux":
+    case "redhat":
+    case "rhel":
+    case "mint":
+    case "linuxmint":
+    case "popos":
+    case "pop_os":
+    case "opensuse":
+    case "suse":
+    case "zorin":
+    case "elementary":
+    case "elementaryos":
+    case "parrot":
+    case "parrotos":
+    case "tails":
+    case "garuda":
+    case "endeavouros":
+      return "linux";
+
+    case "pnpm":
+      return "pnpm";
+
+    case "vercel":
+      return "vercel";
+
     case "react":
     case "reactjs":
     case "reactjavascript":
@@ -319,6 +423,7 @@ export function normalizeTechName(name: string = "") {
     case "tailwindcss":
       return "tailwindcss";
     case "redux":
+    case "reduxtoolkit":
       return "redux";
 
     case "reduxsaga":
@@ -340,9 +445,11 @@ export function normalizeTechName(name: string = "") {
       return "postgresql";
 
     case "openai":
+    case "openaiapi":
       return "openai";
 
     case "gemini":
+    case "googlegemini":
       return "gemini";
 
     case "huggingface":
@@ -371,7 +478,13 @@ export function normalizeTechName(name: string = "") {
     case "cpluscplus":
     case "c++":
       return "cplusplus";
+    case "framer":
+    case "framermotion":
+      return "framer";
 
+    case "gemma":
+    case "gemmaai":
+      return "gemma";
     // DEFAULT: return cleaned name
     default:
       return n;

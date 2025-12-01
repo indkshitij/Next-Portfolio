@@ -402,7 +402,7 @@ export function Globe() {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto w-full relative mt-14 sm:mt-0 h-64 md:h-120 px-0 py-0 my-0">
+    <div className="max-w-4xl mx-auto w-full relative mt-14 sm:mt-0 h-64 md:h-128 px-0 py-0 my-0">
       <div className="absolute w-full bottom-0 inset-x-0 h-40 pointer-events-none select-none z-40" />
       <div className="absolute w-full bottom-10 h-72 md:h-full z-10 ">
         <World data={sampleArcs} globeConfig={globeConfig} />

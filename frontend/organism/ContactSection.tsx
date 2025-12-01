@@ -16,7 +16,7 @@ export default function ContactSection() {
           badgePosition="rotate-4"
         />
 
-        <div className="relative flex flex-col-reverse sm:flex-row gap-10 items-center">
+        <div className="relative flex flex-col-reverse sm:flex-row gap-10 items-start">
           <div className="w-full -mb-28 sm:mb-0">
             <Globe />
           </div>

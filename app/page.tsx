@@ -35,12 +35,12 @@ export default function Home() {
         <Navbar />
         <div className="bg-[#F8FAFB]">
           <HeroSection />
-          <ContactSection />
           <SkillsCarousel />
           <EducationSection />
           <ExperienceSection />
-          <ExpertiseSecction />
           <SkillsSection />
+          <ExpertiseSecction />
+          <ContactSection />
         </div>
         <div className="dark:bg-black ">
           <Footer />
