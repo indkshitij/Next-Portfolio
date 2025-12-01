@@ -40,14 +40,14 @@ export default function MobileNavbar() {
     <>
       <div className="h-fit flex items-center justify-between w-[90vw] px-4 py-2 rounded-full bg-custom-black text-white  shadow-xl backdrop-blur-xl">
         {/* Logo */}
-        <motion.div whileTap={{ scale: 0.9 }} className="w-12 h-12">
+        <motion.div whileTap={{ scale: 0.9 }} className="w-fit h-auto">
           <Logo />
         </motion.div>
 
         <motion.button
           whileTap={{ scale: 0.85 }}
           onClick={() => setOpen(!open)}
-          className="p-3 rounded-full text-white shadow-md"
+          className="p-2.5 rounded-full text-white shadow-md"
         >
           {open ? <Icons icon="close" /> : <Icons icon="menu" />}
         </motion.button>
@@ -77,7 +77,7 @@ export default function MobileNavbar() {
               </Link>
             ))}
 
-            <div className="mt-5 mb-2.5 flex flex-wrap justify-center items-center gap-5">
+            <div className="mt-6 mb-2.5 flex flex-wrap justify-center items-center gap-5">
               {SOCIAL_LINKS.map((social, index) => {
                 return (
                   <Link

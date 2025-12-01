@@ -3,6 +3,10 @@ import Footer from "@/components/Footer";
 import PageHeading from "@/frontend/atoms/PageHeading";
 import SectionContainer from "@/lib/Wrapper/SectionContainer";
 
+export const metadata = {
+  title: 'Projects',
+};
+
 const page = () => {
   return (
     <div className="h-screen">
@@ -14,9 +18,8 @@ const page = () => {
       />
       <div className="bg-[#F8FAFB]">
         <SectionContainer>
-          <div className="my-24 text-center text-5xl font-bold">
-            {" "}
-            Working...
+          <div className="font-logo my-24 text-center text-9xl font-bold text-black">
+            {" "}Working...
           </div>
         </SectionContainer>
       </div>

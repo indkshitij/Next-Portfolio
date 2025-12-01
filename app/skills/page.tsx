@@ -5,6 +5,11 @@ import { SKILLS_DATA } from "@/lib/DummyData";
 import PageHeading from "@/frontend/atoms/PageHeading";
 import SectionContainer from "@/lib/Wrapper/SectionContainer";
 import ExpertiseSection from "@/frontend/organism/ExpertiseSection";
+
+export const metadata = {
+  title: 'Skills & Expertise',
+};
+
 const page = () => {
   return (
     <div className="h-screen">
@@ -16,7 +21,7 @@ const page = () => {
           subheading="A blend of technical mastery and modern toolsets crafted to build fast, elegant, and scalable digital experiences."
         />
         <SectionContainer>
-          <div className="mt-14 rounded-lg border border-gray/10 overflow-hidden">
+          <div className="sm:mt-14 rounded-lg border border-gray/10 overflow-hidden">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
               {SKILLS_DATA.map((skill, idx) => (
                 <SkillCard key={idx} skill={skill} />

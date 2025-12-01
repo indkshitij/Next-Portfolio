@@ -3,7 +3,6 @@
 import SectionContainer from "@/lib/Wrapper/SectionContainer";
 import ContainerTextFlip from "@/frontend/atoms/ContainerTextFlip";
 import TriggerToast from "@/frontend/atoms/TriggerToast";
-import CursorWrapper from "@/lib/Wrapper/CursorWrapper";
 import SmallButton from "@/frontend/atoms/SmallButton";
 import Icons from "@/lib/Icons";
 import { RESUME_LINK } from "@/lib/DummyData";
@@ -19,6 +18,7 @@ const Footer = () => {
       TriggerToast({
         message: "📧 Email copied!",
         type: "success",
+        variant:"solid",
       });
     } catch (err) {
       console.log(err);
@@ -81,7 +81,7 @@ const Footer = () => {
                   textColor="text-custom-black"
                   hoverTextColor="#ffffff"
                   hoverBubbleColor="bg-[linear-gradient(135deg,#60A5FA_0%,#2563EB_100%)]"
-                  cursorDescription="💬 Start a Conversation"
+                 
                 />
                 <SmallButton
                   content="View Resume"
@@ -97,19 +97,17 @@ const Footer = () => {
                   textColor="text-custom-black"
                   hoverTextColor="#ffffff"
                   hoverBubbleColor="bg-[linear-gradient(135deg,#60A5FA_0%,#2563EB_100%)]"
-                  cursorDescription="👀 Take a Look at My Resume"
+                  
                 />
               </div>
 
               <div className="flex items-center gap-4 bg-gray-100 rounded-lg py-1.5 pl-3 pr-1.5 sm:py-2 sm:pl-4 sm:pr-2 w-fit">
                 <p
-                  className="sm:min-w-69 text-lg text-gray-500 whitespace-nowrap overflow-hidden border-r-2 border-blue-font select-none "
-                  style={{ width: email.length * 10 + "px" }}
+                  className="min-w-62 sm:min-w-86 text-md sm:text-lg text-gray-500 whitespace-nowrap overflow-hidden border-r-2 border-blue-font select-none"
                 >
                   <Typewriter text={email}/>
                   {/* {email} */}
                 </p>
-                <CursorWrapper description="📧 Click to copy my email">
                   <button
                     onClick={copyEmail}
                     className=" relative px-6 py-2.5 rounded-md text-white text-sm font-medium bg-blue-font transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:bg-blue-700 hover:shadow-[0_6px_18px_rgba(0,0,0,0.35)] active:translate-y-0 overflow-hidden"
@@ -118,7 +116,7 @@ const Footer = () => {
                     <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 translate-x-[-150%] group-hover:translate-x-[150%] transition-all duration-700 ease-out"></span>
                     Copy
                   </button>
-                </CursorWrapper>
+            
               </div>
             </div>
           </div>

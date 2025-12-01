@@ -16,13 +16,13 @@ interface SectionHeadingProps {
   descriptionColor?: string;
 }
 
-const chars = "!<>-_\\/[]{}—=+*^?#_!<>--_-______";
+const chars = "!<>-_\\/[]{}—=+*^?#_ ";
 
 const SectionHeading = ({
   icon,
   heading,
   className = "",
-  speed = 160,
+  speed = 200,
   textColor = "text-custom-black",
   description,
   badge,
@@ -34,7 +34,7 @@ const SectionHeading = ({
   const ref = useRef(null);
 
   const isInView = useInView(ref, {
-    margin: "-15% 0px",
+    margin: "0% 0px",
     once: true,
   });
 
@@ -69,7 +69,7 @@ const SectionHeading = ({
   return (
     <div
       ref={ref}
-      className={`flex flex-col gap-2 items-center justify-center py-4 mb-10 select-none ${className}`}
+      className={`flex flex-col gap-2 items-center justify-center py-4 mb-10 select-none  ${className}`}
     >
       {icon && (
         <div className="text-white flex items-center bg-blue-500/10 rounded-full p-3.5">

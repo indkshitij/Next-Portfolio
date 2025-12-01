@@ -15,7 +15,7 @@ const ExperienceSection = () => {
           badgePosition="-rotate-5"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-5 md:px-15">
           {EXPERIENCE_DATA.map((exp, index) => (
             <ExperienceCard experience={exp} key={index} />
           ))}

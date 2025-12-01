@@ -1,10 +1,14 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ContactSection from "@/frontend/organism/ContactSection";
 import PageHeading from "@/frontend/atoms/PageHeading";
 import SectionContainer from "@/lib/Wrapper/SectionContainer";
 import { Globe } from "@/frontend/atoms/Globe";
 import ContactForm from "@/frontend/molecules/ContactForm";
+
+export const metadata = {
+  title: 'Contact',
+};
+
 
 const page = () => {
   return (

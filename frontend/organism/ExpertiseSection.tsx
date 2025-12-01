@@ -53,7 +53,7 @@ function ExpertiseCard({ item, idx }: ExpertiseCardProps) {
   const isEven = idx % 2 === 0;
 
   return (
-    <div className="group relative h-44 w-full px-4 py-6 border border-white/10 flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:bg-white/5 overflow-hidden cursor-pointer">
+    <div className="group relative h-30 md:h-44 w-full px-4 py-6 border border-white/10 flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:bg-white/5 overflow-hidden cursor-pointer">
       <motion.div
         animate={isEven ? animation : undefined}
         transition={{
@@ -66,13 +66,13 @@ function ExpertiseCard({ item, idx }: ExpertiseCardProps) {
           !isEven ? { scale: 1.2, rotate: 6, y: -6 } : { scale: 1.15, y: -4 }
         }
         style={{ color }}
-        className="p-4 flex justify-center items-center mt-10 group-hover:mt-0 group-hover:py-0 transition-all duration-500"
+        className="p-0 md:p-4 flex justify-center items-center mt-18 sm:mt-10 group-hover:mt-0 group-hover:py-0 transition-all duration-500"
       >
         <Icons icon={item.slug} size={40} />
       </motion.div>
 
       {/* TITLE */}
-      <h3 className="text-white text-md font-medium leading-tight text-center select-none">
+      <h3 className="text-white text-sm md:text-md font-medium leading-tight text-center select-none">
         {item.title}
       </h3>
 

@@ -11,7 +11,6 @@ import {
   useMotionValue,
   useSpring,
   useTransform,
-  useMotionTemplate,
 } from "motion/react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -26,16 +25,25 @@ const ExperienceCard = ({
   experience: ExperienceInterface;
 }) => {
   /** ------------- ALL HOOKS MUST COME FIRST ------------- */
-  const rotateDepth = 17.5;
-  const translateDepth = 20;
+  const rotateDepth = 14.5;
+  const translateDepth = 18;
 
   const ref = useRef<HTMLDivElement>(null);
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
-  const mouseXSpring = useSpring(x, { stiffness: 300, damping: 25, mass: 0.5 });
-  const mouseYSpring = useSpring(y, { stiffness: 300, damping: 25, mass: 0.5 });
+  const mouseXSpring = useSpring(x, {
+    stiffness: 180,
+    damping: 24,
+    mass: 0.6,
+  });
+
+  const mouseYSpring = useSpring(y, {
+    stiffness: 180,
+    damping: 24,
+    mass: 0.6,
+  });
 
   const rotateX = useTransform(
     mouseYSpring,
@@ -58,19 +66,6 @@ const ExperienceCard = ({
     [-0.5, 0.5],
     [`${translateDepth}px`, `-${translateDepth}px`]
   );
-
-  const glareX = useTransform(mouseXSpring, [-0.5, 0.5], [0, 100]);
-  const glareY = useTransform(mouseYSpring, [-0.5, 0.5], [0, 100]);
-
-  const glareBackground = useMotionTemplate`
-   radial-gradient(
-     circle at ${glareX}% ${glareY}%,
-     rgba(255, 255, 255, 0.35) 0%,
-     rgba(255, 255, 255, 0.20) 15%,
-     rgba(255, 255, 255, 0.10) 30%,
-     rgba(255, 255, 255, 0) 60%
-   )
- `;
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!ref.current) return;
@@ -106,28 +101,24 @@ const ExperienceCard = ({
       }
       description={experience?.companyName}
     >
-      <Link href={`/experience/experience-detail/${experience._id}`}>
-        <motion.div
-          ref={ref}
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-          style={{ rotateX, rotateY, translateX, translateY }}
-          initial={{ scale: 1 }}
-          whileHover={{ scale: 1.02 }}
-          className={cn(
-            `group min-h-fit sm:min-h-full relative overflow-hidden rounded-3xl bg-white dark:bg-custom-black shadow-xl border border-gray-200 dark:border-white/10 transition-all hover:shadow-2xl perspective-distant transform-3d flex flex-col justify-between`
-          )}
-        >
-          {/* GLARE LAYER */}
-          <motion.div
-            style={{ background: glareBackground }}
-            className="pointer-events-none  absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-2"
-          />
-
+      <motion.div
+        ref={ref}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={{ rotateX, rotateY, translateX, translateY }}
+        initial={{ scale: 1 }}
+        whileHover={{ scale: 1.015 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+        className={cn( 
+          ` m-1 group min-h-fit sm:min-h-full relative overflow-hidden rounded-xl bg-white dark:bg-custom-black shadow-xl border border-gray-200 dark:border-white/10 transition-all hover:shadow-2xl perspective-distant transform-3d flex flex-col justify-between`
+        )}
+      >
+        {" "}
+        <Link href={`/experience/experience-detail/${experience._id}`}>
           {/* TOP SECTION — DETAILS */}
-          <div className="h-68 px-5 sm:px-12 pt-5 sm:pt-8 pb-2 ">
+          <div className="h-fit px-5 sm:px-12 pt-5 sm:pt-8 pb-5 ">
             <div className="relative space-y-1.5 transition-all">
-              <h1 className="text-2xl sm:text-3xl font-semibold leading-tight text-custom-black ">
+              <h1 className="text-xl sm:text-2xl font-medium leading-tight text-custom-black ">
                 {experience?.jobTitle} at{" "}
                 <span
                   className={`italic `}
@@ -139,7 +130,7 @@ const ExperienceCard = ({
 
               {/* COMPANY DESCRPTION */}
 
-              <p className="text-base leading-relaxed text-light-gray font-medium mt-1 mb-2.5">
+              <p className="text-base leading-relaxed text-light-gray mt-2.5 mb-6">
                 {experience?.shortDescription}
               </p>
 
@@ -163,7 +154,7 @@ const ExperienceCard = ({
                             className={cn(
                               "relative w-10 h-10 flex items-center justify-center rounded-full overflow-hidden",
                               // Background + Glass
-                              "bg-white/30 dark:bg-white/10 backdrop-blur-md",
+                              "bg-white dark:bg-gray-100 backdrop-blur-md",
                               // Border Ring + Subtle Gradient Outline
                               "border border-white/40 dark:border-white/20",
                               "shadow-[0_2px_6px_rgba(0,0,0,0.15)]",
@@ -200,18 +191,17 @@ const ExperienceCard = ({
                     experience?.isPresent
                       ? "Present"
                       : experience?.endDate
-                      ? formatDateMonthYear(experience.endDate)
-                      : "Unknown"
+                        ? formatDateMonthYear(experience.endDate)
+                        : "Unknown"
                   }`}
                 />
               </div>
             </div>
           </div>
-
           {/* BOTTOM SECTION — GRADIENT PANEL */}
           <div className="p-2 md:p-3 h-90 sm:h-80">
             <div
-              className="relative overflow-hidden h-full w-full rounded-3xl p-2.5 md:p-5"
+              className="relative overflow-hidden h-full w-full rounded-xl p-2.5 md:p-5"
               style={{ background: COMPANY_GRADIENT(experience?.companyName) }}
             >
               {/* DESCRIPTION */}
@@ -226,13 +216,13 @@ const ExperienceCard = ({
                 <Image
                   src={experience?.image}
                   alt={experience?.companyName || "No Image"}
-                  className="object-cover w-full h-full rounded-2xl group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>
-          </div>
-        </motion.div>
-      </Link>
+          </div>{" "}
+        </Link>
+      </motion.div>
     </CursorWrapper>
   );
 };

@@ -14,7 +14,7 @@ const EducationSection = () => {
         badgePosition="rotate-3"
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-5 md:px-15">
         {EDUCATION_DATA.map((edu, index) => (
           <EducationCard edu={edu} index={index} key={index} />
         ))}
