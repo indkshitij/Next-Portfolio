@@ -106,7 +106,7 @@ const EducationCard = ({
           <div className="h-fit px-5 sm:px-12 pt-5 sm:pt-8 pb-4">
             <div className="relative space-y-1.5 transition-all ">
               {/* DEGREE */}
-              <h1 className="mb-2.5 text-xl sm:text-2xl font-medium leading-tight text-custom-black dark:text-white">
+              <h1 className="mb-2.5 text-2xl font-medium leading-tight text-custom-black dark:text-white">
                 {edu.degree}
               </h1>
 
@@ -144,7 +144,7 @@ const EducationCard = ({
             >
               {/* DESCRIPTION */}
               <div className="opacity-100 md:opacity-0 md:translate-y-70 group-hover:opacity-100 text-white group-hover:translate-y-0 transition-all ease-in-out duration-700">
-                <span className="text-base leading-relaxed text-white font-medium">
+                <span className="text-sm md:text-base leading-relaxed text-white font-medium">
                   {edu.shortDescription}
                 </span>
               </div>
