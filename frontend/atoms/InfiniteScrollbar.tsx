@@ -56,7 +56,7 @@ export default function InfiniteScroller({
             return (
               <motion.div
                 key={idx}
-                className="group mx-10 flex flex-col items-center select-none cursor-pointer opacity-70 hover:opacity-100 transition-all duration-300 hover:scale-[1.02]  hover:-translate-y-2"
+                className="group mx-5 sm:mx-10 flex flex-col items-center select-none cursor-pointer opacity-70 hover:opacity-100 transition-all duration-300 hover:scale-[1.02]  hover:-translate-y-2"
                 onMouseEnter={() => setPaused(true)}
                 onMouseLeave={() => setPaused(false)}
               >
