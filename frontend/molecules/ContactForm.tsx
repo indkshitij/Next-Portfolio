@@ -68,13 +68,13 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="p-3 sm:p-4 bg-white/60 rounded-xl shadow-md border border-gray-100">
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="p-3 sm:p-5 bg-white/60 rounded-lg shadow-md border border-gray-100">
+      <form onSubmit={handleSubmit} className="space-y-3">
         {/* NAME + EMAIL */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {/* NAME */}
           <div className="space-y-1.5">
-            <label className="text-sm font-medium text-gray-600">Name</label>
+            <label className="text-sm ml-0.5 font-medium text-gray-600">Name</label>
 
             <div className="relative flex items-center">
               <Icons icon="name" className="absolute left-3 text-gray-400" />
@@ -85,14 +85,14 @@ const ContactForm = () => {
                 placeholder="Your Name"
                 value={form.name}
                 onChange={handleChange}
-                className="w-full pl-10 pr-4 py-3 rounded-lg bg-[#F8FAFB] text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-none focus:ring-blue-100 transition-all shadow-lg border border-gray-200/50"
+                className="w-full pl-11 pr-4 py-3 rounded-lg bg-[#F8FAFB] text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-none focus:ring-blue-100 transition-all shadow-lg border border-gray-200/50"
               />
             </div>
           </div>
 
           {/* EMAIL */}
           <div className="space-y-1.5">
-            <label className="text-sm font-medium text-gray-600">Email</label>
+            <label className="text-sm ml-0.5 font-medium text-gray-600">Email</label>
 
             <div className="relative flex items-center">
               <Icons icon="mail" className="absolute left-3 text-gray-400" />
@@ -103,7 +103,7 @@ const ContactForm = () => {
                 placeholder="Email Address"
                 value={form.email}
                 onChange={handleChange}
-                className="w-full pl-10 pr-4 py-3 rounded-lg bg-[#F8FAFB] text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-none focus:ring-blue-100 transition-all shadow-lg border border-gray-200/50"
+                className="w-full pl-11 pr-4 py-3 rounded-lg bg-[#F8FAFB] text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-none focus:ring-blue-100 transition-all shadow-lg border border-gray-200/50"
               />
             </div>
           </div>
@@ -111,7 +111,7 @@ const ContactForm = () => {
 
         {/* SUBJECT */}
         <div className="space-y-1.5">
-          <label className="text-sm font-medium text-gray-600">Subject</label>
+          <label className="text-sm ml-0.5 font-medium text-gray-600">Subject</label>
 
           <div className="relative flex items-center">
             <Icons icon="subject" className="absolute left-3 text-gray-400" />
@@ -122,14 +122,14 @@ const ContactForm = () => {
               placeholder="Subject"
               value={form.subject}
               onChange={handleChange}
-              className="w-full pl-10 pr-4 py-3 rounded-lg bg-[#F8FAFB] text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-none focus:ring-blue-100 transition-all shadow-lg border border-gray-200/50"
+              className="w-full pl-11 pr-4 py-3 rounded-lg bg-[#F8FAFB] text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-none focus:ring-blue-100 transition-all shadow-lg border border-gray-200/50"
             />
           </div>
         </div>
 
         {/* MESSAGE */}
         <div className="space-y-1.5">
-          <label className="text-sm font-medium text-gray-600">Message</label>
+          <label className="text-sm ml-0.5 font-medium text-gray-600">Message</label>
 
           <div className="relative">
             <Icons
@@ -140,10 +140,10 @@ const ContactForm = () => {
             <textarea
               name="message"
               placeholder="Your Message..."
-              rows={5}
+              rows={7}
               value={form.message}
               onChange={handleChange}
-              className="w-full pl-10 pr-4 py-3 rounded-lg bg-[#F8FAFB] text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-none focus:ring-blue-100 transition-all shadow-lg border border-gray-200/50"
+              className="w-full pl-11 pr-4 py-3 rounded-lg bg-[#F8FAFB] text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-none focus:ring-blue-100 transition-all shadow-lg border border-gray-200/50"
             />
           </div>
         </div>
@@ -152,27 +152,30 @@ const ContactForm = () => {
         <div className="flex justify-end">
           <button
             type="submit"
-  
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             disabled={sending}
-            className={`min-w-full sm:min-w-52 relative bg-custom-black px-5 py-2 rounded-md overflow-hidden transition-all duration-300 ease-in-out shadow-[0_4px_12px_rgba(0,0,0,0.25)] hover:scale-[1.02] hover:shadow-[0_5px_14px_rgba(0,0,0,0.4)] backdrop-blur-md ${sending ? "opacity-80 cursor-not-allowed" : "cursor-pointer"} `}
+            className={`min-w-full sm:min-w-60 relative bg-custom-black px-5 py-3 rounded-md overflow-hidden transition-all duration-300 ease-in-out shadow-[0_4px_12px_rgba(0,0,0,0.25)] hover:scale-[1.02] hover:shadow-[0_5px_14px_rgba(0,0,0,0.4)] backdrop-blur-md ${sending ? "opacity-80 cursor-not-allowed" : "cursor-pointer"} `}
             style={{ color: "#ffffff" }}
           >
             {!sending && (
               <span
-                className={` absolute left-5 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full z-10 bg-[linear-gradient(180deg,#498DE6_0%,#2C62B9_50%,#103893_100%)] transition-transform duration-500 ease-in-out ${hovered ? "scale-[45]" : "scale-0"}`}
+                className={` absolute left-5 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full z-10 bg-[linear-gradient(180deg,#498DE6_0%,#2C62B9_50%,#103893_100%)] transition-transform duration-500 ease-in-out ${hovered ? "scale-[55]" : "scale-0"}`}
               ></span>
             )}
 
             {/* Idle Text */}
             <div
-              className={`flex justify-center items-center gap-2 relative z-30 font-mono text-md tracking-wide transition-all duration-300 ${sending && "flex-row-reverse"}`}
+              className={`flex justify-center items-center gap-2 relative z-30 font-medium text-[14px] sm:text-[16px]  transition-all duration-300 ${sending && "flex-row-reverse"}`}
             >
               {sending ? "Sending ..." : "Send Message"}
 
               <span className="relative z-20 transition-all duration-300">
-                <Icons icon={`${sending ? "loader" : "send-mail"}`} size={18} />
+                {sending ? (
+                  <Icons icon={"loader"} size={20} />
+                ) : (
+                  <Icons icon={"send-mail"} size={16} />
+                )}
               </span>
             </div>
           </button>
