@@ -17,10 +17,8 @@ export function ContactEmail({
     <div
       style={{
         width: "100%",
-        background: "linear-gradient(to bottom, #eff6ff, #e0f2fe)",
-
+        borderRadius: "14px",
         fontFamily: "Poppins, sans-serif",
-        color: "#1a1a1a",
       }}
     >
       <div
@@ -50,8 +48,7 @@ export function ContactEmail({
             style={{
               margin: 0,
               fontSize: "22px",
-              fontWeight: 700,
-              letterSpacing: "0.5px",
+              fontWeight: 600,
               fontFamily: "Onest, Poppins, sans-serif",
             }}
           >
