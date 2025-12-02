@@ -103,7 +103,7 @@ const EducationCard = ({
         )}
       >
         <Link href={`/education/education-detail/${edu._id}`}>
-          <div className="h-fit px-5 sm:px-12 pt-5 sm:pt-8 pb-4">
+          <div className="h-fit px-5 sm:px-10 pt-5 sm:pt-8 pb-4">
             <div className="relative space-y-1.5 transition-all ">
               {/* DEGREE */}
               <h1 className="mb-2.5 text-2xl font-medium leading-tight text-custom-black dark:text-white">

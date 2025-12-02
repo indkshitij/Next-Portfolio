@@ -3,11 +3,12 @@
 import SectionContainer from "@/lib/Wrapper/SectionContainer";
 import ContainerTextFlip from "@/frontend/atoms/ContainerTextFlip";
 import TriggerToast from "@/frontend/atoms/TriggerToast";
-import SmallButton from "@/frontend/atoms/SmallButton";
+import LinkButton from "@/frontend/atoms/LinkButton";
 import Icons from "@/lib/Icons";
 import { RESUME_LINK } from "@/lib/DummyData";
 import SocialHandle from "@/frontend/molecules/SocialHandle";
 import Typewriter from "@/frontend/atoms/Typewriter";
+import OnClickButton from "@/frontend/atoms/OnClickButton";
 
 const Footer = () => {
   const email = "ind.kshitijsingh@gmail.com";
@@ -30,10 +31,7 @@ const Footer = () => {
   };
 
   return (
-    <footer
-      className="w-full text-white/85 relative overflow-hidden bg-custom-black"
-     
-    >
+    <footer className="w-full text-white/85 relative overflow-hidden bg-custom-black">
       <div className="pt-5 sm:pt-10 pb-36 sm:pb-52">
         <SectionContainer>
           <div className="flex flex-col md:flex-row justify-between items-start gap-10 sm:gap-20">
@@ -69,8 +67,9 @@ const Footer = () => {
               </h1>
 
               {/* Resume Button */}
-              <div className="flex flex-wrap flex-row justify-between sm:justify-center items-center gap-2.5 sm:gap-5 mt-2">
-                <SmallButton
+              <div className="grid grid-cols-2 gap-4 mt-2">
+                {/* TOP LEFT */}
+                <LinkButton
                   content="Let's Connect"
                   path="/contact"
                   icon={<Icons icon="circle-right" size={20} />}
@@ -79,36 +78,38 @@ const Footer = () => {
                   hoverTextColor="#ffffff"
                   hoverBubbleColor="bg-[linear-gradient(135deg,#60A5FA_0%,#2563EB_100%)]"
                 />
-                <SmallButton
-                  content="View Resume"
-                  path={RESUME_LINK}
-                  icon={
-                    <Icons
-                      icon="circle-right"
-                      className="-rotate-45"
-                      size={20}
-                    />
-                  }
-                  bgColor="bg-white"
-                  textColor="text-custom-black"
-                  hoverTextColor="#ffffff"
-                  hoverBubbleColor="bg-[linear-gradient(135deg,#60A5FA_0%,#2563EB_100%)]"
-                />
-              </div>
 
-              <div className="flex items-center gap-4 bg-gray-100 rounded-lg py-1.5 pl-3 pr-1.5 sm:py-2 sm:pl-4 sm:pr-2 w-fit">
-                <p className="min-w-60 sm:min-w-86 text-md sm:text-lg text-gray-500 whitespace-nowrap overflow-hidden border-r-2 border-blue-font select-none">
-                  <Typewriter text={email} />
-                  {/* {email} */}
-                </p>
-                <button
-                  onClick={copyEmail}
-                  className=" relative px-6 py-2.5 rounded-md text-white/90 text-sm font-medium bg-blue-font transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:bg-blue-700 hover:shadow-[0_6px_18px_rgba(0,0,0,0.35)] active:translate-y-0 overflow-hidden"
-                >
-                  {/* Shine Effect */}
-                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 translate-x-[-150%] group-hover:translate-x-[150%] transition-all duration-700 ease-out"></span>
-                  Copy
-                </button>
+                {/* TOP RIGHT (only if resume exists) */}
+                {RESUME_LINK && RESUME_LINK.trim() !== "" && RESUME_LINK.trim() !== "#" && (
+                  <LinkButton
+                    content="View Resume"
+                    path={RESUME_LINK}
+                    icon={
+                      <Icons
+                        icon="circle-right"
+                        className="-rotate-45"
+                        size={20}
+                      />
+                    }
+                    bgColor="bg-white"
+                    textColor="text-custom-black"
+                    hoverTextColor="#ffffff"
+                    hoverBubbleColor="bg-[linear-gradient(135deg,#60A5FA_0%,#2563EB_100%)]"
+                  />
+                )}
+
+                {/* BOTTOM FULL-WIDTH ROW */}
+                <div className="col-span-2 flex items-center gap-4 bg-gray-100 rounded-lg py-1.5 pl-3 pr-1.5 sm:py-2 sm:pl-4 sm:pr-2">
+                  <p className="w-full text-md sm:text-lg text-gray-500 whitespace-nowrap overflow-hidden border-r-2 border-blue-font select-none">
+                    <Typewriter text={email} />
+                  </p>
+
+                  <OnClickButton
+                    onClick={copyEmail}
+                    content="Copy"
+                    minWidth="min-w-0"
+                  />
+                </div>
               </div>
             </div>
           </div>

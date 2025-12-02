@@ -1,12 +1,11 @@
 import ExperienceDetailTemplate from "@/frontend/template/ExperienceDetailTemplate";
-import React from "react";
+
+export const metadata = {
+  title: "Experience",
+};
 
 const page = () => {
-  return (
-    <div>
-      <ExperienceDetailTemplate />
-    </div>
-  );
+  return <ExperienceDetailTemplate />;
 };
 
 export default page;

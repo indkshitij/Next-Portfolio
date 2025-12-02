@@ -116,7 +116,7 @@ const ExperienceCard = ({
         {" "}
         <Link href={`/experience/experience-detail/${experience._id}`}>
           {/* TOP SECTION — DETAILS */}
-          <div className="h-fit px-5 sm:px-12 pt-5 sm:pt-8 pb-5 ">
+          <div className="h-fit px-5 sm:px-10 pt-5 sm:pt-8 pb-5 ">
             <div className="relative space-y-1.5 transition-all">
               <h1 className="text-2xl font-medium leading-tight text-custom-black ">
                 {experience?.jobTitle} at{" "}

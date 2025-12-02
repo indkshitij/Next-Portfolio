@@ -2,9 +2,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeading from "@/frontend/atoms/PageHeading";
 import SectionContainer from "@/lib/Wrapper/SectionContainer";
+import { PROJECT_DATA } from "@/lib/DummyData";
+import ProjectCard from "@/frontend/molecules/ProjectCard";
 
 export const metadata = {
-  title: 'Projects',
+  title: "Projects",
 };
 
 const page = () => {
@@ -18,9 +20,11 @@ const page = () => {
       />
       <div className="bg-[#F8FAFB]">
         <SectionContainer>
-          <div className="font-logo my-24 text-center text-9xl font-bold text-black">
-            {" "}Working...
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-5 md:px-15">
+          {PROJECT_DATA.map((p, index) => (
+            <ProjectCard project={p} key={index} />
+          ))}
+        </div>
         </SectionContainer>
       </div>
       <div className="dark:bg-black ">

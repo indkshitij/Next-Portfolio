@@ -9,6 +9,11 @@ import ForescribeImg from "@/assets/experience/forescribe.png";
 import AgileLogoImg from "@/assets/experience/agileLogo.png";
 import ForescribeLogoImg from "@/assets/experience/forescribeLogo.png";
 import { normalizeTechName, TECH_ICONS } from "@/lib/MapTechnologiesLogo";
+import NeoFinance from "@/assets/project/neofinance.png";
+import BrainwaveAi from "@/assets/project/brainwaveai.png";
+import PortfolioCMS from "@/assets/project/portfolioCMS.png";
+
+export const RESUME_LINK = "kjbiu";
 
 export const NAV_ITEMS = [
   { link: "/", icon: <Icons icon="home" />, name: "Home" },
@@ -428,163 +433,6 @@ export const EXPERTISE = [
   },
 ];
 
-// export const SKILLS_DATA = [
-//   {
-//     name: "C++",
-//     normalized: normalizeTechName("C++"),
-//     icon: TECH_ICONS[normalizeTechName("C++")],
-//     description:
-//       "A fast and powerful language used for algorithms and performance-critical systems.",
-//   },
-//   {
-//     name: "JavaScript",
-//     normalized: normalizeTechName("JavaScript"),
-//     icon: TECH_ICONS[normalizeTechName("JavaScript")],
-//     description:
-//       "The core language of the web, powering dynamic and interactive interfaces.",
-//   },
-//   {
-//     name: "TypeScript",
-//     normalized: normalizeTechName("TypeScript"),
-//     icon: TECH_ICONS[normalizeTechName("TypeScript")],
-//     description:
-//       "JavaScript with type safety — ideal for scalable and maintainable applications.",
-//   },
-//   {
-//     name: "HTML5",
-//     normalized: normalizeTechName("HTML5"),
-//     icon: TECH_ICONS[normalizeTechName("HTML5")],
-//     description: "Provides structure and semantic meaning to web content.",
-//   },
-//   {
-//     name: "CSS3",
-//     normalized: normalizeTechName("CSS3"),
-//     icon: TECH_ICONS[normalizeTechName("CSS3")],
-//     description: "Used to build modern, responsive, and visually elegant UIs.",
-//   },
-
-//   // Frontend
-//   {
-//     name: "React",
-//     normalized: normalizeTechName("React"),
-//     icon: TECH_ICONS[normalizeTechName("React")],
-//     description: "Component-driven UI library for building dynamic frontends.",
-//   },
-//   {
-//     name: "Next.js",
-//     normalized: normalizeTechName("Next.js"),
-//     icon: TECH_ICONS[normalizeTechName("Next.js")],
-//     description:
-//       "A full-stack React framework with SSR, routing, and API support built in.",
-//   },
-//   {
-//     name: "Tailwind CSS",
-//     normalized: normalizeTechName("Tailwind CSS"),
-//     icon: TECH_ICONS[normalizeTechName("Tailwind CSS")],
-//     description:
-//       "A utility-first CSS framework for fast and consistent styling.",
-//   },
-//   {
-//     name: "React Router",
-//     normalized: normalizeTechName("React Router"),
-//     icon: TECH_ICONS[normalizeTechName("React Router")],
-//     description: "Handles client-side routing in modern React applications.",
-//   },
-
-//   // Backend
-//   {
-//     name: "Node.js",
-//     normalized: normalizeTechName("Node.js"),
-//     icon: TECH_ICONS[normalizeTechName("Node.js")],
-//     description: "JavaScript runtime used to build scalable backend services.",
-//   },
-//   {
-//     name: "Express.js",
-//     normalized: normalizeTechName("Express.js"),
-//     icon: TECH_ICONS[normalizeTechName("Express.js")],
-//     description:
-//       "Minimal and flexible Node.js framework for building robust REST APIs.",
-//   },
-//   {
-//     name: "REST API",
-//     normalized: normalizeTechName("REST API"),
-//     icon: TECH_ICONS[normalizeTechName("REST API")],
-//     description: "A standard architectural style for designing scalable APIs.",
-//   },
-
-//   // Database & Cloud
-//   {
-//     name: "MongoDB",
-//     normalized: normalizeTechName("MongoDB"),
-//     icon: TECH_ICONS[normalizeTechName("MongoDB")],
-//     description:
-//       "A NoSQL database for flexible, high-performance applications.",
-//   },
-//   {
-//     name: "Mongoose",
-//     normalized: normalizeTechName("Mongoose"),
-//     icon: TECH_ICONS[normalizeTechName("Mongoose")],
-//     description: "Elegant object modeling tool for MongoDB in Node.js.",
-//   },
-//   {
-//     name: "Azure",
-//     normalized: normalizeTechName("Azure"),
-//     icon: TECH_ICONS[normalizeTechName("Azure")],
-//     description:
-//       "Microsoft’s cloud platform for deploying and scaling applications.",
-//   },
-
-//   // Tools
-//   {
-//     name: "Git",
-//     normalized: normalizeTechName("Git"),
-//     icon: TECH_ICONS[normalizeTechName("Git")],
-//     description:
-//       "Version control system that enables collaboration and tracking changes.",
-//   },
-//   {
-//     name: "GitHub",
-//     normalized: normalizeTechName("GitHub"),
-//     icon: TECH_ICONS[normalizeTechName("GitHub")],
-//     description:
-//       "A platform for hosting repositories and streamlining team development.",
-//   },
-//   {
-//     name: "Docker",
-//     normalized: normalizeTechName("Docker"),
-//     icon: TECH_ICONS[normalizeTechName("Docker")],
-//     description:
-//       "Containerization platform ensuring consistent development and deployments.",
-//   },
-//   {
-//     name: "Postman",
-//     normalized: normalizeTechName("Postman"),
-//     icon: TECH_ICONS[normalizeTechName("Postman")],
-//     description: "A powerful tool for building, testing, and managing APIs.",
-//   },
-//   {
-//     name: "VS Code",
-//     normalized: normalizeTechName("VS Code"),
-//     icon: TECH_ICONS[normalizeTechName("VS Code")],
-//     description:
-//       "Highly customizable source-code editor for efficient development.",
-//   },
-//   {
-//     name: "Figma",
-//     normalized: normalizeTechName("Figma"),
-//     icon: TECH_ICONS[normalizeTechName("Figma")],
-//     description:
-//       "Collaborative UI/UX design tool for building modern interfaces.",
-//   },
-//   {
-//     name: "Linux",
-//     normalized: normalizeTechName("Linux"),
-//     icon: TECH_ICONS[normalizeTechName("Linux")],
-//     description:
-//       "Collaborative UI/UX design tool for building modern interfaces.",
-//   },
-// ];
-
 export const SKILLS_DATA = [
   // ---------------------------
   // 1. LANGUAGES
@@ -992,6 +840,277 @@ export const SKILLS_DATA = [
   },
 ];
 
+export const PROJECT_DATA = [
+  {
+    _id: "1",
+    type: "AI",
+    category: "Career / Voice AI",
+    primaryColor: "#FF8A4C",
+
+    name: "Brainwave AI ",
+    nameDescribe: "Intelligent Voice-Based Mock Interview Platform",
+    shortDescription:
+      "A full-stack voice-based AI mock interview simulator that generates real-time questions, listens to your answers, and provides structured feedback instantly.",
+    shortDescription2:
+      "A personal portfolio + full admin dashboard CMS that supports dynamic content editing, media uploads, and secure JWT-protected routes.",
+
+    projectLink: "https://brainwaveai.onrender.com/",
+    githubLink: "https://github.com/indkshitij/BrainwaveAI",
+
+    imageUrl: BrainwaveAi,
+    techStack: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Vapi AI",
+      "Gemini",
+      "Clerk",
+      "Zod",
+    ],
+
+    features: [
+      "Voice-based real-time interview simulation",
+      "AI-generated questions based on role & experience",
+      "Automated feedback with scoring",
+      "Behavioral & technical interview modes",
+      "Dashboard with interview history",
+      "Secure login with Clerk",
+    ],
+
+    highlights: [
+      "Integrated Vapi AI for real-time voice responses",
+      "Used Google GenAI API for feedback scoring",
+      "Designed a detailed analytics dashboard",
+      "Created scalable REST APIs for interview sessions",
+    ],
+
+    problemSolved:
+      "Helps job seekers practice interviews with real-time voice interaction and actionable feedback, bridging the gap between preparation and real interviews.",
+
+    roleInProject: [
+      "Full-stack development",
+      "Voice AI integration",
+      "Interview feedback engine",
+      "Dashboard and analytics UI",
+    ],
+
+    challenges: [
+      "Managing accurate voice-to-text interpretations",
+      "Generating structured and meaningful feedback",
+      "Synchronizing interview sessions in real time",
+    ],
+
+    solutions: [
+      "Used Vapi AI for reliable voice session handling",
+      "Integrated Google Generative AI for content evaluation",
+      "Implemented real-time UI state sync + optimized schema",
+    ],
+
+    metrics: {
+      userGrowth: "150+ mock interviews tested",
+      accuracyImprovement: "30% better feedback consistency",
+      performance: "Fast processing under 2 seconds",
+    },
+
+    description: `<div class="flex flex-wrap gap-2 text-xs mb-4">
+      <span class="px-2 py-0.5 border-orange-400 text-orange-400 font-medium border rounded">React</span>
+      <span class="px-2 py-0.5 border-orange-400 text-orange-400 font-medium border rounded">Node.js</span>
+      <span class="px-2 py-0.5 border-orange-400 text-orange-400 font-medium border rounded">Vapi AI</span>
+      <span class="px-2 py-0.5 border-orange-400 text-orange-400 font-medium border rounded">Google GenAI</span>
+      <span class="px-2 py-0.5 border-orange-400 text-orange-400 font-medium border rounded">MongoDB</span>
+    </div>
+    <span class="font-semibold">Brainwave AI</span> helps users simulate <span class="italic">real interviews with voice</span> and get instant AI feedback.`,
+
+    inDepthDetail: "<<< USE YOUR EXISTING FULL HTML DETAIL HERE >>>",
+
+    createdAt: "2025-01-01T00:00:00Z",
+    updatedAt: "2025-01-10T00:00:00Z",
+  },
+
+  // -------------------------------------------------------
+
+  {
+    _id: "2",
+    type: "Full-stack",
+    category: "Finance / AI Automation",
+    primaryColor: "#4C9AFF",
+
+    name: "Neo Finance",
+    nameDescribe: "AI-Enabled Personal Finance Manager",
+    shortDescription:
+      "A modern MERN-based personal finance assistant with AI-powered bill scanning, budgeting, analytics, and event-driven alerts.",
+    shortDescription2:
+      "A personal portfolio + full admin dashboard CMS that supports dynamic content editing, media uploads, and secure JWT-protected routes.",
+
+    projectLink: "https://neo-finance.onrender.com/",
+    githubLink: "https://github.com/indkshitij/Neo-Finance",
+
+    imageUrl: NeoFinance,
+
+    techStack: [
+      "React",
+      "Tailwind",
+      "shadcn/ui",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Gemini",
+      "Clerk",
+      "Svix",
+      "Inngest",
+      "Resend",
+      "Arcjet",
+    ],
+
+    features: [
+      "AI-powered receipt/bill scanning",
+      "Income & expense tracking",
+      "Automated budgeting alerts",
+      "Email notifications",
+      "Event-driven workflows",
+      "Secure authentication",
+    ],
+
+    highlights: [
+      "OCR pipeline using Google GenAI",
+      "Event-driven alerts using Inngest",
+      "Webhook syncing with Clerk + Svix",
+      "Dynamic data visualization using Recharts",
+    ],
+
+    problemSolved:
+      "Reduces manual effort in managing finances by automatically extracting bill details, tracking expenses, and alerting users on overspending.",
+
+    roleInProject: [
+      "Full-stack MERN developer",
+      "AI OCR integration",
+      "After-upload bill parsing system",
+      "UI/UX and dashboard components",
+    ],
+
+    challenges: [
+      "Accurate OCR extraction",
+      "Real-time syncing with webhooks",
+      "Handling large financial datasets efficiently",
+    ],
+
+    solutions: [
+      "Used Generative AI for structured OCR extraction",
+      "Implemented server-side events with Inngest",
+      "Optimized Mongo queries & added indexing",
+    ],
+
+    metrics: {
+      ocrAccuracy: "92% accurate bill detection",
+      performance: "35% faster client-side rendering",
+      automation: "Over 60% reduced manual entry",
+    },
+
+    description: `<div class="flex flex-wrap gap-2 text-xs mb-4">
+      <span class="px-2 py-0.5 border-orange-400 text-orange-400 font-medium border rounded">React</span>
+      <span class="px-2 py-0.5 border-orange-400 text-orange-400 font-medium border rounded">MongoDB</span>
+      <span class="px-2 py-0.5 border-orange-400 text-orange-400 font-medium border rounded">Google GenAI</span>
+    </div>
+    <span class="font-semibold">Neo Finance</span> is a personal finance manager with <span class="italic">AI-powered receipt scanning and automated alerts</span>.`,
+
+    inDepthDetail: "<<< USE YOUR EXISTING FULL HTML DETAIL HERE >>>",
+
+    createdAt: "2025-01-02T00:00:00Z",
+    updatedAt: "2025-01-10T00:00:00Z",
+  },
+
+  // -------------------------------------------------------
+
+  {
+    _id: "3",
+    type: "Full-stack",
+    category: "Developer Tools",
+    primaryColor: "#FFC04C",
+
+    name: "Portfolio Admin Dashboard",
+    nameDescribe: " MERN-Based Content Management System",
+    shortDescription:
+      "A personal portfolio + full admin dashboard CMS that supports dynamic content editing, media uploads, and secure JWT-protected routes.",
+    shortDescription2:
+      "A personal portfolio + full admin dashboard CMS that supports dynamic content editing, media uploads, and secure JWT-protected routes.",
+
+    projectLink: "https://kshitij-singh.onrender.com/",
+    githubLink: "https://github.com/indkshitij/Kshitij-Portfolio",
+
+    imageUrl: PortfolioCMS,
+    techStack: [
+      "React",
+      "Vite",
+      "Tailwind",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "Cloudinary",
+    ],
+
+    features: [
+      "Dynamic project & skills management",
+      "CRUD operations via admin panel",
+      "JWT authentication",
+      "Image uploads via Multer + Cloudinary",
+      "Fully responsive UI",
+      "Real-time content updates",
+    ],
+
+    highlights: [
+      "CMS-like admin dashboard",
+      "Cloudinary integration",
+      "Secure token-based routes",
+      "Separate public and admin UI",
+    ],
+
+    problemSolved:
+      "Helps developers manage their portfolio dynamically without redeployment or code changes.",
+
+    roleInProject: [
+      "Full-stack MERN developer",
+      "Admin dashboard architecture",
+      "Image upload integration",
+      "Public portfolio UI",
+    ],
+
+    challenges: [
+      "Ensuring secure admin access",
+      "Building scalable CRUD modules",
+      "Handling images efficiently",
+    ],
+
+    solutions: [
+      "JWT tokens + cookie-based auth",
+      "Modular controllers with Mongoose models",
+      "Cloudinary uploads with optimized transformations",
+    ],
+
+    metrics: {
+      performance: "40% faster UI render with lazy loading",
+      cmsUsage: "100+ content updates without redeploy",
+      security: "Zero unauthorized access incidents",
+    },
+
+    description: `<div class="flex flex-wrap gap-2 text-xs mb-4">
+      <span class="px-2 py-0.5 border-orange-400 text-orange-400 font-medium border rounded">React</span>
+      <span class="px-2 py-0.5 border-orange-400 text-orange-400 font-medium border rounded">Node.js</span>
+      <span class="px-2 py-0.5 border-orange-400 text-orange-400 font-medium border rounded">JWT</span>
+      <span class="px-2 py-0.5 border-orange-400 text-orange-400 font-medium border rounded">MongoDB</span>
+    </div>
+    A <span class="font-semibold">developer-focused CMS</span> for managing portfolio content in real time.`,
+
+    inDepthDetail: "<<< USE YOUR EXISTING FULL HTML DETAIL HERE >>>",
+
+    createdAt: "2025-01-03T00:00:00Z",
+    updatedAt: "2025-01-10T00:00:00Z",
+  },
+];
+
 export const SKILLS = [
   // 1. LANGUAGES
   "JavaScript",
@@ -1077,8 +1196,6 @@ export const SKILLS = [
   "Bash",
 ];
 // TOTAL: 62 SKILLS
-
-export const RESUME_LINK = "#";
 
 export const myskills = [
   // ---------------------------

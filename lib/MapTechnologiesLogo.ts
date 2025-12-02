@@ -116,6 +116,7 @@ import heroui from "@/assets/techStack/socketIo.png";
 import axios from "@/assets/techStack/axios.png";
 import fetch from "@/assets/techStack/fetch.png";
 import pnpm from "@/assets/techStack/pnpm.png";
+import vapi from "@/assets/techStack/vapi.svg"
 import vercel from "@/assets/techStack/vercel.png";
 
 // Fallback icon (add this file)
@@ -219,7 +220,7 @@ export const TECH_ICONS = {
   cicd,
   redux,
   reduxsaga,
-  render,
+  render,vapi,
   replit,
   resend,
   safari,
@@ -257,6 +258,16 @@ export function normalizeTechName(name: string = "") {
     case "chrome":
       return "chrome";
 
+    case "vitejs":
+    case "vite":
+      return "vitejs";
+
+      case "vapi":
+    case "vapiai":
+      case "vapivoice":
+      return "vapi";
+      
+
     case "safari":
       return "safari";
 
@@ -265,7 +276,7 @@ export function normalizeTechName(name: string = "") {
       return "brave";
 
     case "colab":
-      
+
     case "googlecolab":
       return "colab";
 

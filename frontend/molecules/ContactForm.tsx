@@ -4,9 +4,9 @@ import { useState, FormEvent, ChangeEvent } from "react";
 import TriggerToast from "../atoms/TriggerToast";
 import Icons from "@/lib/Icons";
 import axios from "axios";
+import OnClickButton from "../atoms/OnClickButton";
 const ContactForm = () => {
   const [sending, setSending] = useState(false);
-  const [hovered, setHovered] = useState(false);
 
   const [form, setForm] = useState({
     name: "",
@@ -71,10 +71,12 @@ const ContactForm = () => {
     <div className="p-3 sm:p-5 bg-white/60 rounded-lg shadow-md border border-gray-100">
       <form onSubmit={handleSubmit} className="space-y-3">
         {/* NAME + EMAIL */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {/* NAME */}
           <div className="space-y-1.5">
-            <label className="text-sm ml-0.5 font-medium text-gray-600">Name</label>
+            <label className="text-sm ml-0.5 font-medium text-gray-600">
+              Name
+            </label>
 
             <div className="relative flex items-center">
               <Icons icon="name" className="absolute left-3 text-gray-400" />
@@ -92,7 +94,9 @@ const ContactForm = () => {
 
           {/* EMAIL */}
           <div className="space-y-1.5">
-            <label className="text-sm ml-0.5 font-medium text-gray-600">Email</label>
+            <label className="text-sm ml-0.5 font-medium text-gray-600">
+              Email
+            </label>
 
             <div className="relative flex items-center">
               <Icons icon="mail" className="absolute left-3 text-gray-400" />
@@ -111,7 +115,9 @@ const ContactForm = () => {
 
         {/* SUBJECT */}
         <div className="space-y-1.5">
-          <label className="text-sm ml-0.5 font-medium text-gray-600">Subject</label>
+          <label className="text-sm ml-0.5 font-medium text-gray-600">
+            Subject
+          </label>
 
           <div className="relative flex items-center">
             <Icons icon="subject" className="absolute left-3 text-gray-400" />
@@ -129,7 +135,9 @@ const ContactForm = () => {
 
         {/* MESSAGE */}
         <div className="space-y-1.5">
-          <label className="text-sm ml-0.5 font-medium text-gray-600">Message</label>
+          <label className="text-sm ml-0.5 font-medium text-gray-600">
+            Message
+          </label>
 
           <div className="relative">
             <Icons
@@ -150,35 +158,23 @@ const ContactForm = () => {
 
         {/* SUBMIT BUTTON */}
         <div className="flex justify-end">
-          <button
-            type="submit"
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-            disabled={sending}
-            className={`min-w-full sm:min-w-60 relative bg-custom-black px-5 py-3 rounded-md overflow-hidden transition-all duration-300 ease-in-out shadow-[0_4px_12px_rgba(0,0,0,0.25)] hover:scale-[1.02] hover:shadow-[0_5px_14px_rgba(0,0,0,0.4)] backdrop-blur-md ${sending ? "opacity-80 cursor-not-allowed" : "cursor-pointer"} `}
-            style={{ color: "#ffffff" }}
-          >
-            {!sending && (
-              <span
-                className={` absolute left-5 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full z-10 bg-[linear-gradient(180deg,#498DE6_0%,#2C62B9_50%,#103893_100%)] transition-transform duration-500 ease-in-out ${hovered ? "scale-[55]" : "scale-0"}`}
-              ></span>
-            )}
-
-            {/* Idle Text */}
-            <div
-              className={`flex justify-center items-center gap-2 relative z-30 font-medium text-[14px] sm:text-[16px]  transition-all duration-300 ${sending && "flex-row-reverse"}`}
-            >
-              {sending ? "Sending ..." : "Send Message"}
-
-              <span className="relative z-20 transition-all duration-300">
-                {sending ? (
-                  <Icons icon={"loader"} size={20} />
-                ) : (
-                  <Icons icon={"send-mail"} size={16} />
-                )}
-              </span>
-            </div>
-          </button>
+          <OnClickButton
+            content={sending ? "Sending ..." : "Send Message"}
+            onClick={handleSubmit}
+            icon={
+              sending ? (
+                <Icons icon={"loader"} size={20} />
+              ) : (
+                <Icons icon={"send-mail"} size={16} />
+              )
+            }
+            bgColor="bg-custom-black"
+            textColor="text-white"
+            hoverTextColor="#ffffff"
+            hoverBubbleColor="bg-[linear-gradient(135deg,#60A5FA_0%,#2563EB_100%)]"
+            minWidth="min-w-full w-full sm:w-fit sm:min-w-40"
+          />
+          
         </div>
       </form>
     </div>

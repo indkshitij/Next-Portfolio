@@ -15,6 +15,7 @@ import ContactSection from "@/frontend/organism/ContactSection";
 import EducationSection from "@/frontend/organism/EducationSection";
 import ExperienceSection from "@/frontend/organism/ExperienceSection";
 import ExpertiseSecction from "@/frontend/organism/ExpertiseSection";
+import ProjectSection from "@/frontend/organism/ProjectSection";
 import SkillsSection from "@/frontend/organism/SkillsSection";
 
 export default function Home() {
@@ -37,8 +38,9 @@ export default function Home() {
           <HeroSection />
           <div id="work">
             <SkillsCarousel />
-            <EducationSection />
             <ExperienceSection />
+            <EducationSection />
+            <ProjectSection/>
             <SkillsSection />
             <ExpertiseSecction />
             <ContactSection />
