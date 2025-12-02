@@ -1,16 +1,28 @@
 import SectionHeading from "@/frontend/atoms/SectionHeading";
-import Icons from "@/lib/Icons";
 import SectionContainer from "@/lib/Wrapper/SectionContainer";
-
+import ProjectCard from "../molecules/ProjectCard";
+import { PROJECT_DATA } from "@/lib/DummyData";
 
 const ProjectSection = () => {
   return (
     <SectionContainer>
-    <div>
-          <SectionHeading icon={<Icons icon="project" className="w-6 h-6 md:w-10 md:h-10"/>} heading="Project Section" />
-      
-        ProjectSection</div></SectionContainer>
-  )
-}
+      <div>
+        <SectionHeading
+          badge="Projects"
+          badgeColor="bg-blue-600"
+          heading="Featured Projects"
+          description="A showcase of the products and AI-driven applications I’ve built—crafted for real use, performance, and scalability."
+          badgePosition="-rotate-3"
+        />
 
-export default ProjectSection
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-5 md:px-15">
+          {PROJECT_DATA.map((p, index) => (
+            <ProjectCard project={p} key={index} />
+          ))}
+        </div>
+      </div>
+    </SectionContainer>
+  );
+};
+
+export default ProjectSection;

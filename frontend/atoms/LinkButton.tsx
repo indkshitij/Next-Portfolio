@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { ReactNode } from "react";
 
-interface SmallButtonProps {
+interface LinkButtonProps {
   content: string;
   path?: string;
   icon?: ReactNode;
@@ -17,7 +17,7 @@ interface SmallButtonProps {
   cursorBgColor?: string;
   cursorTextColor?: string;
 }
-const SmallButton = ({
+const LinkButton = ({
   content,
   path = "#",
   icon,
@@ -27,7 +27,7 @@ const SmallButton = ({
   hoverBubbleColor = "bg-[linear-gradient(180deg,#498DE6_0%,#2C62B9_50%,#103893_100%)]",
   borderColor = "border-transparent",
  
-}: SmallButtonProps) => {
+}: LinkButtonProps) => {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -66,4 +66,4 @@ const SmallButton = ({
   );
 };
 
-export default SmallButton;
+export default LinkButton;

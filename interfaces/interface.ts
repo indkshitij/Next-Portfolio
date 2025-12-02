@@ -23,6 +23,9 @@ export interface EducationInterface {
 
   highlights?: string[];
   keywords?: string[];
+
+  createdAt?: string | Date;
+  updatedAt?: string | Date;
 }
 
 export interface ExperienceInterface {
@@ -69,4 +72,54 @@ export interface ExperienceInterface {
     bugReduction?: string;
     featureDeliverySpeed?: string;
   };
+
+  createdAt?: string | Date;
+  updatedAt?: string | Date;
+}
+
+export interface ProjectTechStack {
+  frontend?: string[];
+  backend?: string[];
+  ai?: string[];
+}
+
+export interface ProjectInterface {
+  _id?: string;
+
+  type?: string;
+  category?: string;
+  primaryColor?: string;
+
+  name?: string;
+  nameDescribe?: string;
+  shortDescription?: string;
+  shortDescription2?: string;
+  
+
+  projectLink?: string;
+  githubLink?: string;
+  imageUrl?: string | StaticImageData;
+
+  techStack?: string[];
+  features?: string[];
+  highlights?: string[];
+
+  problemSolved?: string;
+  roleInProject?: string[];
+
+  challenges?: string[];
+  solutions?: string[];
+
+  metrics?: {
+    userGrowth?: string;
+    performance?: string;
+    bugReduction?: string;
+    accuracyImprovement?: string;
+    ocrAccuracy?: string;
+    cmsUsage?: string;
+    security?: string;
+  };
+
+  description?: string;
+  inDepthDetail?: string;
 }

@@ -30,9 +30,7 @@ const CursorWrapper = ({
 
   return (
     <div
-      className={`relative  ${
-        hovering ? "cursor-none" : "cursor-default"
-      }`}
+      className={`relative`}
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
       onMouseMove={handleMove}

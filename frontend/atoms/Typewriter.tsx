@@ -16,24 +16,23 @@ export default function Typewriter({
   text,
   cursorColor = "#3b82f6",
   className = "",
-  typingSpeed = 0.12, // slower typing
-  deletingSpeed = 0.1, // faster delete
-  repeatDelay = 2.5, // pause before delete + before retype
+  typingSpeed = 0.3,
+  deletingSpeed = 0.15,
+  repeatDelay = 1.2,
 }: TypewriterProps) {
   const characters = text.split("");
-
   const [scope, animate] = useAnimate();
 
   useEffect(() => {
     const run = async () => {
       while (true) {
-        // RESET TO HIDDEN
-        await animate("span", { opacity: 0, display: "none" }, { duration: 0 });
+        // RESET
+        await animate("span.wrap", { opacity: 0, width: 0 }, { duration: 0 });
 
-        // TYPE EFFECT
+        // TYPE
         await animate(
-          "span",
-          { opacity: 1, display: "inline-block" },
+          "span.wrap",
+          { opacity: 1, width: "auto" },
           {
             delay: stagger(typingSpeed),
             duration: typingSpeed,
@@ -41,22 +40,20 @@ export default function Typewriter({
           }
         );
 
-        // WAIT BEFORE DELETING
-        await new Promise((res) => setTimeout(res, repeatDelay * 1000));
+        await new Promise((r) => setTimeout(r, repeatDelay * 1000));
 
-        // DELETE EFFECT (reverse stagger)
+        // DELETE (fade + width collapse at same time)
         await animate(
-          "span",
-          { opacity: 0, display: "none" },
+          "span.wrap",
+          { opacity: 0, width: 0 },
           {
-            delay: stagger(-deletingSpeed),
+            delay: stagger(deletingSpeed, { from: "last" }),
             duration: deletingSpeed,
-            ease: "easeIn",
+            ease: "easeInOut",
           }
         );
 
-        // WAIT BEFORE TYPING AGAIN
-        await new Promise((res) => setTimeout(res, repeatDelay * 1000));
+        await new Promise((r) => setTimeout(r, repeatDelay * 1000));
       }
     };
 
@@ -65,15 +62,19 @@ export default function Typewriter({
 
   return (
     <span className={`inline-flex items-center ${className}`}>
-      <motion.span ref={scope}>
+      <motion.span ref={scope} className="inline-flex">
         {characters.map((c, i) => (
-          <motion.span key={i} className="opacity-0 hidden">
-            {c}
-          </motion.span>
+          <span
+            key={i}
+            className="wrap inline-flex overflow-hidden opacity-0"
+            style={{ width: 0 }} // important
+          >
+            <span>{c}</span>
+          </span>
         ))}
       </motion.span>
 
-      {/* cursor */}
+      {/* Cursor */}
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

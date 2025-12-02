@@ -38,7 +38,7 @@ export default function HeroSection() {
     <section className="relative w-full min-h-[92vh] sm:min-h-screen flex justify-center items-center bg-transparent">
       <div className="relative w-[97vw] h-[90vh] sm:h-[95vh] bg-white border border-gray-300 dark:border-gray-700 rounded-[20px] overflow-hidden backdrop-blur-md p-1 md:p-6 shadow-xl flex flex-col justify-between items-center">
         <div className="absolute inset-0 pointer-events-none">
-          <BackgroundRippleEffect  rows={12} cols={27} cellSize={60} />
+          <BackgroundRippleEffect rows={12} cols={27} cellSize={60} />
         </div>
 
         <div className="h-1/4 sm:h-1/5 z-50 hidden md:flex justify-between w-full">
@@ -70,27 +70,30 @@ export default function HeroSection() {
                 textColor="text-white"
                 hoverTextColor="#ffffff"
                 hoverBubbleColor="bg-[linear-gradient(135deg,#60A5FA_0%,#2563EB_100%)]"
-               
               />
-              <CTAButton
-                content="View My Resume"
-                path={RESUME_LINK}
-                icon={
-                  <Icons icon="circle-right" className="-rotate-45" size={20} />
-                }
-                bgColor="bg-white"
-                textColor="text-custom-black"
-                hoverTextColor="#ffffff"
-                hoverBubbleColor="bg-[linear-gradient(135deg,#60A5FA_0%,#2563EB_100%)]"
-                
-              />
+              {RESUME_LINK && RESUME_LINK.trim() !== "" && RESUME_LINK.trim() !== "#"&& (
+                <CTAButton
+                  content="View My Resume"
+                  path={RESUME_LINK}
+                  icon={
+                    <Icons
+                      icon="circle-right"
+                      className="-rotate-45"
+                      size={20}
+                    />
+                  }
+                  bgColor="bg-white"
+                  textColor="text-custom-black"
+                  hoverTextColor="#ffffff"
+                  hoverBubbleColor="bg-[linear-gradient(135deg,#60A5FA_0%,#2563EB_100%)]"
+                />
+              )}
             </div>
           </div>
         </div>
 
         {/* second row */}
         <div className="mb-5 md:mb-0 h-1/4 sm:h-1/5 flex justify-center md:justify-between items-end w-full">
-          
           {/* Thought */}
           <div className="hidden md:flex w-2/5 text-left cursor-default select-none">
             <div className="flex items-center gap-2.5 w-fit bg-blue-50 rounded-md text-blue-font font-medium text-base px-4 py-2">
@@ -109,11 +112,10 @@ export default function HeroSection() {
           {/* time */}
           <div className="w-2/5 hidden md:flex justify-end cursor-default select-none">
             <span className="w-fit uppercase bg-zinc-100 rounded-lg text-light-gray font-semibold text-lg px-4 py-2 flex justify-center items-center gap-2.5 tracking-wider">
-              <Icons icon="clock"/>
+              <Icons icon="clock" />
               {time}
             </span>
           </div>
-
         </div>
       </div>
     </section>

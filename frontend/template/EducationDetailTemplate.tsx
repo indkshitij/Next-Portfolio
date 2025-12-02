@@ -7,6 +7,7 @@ import Icons from "@/lib/Icons";
 import { formatDateMonthYear } from "@/lib/backendUtils/helperFunction";
 import BackButton from "@/frontend/atoms/BackButton";
 
+
 export default function EducationDetailTemplate() {
   const params = useParams();
   const educationId = params?._id;
@@ -22,7 +23,6 @@ export default function EducationDetailTemplate() {
 
   return (
     <div className="min-h-screen w-full bg-gray-50 dark:bg-custom-black py-10 px-4">
-
       {/* Optional Back Button */}
       <div className="max-w-6xl mx-auto mb-6">
         <BackButton />
@@ -30,11 +30,9 @@ export default function EducationDetailTemplate() {
 
       {/* ----------------------- HEADER SECTION ----------------------- */}
       <div className="max-w-6xl mx-auto bg-white dark:bg-[#0b0b0b] rounded-3xl shadow-xl p-10 relative overflow-hidden">
-
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-blue-900/10 rounded-3xl pointer-events-none" />
 
         <div className="relative z-10 flex flex-col md:flex-row gap-10">
-
           {/* LEFT CONTENT */}
           <div className="flex-1 space-y-5">
             <h1 className="text-4xl font-bold text-custom-black dark:text-white leading-tight">
@@ -51,10 +49,10 @@ export default function EducationDetailTemplate() {
 
             {/* BADGES */}
             <div className="flex flex-wrap gap-3 mt-4">
-
               <span className="flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-semibold text-sm">
                 <Icons icon="calendar" size={18} />
-                {formatDateMonthYear(edu.startDate)} — {formatDateMonthYear(edu.endDate)}
+                {formatDateMonthYear(edu.startDate)} —{" "}
+                {formatDateMonthYear(edu.endDate)}
               </span>
 
               <span className="flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full font-semibold text-sm">
@@ -84,7 +82,6 @@ export default function EducationDetailTemplate() {
               />
             </div>
           </div>
-
         </div>
       </div>
 
@@ -141,7 +138,6 @@ export default function EducationDetailTemplate() {
           </div>
         </section>
       )}
-
     </div>
   );
 }
