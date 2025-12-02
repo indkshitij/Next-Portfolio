@@ -25,14 +25,14 @@ const Menu = () => {
                 )}
               >
                 <span
-                  className={`text-2xl transition-all duration-300 ease-in-out px-1 group-hover:px-3 font-black",
+                  className={`text-2xl transition-all duration-300 ease-in-out px-1 group-hover:px-3 ",
                     ${!isActive && "group-hover:-translate-x-2"}`}
                 >
                   {item.icon}
                 </span>
 
                 <span
-                  className={`text-md opacity-0 font-semibold whitespace-nowrap overflow-hidden transition-all duration-200 ease-in-out max-w-0 group-hover:opacity-100 group-hover:max-w-[120px]`}
+                  className={`text-md opacity-0 font-medium whitespace-nowrap overflow-hidden transition-all duration-200 ease-in-out max-w-0 group-hover:opacity-100 group-hover:max-w-[120px]`}
                 >
                   {item.name}
                 </span>

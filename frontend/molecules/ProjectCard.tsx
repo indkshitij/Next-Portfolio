@@ -2,9 +2,7 @@
 
 import { ProjectInterface } from "@/interfaces/interface";
 import CursorWrapper from "@/lib/Wrapper/CursorWrapper";
-import { formatDateMonthYear } from "@/lib/backendUtils/helperFunction";
 import Image from "next/image";
-import Icons from "@/lib/Icons";
 import React, { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { cn } from "@/lib/utils";
@@ -107,13 +105,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           <div className="h-fit px-5 sm:px-10 pt-5 sm:pt-8 pb-5 ">
             <div className="relative space-y-1.5 transition-all">
               <h1 className="text-2xl font-medium leading-tight text-custom-black ">
-                <span
-                  className={`italic `}
-                  style={{ color: project?.primaryColor || "#000" }}
-                >
-                  {project?.name}
-                </span>
-                - {project?.nameDescribe}
+                <span className={`italic`}style={{ color: project?.primaryColor || "#000" }}>{project?.name}</span>{" "}-{" "}{project?.nameDescribe}
               </h1>
 
               {/* COMPANY DESCRPTION */}

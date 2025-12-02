@@ -94,7 +94,6 @@ export interface ProjectInterface {
   nameDescribe?: string;
   shortDescription?: string;
   shortDescription2?: string;
-  
 
   projectLink?: string;
   githubLink?: string;
@@ -121,5 +120,5 @@ export interface ProjectInterface {
   };
 
   description?: string;
-  inDepthDetail?: string;
+  inDepthDetail?: string | string[];
 }

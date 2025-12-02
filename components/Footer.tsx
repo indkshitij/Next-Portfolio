@@ -31,7 +31,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full text-white/85 relative overflow-hidden bg-custom-black">
+    <footer className="w-full text-white/85 relative overflow-hidden bg-custom-black ">
       <div className="pt-5 sm:pt-10 pb-36 sm:pb-52">
         <SectionContainer>
           <div className="flex flex-col md:flex-row justify-between items-start gap-10 sm:gap-20">

@@ -26,7 +26,6 @@ const LinkButton = ({
   hoverTextColor = "#ffffff",
   hoverBubbleColor = "bg-[linear-gradient(180deg,#498DE6_0%,#2C62B9_50%,#103893_100%)]",
   borderColor = "border-transparent",
- 
 }: LinkButtonProps) => {
   const [hovered, setHovered] = useState(false);
 
@@ -48,7 +47,7 @@ const LinkButton = ({
 
           {/* Text + Icon */}
           <span
-            className={`min-w-30 sm:min-w-48 flex justify-center items-center gap-2.5 px-2 sm:px-5 relative z-20 font-medium text-[14px] sm:text-[16px] transition-all duration-300 ${textColor} `}
+            className={`min-w-30 sm:min-w-48 w-full flex justify-center items-center gap-2.5 px-2 sm:px-5 relative z-20 font-medium text-[14px] sm:text-[16px] transition-all duration-300 ${textColor} text-center`}
             style={{
               color: hovered ? hoverTextColor : undefined,
             }}

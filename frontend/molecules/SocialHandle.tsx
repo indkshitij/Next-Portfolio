@@ -24,7 +24,7 @@ export const SocialHandle = () => {
                 {s.icon}
               </span>
 
-              <span className="relative text-md whitespace-nowrap font-semibold text-white max-w-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out group-hover:max-w-[120px] group-hover:opacity-100">
+              <span className="relative text-md whitespace-nowrap font-medium text-white max-w-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out group-hover:max-w-[120px] group-hover:opacity-100">
                 {s.name}
               </span>
             </div>

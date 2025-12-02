@@ -1,12 +1,12 @@
 "use client";
 
-import { useParams } from "next/navigation";
 import { EDUCATION_DATA } from "@/lib/DummyData";
 import Image from "next/image";
-import Icons from "@/lib/Icons";
 import { formatDateMonthYear } from "@/lib/backendUtils/helperFunction";
 import BackButton from "@/frontend/atoms/BackButton";
-
+import { useParams } from "next/navigation";
+import PageHeading from "../atoms/PageHeading";
+import Icons from "@/lib/Icons";
 
 export default function EducationDetailTemplate() {
   const params = useParams();
@@ -22,18 +22,40 @@ export default function EducationDetailTemplate() {
     );
 
   return (
-    <div className="min-h-screen w-full bg-gray-50 dark:bg-custom-black py-10 px-4">
-      {/* Optional Back Button */}
-      <div className="max-w-6xl mx-auto mb-6">
+    <>
+      <div className="relative">
+        {/* Back Button */}
+        <div className="absolute top-10 left-10 z-10">
+          <BackButton
+            icon={
+              <Icons icon="circle-right" className="rotate-180" size={20} />
+            }
+          />
+        </div>
+        {/* Heading */}
+        <PageHeading
+          heading={
+            <h1 className=" text-3xl sm:text-4xl font-medium">
+             {edu.degree} 
+            </h1>
+          }
+          subheading={<p className="font-medium"> {edu.shortDescription}</p>}
+        />
+
+        <div className="h-screen">
+
+        </div>
+      </div>
+      {/* <div className="min-h-screen w-full bg-gray-50 dark:bg-custom-black py-10 px-4">
+
+      <div className="mb-6">
         <BackButton />
       </div>
 
-      {/* ----------------------- HEADER SECTION ----------------------- */}
       <div className="max-w-6xl mx-auto bg-white dark:bg-[#0b0b0b] rounded-3xl shadow-xl p-10 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-blue-900/10 rounded-3xl pointer-events-none" />
 
         <div className="relative z-10 flex flex-col md:flex-row gap-10">
-          {/* LEFT CONTENT */}
           <div className="flex-1 space-y-5">
             <h1 className="text-4xl font-bold text-custom-black dark:text-white leading-tight">
               {edu.degree}
@@ -47,7 +69,6 @@ export default function EducationDetailTemplate() {
               {edu.institute}
             </p>
 
-            {/* BADGES */}
             <div className="flex flex-wrap gap-3 mt-4">
               <span className="flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-semibold text-sm">
                 <Icons icon="calendar" size={18} />
@@ -66,13 +87,11 @@ export default function EducationDetailTemplate() {
               </span>
             </div>
 
-            {/* SHORT DESCRIPTION */}
             <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mt-4">
               {edu.shortDescription}
             </p>
           </div>
 
-          {/* RIGHT IMAGE */}
           <div className="flex-1 flex justify-center md:justify-end">
             <div className="w-80 h-80 rounded-3xl overflow-hidden shadow-lg">
               <Image
@@ -85,7 +104,6 @@ export default function EducationDetailTemplate() {
         </div>
       </div>
 
-      {/* ----------------------- LONG DESCRIPTION ----------------------- */}
       {edu.longDescription && (
         <section className="max-w-6xl mx-auto mt-16">
           <h2 className="text-3xl font-bold text-custom-black dark:text-white">
@@ -98,7 +116,6 @@ export default function EducationDetailTemplate() {
         </section>
       )}
 
-      {/* ----------------------- HIGHLIGHTS ----------------------- */}
       {edu.highlights?.length > 0 && (
         <section className="max-w-6xl mx-auto mt-16">
           <h2 className="text-3xl font-bold text-custom-black dark:text-white">
@@ -119,7 +136,6 @@ export default function EducationDetailTemplate() {
         </section>
       )}
 
-      {/* ----------------------- KEYWORDS ----------------------- */}
       {edu.keywords?.length > 0 && (
         <section className="max-w-6xl mx-auto mt-16 mb-20">
           <h2 className="text-3xl font-bold text-custom-black dark:text-white">
@@ -138,6 +154,7 @@ export default function EducationDetailTemplate() {
           </div>
         </section>
       )}
-    </div>
+    </div> */}
+    </>
   );
 }
