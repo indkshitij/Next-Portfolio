@@ -14,18 +14,18 @@ export default function SkillCard({
   };
 }) {
   return (
-    <div className="group relative h-30 sm:h-44 w-full px-4 py-4 border border-gray/10 flex flex-col items-center justify-center gap-3 transition-all duration-500 hover:bg-gray/5 overflow-hidden cursor-pointer hover:bg-gray-200/50">
+    <div className="group relative h-30 sm:h-44 w-full px-4 py-4 border border-gray/10 flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:bg-gray/5 overflow-hidden cursor-pointer hover:bg-gray-200/50">
       {/* ICON */}
       <motion.div
         animate={{ y: [0, -4, 0] }}
         transition={{
-          duration: 1.4,
+          duration: 0.3,
           repeat: Infinity,
           repeatType: "mirror",
           ease: "easeInOut",
         }}
         whileHover={{ scale: 1.15, y: -6 }}
-        className="p-0 sm:p-4 sm:mt-10 group-hover:py-0 group-hover:mt-0 transition-all duration-500"
+        className="p-0 sm:p-4 sm:mt-10 group-hover:py-0 group-hover:mt-0 transition-all duration-300"
       >
         
           <Image
@@ -44,7 +44,7 @@ export default function SkillCard({
       </h3>
 
       {/* DESCRIPTION */}
-      <p className="hidden sm:flex opacity-0 translate-y-16 group-hover:translate-y-0 group-hover:opacity-100 text-custom-black text-[12px] transition-all duration-500 ease-in-out px-1 text-center">
+      <p className="hidden sm:flex opacity-0 translate-y-16 group-hover:translate-y-0 group-hover:opacity-100 text-custom-black text-[12px] transition-all duration-300 ease-in-out px-1 text-center">
         {skill.description}
       </p>
     </div>

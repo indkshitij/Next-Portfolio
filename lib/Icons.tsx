@@ -16,7 +16,7 @@ const Icons = ({ icon, className, size = 25, stroke }: IconProps) => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth={stroke || "2"}
+          strokeWidth={stroke || "1.8"}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -35,7 +35,7 @@ const Icons = ({ icon, className, size = 25, stroke }: IconProps) => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth={stroke || "2"}
+          strokeWidth={stroke || "1.8"}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -53,7 +53,7 @@ const Icons = ({ icon, className, size = 25, stroke }: IconProps) => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth={stroke || "2"}
+          strokeWidth={stroke || "1.8"}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -72,7 +72,7 @@ const Icons = ({ icon, className, size = 25, stroke }: IconProps) => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth={stroke || "2"}
+          strokeWidth={stroke || "1.8"}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -85,13 +85,13 @@ const Icons = ({ icon, className, size = 25, stroke }: IconProps) => {
     case "skills":
       return (
         <svg
-          width={size || 20}
-          height={size || 20}
+          width={size || 16}
+          height={size || 16}
           className={className}
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth={stroke || "2"}
+          strokeWidth={stroke || "1.7"}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -119,7 +119,7 @@ const Icons = ({ icon, className, size = 25, stroke }: IconProps) => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth={stroke || "2"}
+          strokeWidth={stroke || "1.8"}
           strokeLinecap="round"
           strokeLinejoin="round"
         >

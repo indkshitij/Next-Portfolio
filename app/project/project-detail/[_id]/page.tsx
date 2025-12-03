@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import ProjectDetailTemplate from "@/frontend/template/ProjectDetailTemplate";
 
 export const metadata = {
@@ -5,7 +7,13 @@ export const metadata = {
 };
 
 const page = () => {
-  return <ProjectDetailTemplate />;
+  return (
+    <div className="bg-[#F8FAFB]">
+      <Navbar />
+      <ProjectDetailTemplate />
+      <Footer />
+    </div>
+  );
 };
 
 export default page;

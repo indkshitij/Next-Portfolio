@@ -1,4 +1,6 @@
 import EducationDetailTemplate from "@/frontend/template/EducationDetailTemplate";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 export const metadata = {
   title: "Education",
@@ -15,7 +17,12 @@ export const metadata = {
 // }
 
 const page = () => {
-  return <EducationDetailTemplate />;
+  return (
+  <div className="bg-[#F8FAFB]">
+      <Navbar />
+      <EducationDetailTemplate /> 
+      <Footer />
+    </div>);
 };
 
 export default page;

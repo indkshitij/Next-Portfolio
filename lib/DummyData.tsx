@@ -915,17 +915,21 @@ export const PROJECT_DATA = [
       performance: "Fast processing under 2 seconds",
     },
 
-    description: `<div class="flex flex-wrap gap-2 text-xs mb-4">
-      <span class="px-2 py-0.5 border-orange-400 text-orange-400 font-medium border rounded">React</span>
-      <span class="px-2 py-0.5 border-orange-400 text-orange-400 font-medium border rounded">Node.js</span>
-      <span class="px-2 py-0.5 border-orange-400 text-orange-400 font-medium border rounded">Vapi AI</span>
-      <span class="px-2 py-0.5 border-orange-400 text-orange-400 font-medium border rounded">Google GenAI</span>
-      <span class="px-2 py-0.5 border-orange-400 text-orange-400 font-medium border rounded">MongoDB</span>
-    </div>
-    <span class="font-semibold">Brainwave AI</span> helps users simulate <span class="italic">real interviews with voice</span> and get instant AI feedback.`,
+    description: `A full-stack voice-based AI mock interview simulator that generates real-time questions, listens to your answers, and provides structured feedback instantly. A full-stack voice-based AI mock interview simulator that generates real-time questions, listens to your answers, and provides structured feedback instantly. A full-stack voice-based AI mock interview simulator that generates real-time questions, listens to your answers, and provides structured feedback instantly. A full-stack voice-based AI mock interview simulator that generates real-time questions, listens to your answers, and provides structured feedback instantly.`,
 
-    inDepthDetail: "<<< USE YOUR EXISTING FULL HTML DETAIL HERE >>>",
+    inDepthDetail: [
+      "This project introduces a full-stack voice-based AI mock interview simulator designed to replicate real-time interview scenarios. It generates dynamic questions, listens to user responses, and provides structured feedback instantly. The system aims to improve communication skills, boost confidence, and offer an interactive environment for candidates preparing for technical and behavioral interviews.",
 
+      "Using advanced speech recognition and natural language understanding, the simulator evaluates spoken answers with high accuracy. It identifies strengths, highlights mistakes, and suggests improvements. Users can practice multiple interview rounds, track their progress, and receive detailed performance insights to enhance fluency, clarity, and professional delivery.",
+
+      "Built as a full-stack application, the platform integrates a modern frontend, scalable backend, and real-time voice processing. It supports continuous question generation using AI-driven models, ensuring each session feels fresh and tailored. The system can adapt to various difficulty levels depending on the user's expertise and interview goals.",
+
+      "The mock interview experience includes real-time feedback, score breakdowns, and personalized improvement tips. Each response is recorded, transcribed, and analyzed to measure relevance, structure, and confidence level. The platform also detects filler words, long pauses, and unclear points to help users refine their communication style.",
+
+      "Users can choose domains such as software engineering, data science, product management, or general HR interviews. The application creates a simulated environment that closely resembles actual interview settings. It helps beginners practice safely while offering experienced candidates a tool to fine-tune their responses and polish their speaking skills.",
+
+      "The system’s dashboard visualizes performance metrics, historical progress, and recommended next steps. With its interactive voice-based approach, the simulator transforms traditional interview preparation into an engaging, AI-assisted learning experience suitable for students, job seekers, and professionals.",
+    ],
     createdAt: "2025-01-01T00:00:00Z",
     updatedAt: "2025-01-10T00:00:00Z",
   },
@@ -1016,7 +1020,7 @@ export const PROJECT_DATA = [
     </div>
     <span class="font-semibold">Neo Finance</span> is a personal finance manager with <span class="italic">AI-powered receipt scanning and automated alerts</span>.`,
 
-    inDepthDetail: "<<< USE YOUR EXISTING FULL HTML DETAIL HERE >>>",
+    inDepthDetail: ["<<< USE YOUR EXISTING FULL HTML DETAIL HERE >>>"],
 
     createdAt: "2025-01-02T00:00:00Z",
     updatedAt: "2025-01-10T00:00:00Z",
@@ -1031,7 +1035,7 @@ export const PROJECT_DATA = [
     primaryColor: "#FFC04C",
 
     name: "Portfolio Admin Dashboard",
-    nameDescribe: " MERN-Based Content Management System",
+    nameDescribe: " MERN Based Content Management System",
     shortDescription:
       "A personal portfolio + full admin dashboard CMS that supports dynamic content editing, media uploads, and secure JWT-protected routes.",
     shortDescription2:
@@ -1104,7 +1108,7 @@ export const PROJECT_DATA = [
     </div>
     A <span class="font-semibold">developer-focused CMS</span> for managing portfolio content in real time.`,
 
-    inDepthDetail: "<<< USE YOUR EXISTING FULL HTML DETAIL HERE >>>",
+    inDepthDetail: ["<<< USE YOUR EXISTING FULL HTML DETAIL HERE >>>"],
 
     createdAt: "2025-01-03T00:00:00Z",
     updatedAt: "2025-01-10T00:00:00Z",

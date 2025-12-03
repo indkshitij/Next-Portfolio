@@ -57,7 +57,7 @@ function ExpertiseCard({ item, idx }: ExpertiseCardProps) {
       <motion.div
         animate={isEven ? animation : undefined}
         transition={{
-          duration: 1.2,
+          duration: 0.3,
           repeat: Infinity,
           repeatType: "mirror",
           ease: "easeInOut",
@@ -66,7 +66,7 @@ function ExpertiseCard({ item, idx }: ExpertiseCardProps) {
           !isEven ? { scale: 1.2, rotate: 6, y: -6 } : { scale: 1.15, y: -4 }
         }
         style={{ color }}
-        className="p-0 md:p-4 flex justify-center items-center mt-18 sm:mt-10 group-hover:mt-0 group-hover:py-0 transition-all duration-500"
+        className="p-0 md:p-4 flex justify-center items-center mt-18 sm:mt-10 group-hover:mt-0 group-hover:py-0 transition-all duration-300"
       >
         <Icons icon={item.slug} size={40} />
       </motion.div>
@@ -77,7 +77,7 @@ function ExpertiseCard({ item, idx }: ExpertiseCardProps) {
       </h3>
 
       {/* DESCRIPTION */}
-      <p className="opacity-0 translate-y-16 group-hover:translate-y-0 group-hover:opacity-100 text-white text-[12px] transition-all duration-500 ease-in-out px-1 text-center">
+      <p className="opacity-0 translate-y-16 group-hover:translate-y-0 group-hover:opacity-100 text-white text-[12px] transition-all duration-300 ease-in-out px-1 text-center">
         {item.desc}
       </p>
     </div>

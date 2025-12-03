@@ -14,7 +14,7 @@ const Badge = ({ icon, content, className }: BadgeProps) => {
     <>
       <div
         className={cn(
-          "relative flex items-center gap-2 px-3 py-1.5 rounded-md select-none group",
+          "relative flex items-center gap-2 px-3 py-1.5 rounded-md select-none group overflow-hidden",
           // Glass background
           "bg-white/15 dark:bg-white/10 backdrop-blur-lg",
           // Premium border
