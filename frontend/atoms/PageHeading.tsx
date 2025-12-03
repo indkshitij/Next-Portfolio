@@ -30,7 +30,11 @@ const letterAnimation: Variants = {
   },
 };
 
-const PageHeading = ({ heading, subheading = "", className = "" }: PageHeadingProps) => {
+const PageHeading = ({
+  heading,
+  subheading = "",
+  className = "",
+}: PageHeadingProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -43,7 +47,10 @@ const PageHeading = ({ heading, subheading = "", className = "" }: PageHeadingPr
         className
       )}
     >
-      <div ref={ref} className="pt-32 sm:pt-40 sm:pb-10 relative w-full rounded-b-2xl">
+      <div
+        ref={ref}
+        className="pt-32 sm:pt-40 sm:pb-10 relative w-full rounded-b-2xl"
+      >
         {/* Background Ripple */}
         <div className="absolute inset-0 pointer-events-none opacity-90">
           <BackgroundRippleEffect rows={5} cols={27} cellSize={60} />
@@ -56,8 +63,8 @@ const PageHeading = ({ heading, subheading = "", className = "" }: PageHeadingPr
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="relative z-20 flex flex-col items-center text-center"
         >
-          {/* ⭐ HEADING WITH SMOOTH STAGGER ANIMATION */}
-          <motion.h1
+          {/* HEADING WITH SMOOTH STAGGER ANIMATION */}
+          <motion.div
             variants={letterContainer}
             initial="hidden"
             animate={isInView ? "show" : "hidden"}
@@ -67,52 +74,43 @@ const PageHeading = ({ heading, subheading = "", className = "" }: PageHeadingPr
               "text-custom-black dark:text-white"
             )}
           >
-            {typeof heading === "string" ? (
-              words.map((word, wi) => (
-                <span key={wi} className="inline-block mr-2">
-                  {word.split("").map((char, ci) => (
-                    <motion.span
-                      key={ci}
-                      variants={letterAnimation}
-                      whileHover={{
-                        y: -8,
-                        scale: 1.16,
-                        color: "rgb(36, 99, 235)",
-                        transition: {
-                          type: "spring",
-                          stiffness: 350,
-                          damping: 14,
-                        },
-                      }}
-                      className="inline-block"
-                    >
-                      {char}
-                    </motion.span>
-                  ))}
-                </span>
-              ))
-            ) : (
-              heading
-            )}
-          </motion.h1>
+            {typeof heading === "string"
+              ? words.map((word, wi) => (
+                  <span key={wi} className="inline-block mr-2">
+                    {word.split("").map((char, ci) => (
+                      <motion.span
+                        key={ci}
+                        variants={letterAnimation}
+                        whileHover={{
+                          y: -8,
+                          scale: 1.16,
+                          color: "rgb(36, 99, 235)",
+                          transition: {
+                            type: "spring",
+                            stiffness: 350,
+                            damping: 14,
+                          },
+                        }}
+                        className="inline-block"
+                      >
+                        {char}
+                      </motion.span>
+                    ))}
+                  </span>
+                ))
+              : heading}
+          </motion.div>
 
           {/* SUBHEADING WITH SMOOTH FADE + BLUR */}
           {subheading && (
-            <motion.p
-              initial={{ opacity: 0, y: 12, filter: "blur(12px)" }}
-              animate={
-                isInView
-                  ? { opacity: 1, y: 0, filter: "blur(0px)" }
-                  : { opacity: 0, y: 12, filter: "blur(12px)" }
-              }
-              transition={{ duration: 0.9, delay: 0.15, ease: "easeOut" }}
+            <div
               className={cn(
                 "max-w-4xl mt-3 text-base sm:text-lg md:text-xl",
                 "text-light-gray dark:text-gray-300 font-medium leading-relaxed"
               )}
             >
               {subheading}
-            </motion.p>
+            </div>
           )}
         </motion.div>
       </div>

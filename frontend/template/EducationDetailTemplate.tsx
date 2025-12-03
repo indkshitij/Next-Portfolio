@@ -1,12 +1,25 @@
 "use client";
 
 import { EDUCATION_DATA } from "@/lib/DummyData";
-import Image from "next/image";
 import { formatDateMonthYear } from "@/lib/backendUtils/helperFunction";
 import BackButton from "@/frontend/atoms/BackButton";
 import { useParams } from "next/navigation";
 import PageHeading from "../atoms/PageHeading";
 import Icons from "@/lib/Icons";
+import SectionContainer from "@/lib/Wrapper/SectionContainer";
+import Badge from "../atoms/Badge";
+import {
+  GraduationCap,
+  MapPinIcon,
+  Calendar,
+  MapPin,
+  Award,
+  Info,
+  FileText,
+  Sparkles,
+  Tags,
+} from "lucide-react";
+import PointsBlock from "../atoms/PointsBlock";
 
 export default function EducationDetailTemplate() {
   const params = useParams();
@@ -23,9 +36,9 @@ export default function EducationDetailTemplate() {
 
   return (
     <>
-      <div className="relative">
+      <div className="relative cursor-default">
         {/* Back Button */}
-        <div className="absolute top-10 left-10 z-10">
+        <div className="absolute top-15 left-15 z-10">
           <BackButton
             icon={
               <Icons icon="circle-right" className="rotate-180" size={20} />
@@ -35,15 +48,71 @@ export default function EducationDetailTemplate() {
         {/* Heading */}
         <PageHeading
           heading={
-            <h1 className=" text-3xl sm:text-4xl font-medium">
-             {edu.degree} 
-            </h1>
+            <h1 className=" text-3xl sm:text-4xl font-medium">{edu.degree}</h1>
           }
           subheading={<p className="font-medium"> {edu.shortDescription}</p>}
         />
 
-        <div className="h-screen">
+        <div className="-mt-10">
+          <SectionContainer>
+            <div className="flex justify-end items-center gap-5">
+              <Badge
+                icon={<Icons icon="calendar" size={18} />}
+                content={
+                  <div className="text-md p-1 -ml-1">
+                    {formatDateMonthYear(edu?.startDate)} —{" "}
+                    {edu?.endDate
+                      ? formatDateMonthYear(edu.endDate)
+                      : "Present"}
+                  </div>
+                }
+              />
 
+              <Badge
+                icon={<Icons icon="score-badge" size={16} />}
+                content={
+                  <div className="text-md p-1 -ml-1">{`${edu.grade?.type} —
+                  ${edu.grade?.value}`}</div>
+                }
+              />
+
+              <Badge
+                icon={<MapPinIcon strokeWidth={1.5} size={18} />}
+                content={
+                  <div className="text-md p-1 -ml-1">{edu?.location}</div>
+                }
+              />
+            </div>
+
+            <div className="grid gap-6 grid-cols-1 md:grid-cols-2 mt-6">
+              {/* Long Description */}
+              <PointsBlock
+                title="Full Description"
+                Icon={<FileText size={20} />}
+                text={edu.longDescription}
+                bordered
+              />
+
+              {/* Highlights */}
+              <PointsBlock
+                title="Highlights"
+                Icon={<Sparkles size={20} />}
+                items={edu.highlights}
+                bordered
+              />
+
+              <div className="col-span-2">
+                <PointsBlock
+                  title="Keywords"
+                  Icon={<Tags size={20} />}
+                  techStack={edu.keywords}
+                  bordered
+                  badgeWithImage={false}
+                  
+                />
+              </div>
+            </div>
+          </SectionContainer>
         </div>
       </div>
       {/* <div className="min-h-screen w-full bg-gray-50 dark:bg-custom-black py-10 px-4">

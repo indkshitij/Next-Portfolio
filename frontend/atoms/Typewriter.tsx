@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "motion/react";
 
 interface TypewriterProps {
-  text: string;
+  text?: string;
   cursorColor?: string;
   className?: string;
   typingSpeed?: number;
@@ -13,7 +13,7 @@ interface TypewriterProps {
 }
 
 export default function Typewriter({
-  text,
+  text="",
   cursorColor = "#3b82f6",
   className = "",
   typingSpeed = 0.15,

@@ -19,6 +19,7 @@ interface PointsBlockProps {
   bordered?: boolean;
   animated?: boolean;
   techStack?: string[];
+  badgeWithImage?: boolean;
 }
 
 const PointsBlock = ({
@@ -35,6 +36,7 @@ const PointsBlock = ({
   bordered = false,
   animated = true,
   techStack,
+  badgeWithImage = true,
 }: PointsBlockProps) => {
   return (
     <motion.div
@@ -111,7 +113,9 @@ const PointsBlock = ({
                   className={`w-1.5 h-1.5 rounded-full mt-2 shrink-0 ${dotColor}`}
                 ></span>
               )}
-              <p className="leading-relaxed opacity-90 tracking-wide text-justify">{p}</p>
+              <p className="leading-relaxed opacity-90 tracking-wide text-justify ">
+                {p}
+              </p>
             </li>
           ))}
         </ul>
@@ -136,13 +140,15 @@ const PointsBlock = ({
                 key={idx}
                 content={
                   <div className="flex items-center gap-2">
-                    <Image
-                      src={Icon}
-                      alt={tech}
-                      width={22}
-                      height={22}
-                      className="object-contain rounded-sm"
-                    />
+                    {badgeWithImage && (
+                      <Image
+                        src={Icon}
+                        alt={tech}
+                        width={22}
+                        height={22}
+                        className="object-contain rounded-sm"
+                      />
+                    )}
                     <p className="font-medium tracking-wide">{tech}</p>
                   </div>
                 }
