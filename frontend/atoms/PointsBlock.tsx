@@ -43,7 +43,7 @@ const PointsBlock = ({
       initial={animated ? { opacity: 0, y: 15 } : {}}
       animate={animated ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.45, ease: "easeOut" }}
-      className={`group relative ${bg} ${textColor} w-full h-full rounded-2xl p-7 sm:p-10 transition-all duration-500   ${bordered ? "border border-gray-200" : ""}
+      className={`group relative ${bg} ${textColor} w-full h-full rounded-2xl p-7 sm:p-10 ${bordered ? "border border-gray-200" : ""}
       shadow-[inset_-10px_-3px_10px_rgba(0,0,0,0.15),inset_0px_4px_8px_1px_rgba(0,0,0,0.25)]
         transition-all duration-300
      `}

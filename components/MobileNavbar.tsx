@@ -6,6 +6,7 @@ import Icons from "@/lib/Icons";
 import { NAV_ITEMS, SOCIAL_LINKS } from "@/lib/DummyData";
 import Link from "next/link";
 import { motion, AnimatePresence, Variants } from "framer-motion";
+import ThemeToggler from "@/frontend/atoms/ThemeToggler";
 
 const menuVariants: Variants = {
   open: {
@@ -38,7 +39,7 @@ export default function MobileNavbar() {
 
   return (
     <>
-      <div className="h-fit flex items-center justify-between w-[95vw] px-5 py-2 rounded-xl bg-custom-black text-white  shadow-xl backdrop-blur-xl">
+      <div className="h-fit flex items-center justify-between w-[97vw] px-5 py-3 rounded-xl bg-custom-black text-white  shadow-xl backdrop-blur-xl">
         {/* Logo */}
         <motion.div whileTap={{ scale: 0.9 }} className="w-fit h-auto">
           <div
@@ -48,13 +49,15 @@ export default function MobileNavbar() {
           </div>
         </motion.div>
 
+    <div className="flex gap-3 justify-center items-center">
+        <motion.div whileTap={{ scale: 0.85 }}> <ThemeToggler/></motion.div>
         <motion.button
           whileTap={{ scale: 0.85 }}
           onClick={() => setOpen(!open)}
           className="p-2.5 rounded-full text-white shadow-md"
         >
           {open ? <Icons icon="close" /> : <Icons icon="menu" />}
-        </motion.button>
+        </motion.button></div>
       </div>
 
       {/* DROPDOWN MENU */}

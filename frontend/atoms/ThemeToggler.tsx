@@ -1,68 +1,49 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { BsMoonStars, BsSunFill } from "react-icons/bs";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function ThemeToggler() {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const { setTheme, resolvedTheme } = useTheme();
 
-  useEffect(() => {
-    const timeout = requestAnimationFrame(() => setMounted(true));
-    return () => cancelAnimationFrame(timeout);
-  }, []);
+  if (!resolvedTheme) return null;
 
-  if (!mounted) return null;
-
-  const isDark = theme === "dark";
+  const isDark = resolvedTheme === "dark";
 
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="relative w-12 h-12 max-w-fit rounded-full px-1 
-      transition-all bg-gray-300 dark:bg-gray-700 flex justify-center items-center cursor-pointer"
+      className={`sm:w-16 sm:h-16 rounded-xl flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 ${!isDark && "sm:border-2 border-gray-200"} cursor-pointer bg-transparent ${isDark ? "sm:bg-[#1a1c1d]" : "sm:bg-[#f4f5f6]"}`}
     >
-      <div
-        className="w-10 h-10 rounded-full flex items-center justify-center shadow-lg 
-        bg-white dark:bg-black"
-      >
-        <AnimatePresence mode="wait">
+      {/* KEEP WRAPPER FIXED TO PREVENT MOBILE SHIFT */}
+      <div className="relative w-8 h-8 flex items-center justify-center">
+        <AnimatePresence mode="wait" initial={false}>
           {isDark ? (
             <motion.div
               key="moon"
-              initial={{ opacity: 0, rotate: -45 }}
-              animate={{ opacity: 1, rotate: 0 }}
-              exit={{ opacity: 0, rotate: 45 }}
-              transition={{ duration: 0.2 }}
+              initial={{ opacity: 0, scale: 0.6 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.6 }}
+              transition={{ duration: 0.2, ease: "easeInOut" }}
+              className="absolute inset-0 flex items-center justify-center"
             >
-              <BsMoonStars className="text-yellow-400" size={20} />
+              <BsMoonStars size={26} className="text-blue-300" />
             </motion.div>
           ) : (
             <motion.div
               key="sun"
-              initial={{ opacity: 0, rotate: 45 }}
-              animate={{ opacity: 1, rotate: 0 }}
-              exit={{ opacity: 0, rotate: -45 }}
-              transition={{ duration: 0.2 }}
+              initial={{ opacity: 0, scale: 0.6 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.6 }}
+              transition={{ duration: 0.2, ease: "easeInOut" }}
+              className="absolute inset-0 flex items-center justify-center"
             >
-              <BsSunFill className="text-yellow-600" size={20} />
+              <BsSunFill size={26} className="text-yellow-500" />
             </motion.div>
           )}
         </AnimatePresence>
       </div>
-
-      <motion.span
-        layout
-        className="absolute inset-0 rounded-full"
-        animate={{
-          backgroundColor: isDark
-            ? "rgba(34,197,94,0.2)"
-            : "rgba(251,191,36,0.25)",
-        }}
-        transition={{ duration: 0.1 }}
-      />
     </button>
   );
 }

@@ -1,7 +1,3 @@
-"use client";
-
-import Footer from "@/components/Footer";
-import HeroSection from "@/components/HeroSection";
 // import { useEffect } from "react";
 // import { fetchProjects } from "@/lib/store/features/projects";
 // import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
@@ -10,6 +6,7 @@ import HeroSection from "@/components/HeroSection";
 // import { fetchProfileData } from "@/lib/store/features/profileData";
 // import { fetchTechnology } from "@/lib/store/features/technologies";
 import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
 import SkillsCarousel from "@/frontend/molecules/SkillsCarousel";
 import ContactSection from "@/frontend/organism/ContactSection";
 import EducationSection from "@/frontend/organism/EducationSection";
@@ -17,6 +14,7 @@ import ExperienceSection from "@/frontend/organism/ExperienceSection";
 import ExpertiseSecction from "@/frontend/organism/ExpertiseSection";
 import ProjectSection from "@/frontend/organism/ProjectSection";
 import SkillsSection from "@/frontend/organism/SkillsSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   // const dispatch = useAppDispatch();
@@ -40,7 +38,7 @@ export default function Home() {
             <SkillsCarousel />
             <ExperienceSection />
             <EducationSection />
-            <ProjectSection/>
+            <ProjectSection />
             <SkillsSection />
             <ExpertiseSecction />
             <ContactSection />

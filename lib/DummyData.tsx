@@ -854,6 +854,11 @@ export const PROJECT_DATA = [
     shortDescription2:
       "A personal portfolio + full admin dashboard CMS that supports dynamic content editing, media uploads, and secure JWT-protected routes.",
 
+    mainDescription: [
+      "A personal portfolio + full admin dashboard CMS that supports dynamic content editing, media uploads, and secure JWT-protected routes.",
+      "A personal portfolio + full admin dashboard CMS that supports dynamic content editing, media uploads, and secure JWT-protected routes.",
+    ],
+
     projectLink: "https://brainwaveai.onrender.com/",
     githubLink: "https://github.com/indkshitij/BrainwaveAI",
 
@@ -948,7 +953,10 @@ export const PROJECT_DATA = [
       "A modern MERN-based personal finance assistant with AI-powered bill scanning, budgeting, analytics, and event-driven alerts.",
     shortDescription2:
       "A personal portfolio + full admin dashboard CMS that supports dynamic content editing, media uploads, and secure JWT-protected routes.",
-
+    mainDescription: [
+      "A personal portfolio + full admin dashboard CMS that supports dynamic content editing, media uploads, and secure JWT-protected routes.",
+      "A personal portfolio + full admin dashboard CMS that supports dynamic content editing, media uploads, and secure JWT-protected routes.",
+    ],
     projectLink: "https://neo-finance.onrender.com/",
     githubLink: "https://github.com/indkshitij/Neo-Finance",
 
@@ -1040,7 +1048,10 @@ export const PROJECT_DATA = [
       "A personal portfolio + full admin dashboard CMS that supports dynamic content editing, media uploads, and secure JWT-protected routes.",
     shortDescription2:
       "A personal portfolio + full admin dashboard CMS that supports dynamic content editing, media uploads, and secure JWT-protected routes.",
-
+    mainDescription: [
+      "A personal portfolio + full admin dashboard CMS that supports dynamic content editing, media uploads, and secure JWT-protected routes.",
+      "A personal portfolio + full admin dashboard CMS that supports dynamic content editing, media uploads, and secure JWT-protected routes.",
+    ],
     projectLink: "https://kshitij-singh.onrender.com/",
     githubLink: "https://github.com/indkshitij/Kshitij-Portfolio",
 

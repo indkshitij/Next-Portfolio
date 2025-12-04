@@ -94,6 +94,7 @@ export interface ProjectInterface {
   nameDescribe?: string;
   shortDescription?: string;
   shortDescription2?: string;
+  mainDescription?: string[] ;
 
   projectLink?: string;
   githubLink?: string;

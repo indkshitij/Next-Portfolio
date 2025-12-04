@@ -26,7 +26,7 @@ export default function Navbar() {
           initial={{ y: -810, opacity: 0 }}
           animate={{ y: visible ? 0 : -80, opacity: visible ? 1 : 0 }}
           transition={{ duration: 0.25, ease: "easeOut" }}
-          className="flex justify-center items-center fixed top-5 md:top-10 left-0 inset-x-0 mx-auto z-50 w-fit "
+          className="flex justify-center items-center fixed top-2 md:top-10 left-0 inset-x-0 mx-auto z-50 w-fit "
         >
           <div className="hidden md:block">
             <Menu />
