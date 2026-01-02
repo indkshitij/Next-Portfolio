@@ -22,29 +22,30 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <>
       {/* // <CursorWrapper description={`👀 See Details`}> */}
+      <div className="bg-black rounded-lg ">
       <div
         className={cn(
-          `sm:p-10 group min-h-fit sm:min-h-full relative overflow-hidden rounded-lg bg-[#F8FAFB]  transition-all shadow-[inset_-12px_-5px_12px_rgba(0,0,0,0.15),inset_2px_6px_10px_3px_rgba(0,0,0,0.25)]`
+          `p-1.5 sm:p-10 group min-h-fit sm:min-h-full relative overflow-hidden rounded-lg bg-[#F8FAFB] dark:bg-gray-100/10 transition-all shadow-[inset_-12px_-5px_12px_rgba(0,0,0,0.15),inset_2px_6px_10px_3px_rgba(0,0,0,0.25)] z-10`
         )}
       >
         {/* <CursorWrapper description={`👀 See Details`}> */}
           <Link href={`/project/project-detail/${project._id}`}>
-            <div className="max-w-full sm:max-w-[75vw] flex flex-col-reverse sm:flex-row sm:gap-5">
+            <div className="max-w-full sm:max-w-[75vw] flex flex-col-reverse sm:flex-row sm:gap-5 ">
               {/* BOTTOM SECTION — GRADIENT PANEL */}
-              <div className="p-2 md:p-3 h-100 max-w-full sm:max-w-[35vw] ">
+              <div className="p-2 md:p-3 h-100 max-w-full sm:max-w-[35vw] dark:brightness-65 ">
                 <div
-                  className="relative overflow-hidden h-full w-full rounded-xl p-2.5 md:p-5 group-hover:-translate-y-2.5 group-hover:shadow-lg transition-all duration-500 ease-in-out"
+                  className="relative overflow-hidden h-full w-full rounded-xl p-2.5 md:p-5 group-hover:-translate-y-2.5 group-hover:shadow-lg transition-all duration-500 ease-in-out dark:border border-zinc-800"
                   style={{ background: PROJECT_GRADIENTS(project.name) }}
                 >
                   {/* DESCRIPTION */}
                   <div className="opacity-100 md:opacity-0 md:translate-y-70 group-hover:opacity-100 text-white group-hover:translate-y-0 transition-all ease-in-out duration-700">
-                    <span className="text-sm md:text-base leading-relaxed text-white font-medium">
+                    <span className="text-base leading-relaxed text-white dark:text-gray-200 font-medium">
                       {project?.shortDescription2}
                     </span>
                   </div>
 
                   {/* IMAGE */}
-                  <div className="absolute top-26 sm:top-6 -left-2 sm:left-0 w-92 md:w-150 overflow-hidden translate-y-4 group-hover:translate-y-28 transition-transform duration-500 z-2">
+                  <div className="absolute top-38 sm:top-6 -left-2 sm:left-0 w-92 md:w-150 overflow-hidden translate-y-4 group-hover:translate-y-28 transition-transform duration-500 z-2">
                     {project.imageUrl && (
                       <Image
                         src={project?.imageUrl}
@@ -58,7 +59,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               {/* TOP SECTION — DETAILS */}
               <div className="h-fitrelative flex flex-col justify-between sm:h-100 px-5 sm:px-3 pt-5 sm:pt-3 pb-5 sm:pb-3">
                 <div className="h-full space-y-2 flex-1 ">
-                  <h1 className="text-2xl font-medium leading-tight text-custom-black ">
+                  <h1 className="text-xl sm:text-2xl font-medium leading-tight text-black dark:text-gray-200">
                     <span
                       className={`italic`}
                       style={{ color: project?.primaryColor || "#000" }}
@@ -74,7 +75,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                     return (
                       <p
                         key={index}
-                        className="text-base leading-relaxed text-light-gray mt-2.5 mb-6 sm:mb-1"
+                        className="text-base leading-relaxed text-gray-400 dark:text-gray-400 mt-2.5 mb-6 sm:mb-1"
                       >
                         {text}
                       </p>
@@ -106,7 +107,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                                 className={cn(
                                   "relative w-10 h-10 flex items-center justify-center rounded-full overflow-hidden",
                                   // Background + Glass
-                                  "bg-white dark:bg-gray-100 backdrop-blur-md",
+                                  "bg-white dark:bg-gray-100/10 dark:brightness-70 backdrop-blur-md",
                                   // Border Ring + Subtle Gradient Outline
                                   "border border-white/40 dark:border-white/20",
                                   "shadow-[0_2px_6px_rgba(0,0,0,0.15)]",
@@ -176,7 +177,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             </div>
           </Link>
         {/* </CursorWrapper> */}
-      </div>
+      </div></div>
     </>
   );
 };

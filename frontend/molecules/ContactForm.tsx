@@ -5,6 +5,7 @@ import TriggerToast from "../atoms/TriggerToast";
 import Icons from "@/lib/Icons";
 import axios from "axios";
 import OnClickButton from "../atoms/OnClickButton";
+import { cn } from "@/lib/utils";
 const ContactForm = () => {
   const [sending, setSending] = useState(false);
 
@@ -68,7 +69,10 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="p-3 sm:p-5 bg-white/60 rounded-lg shadow-md border border-gray-100">
+    <div
+      className=" p-4 sm:p-10 bg-white/60 rounded-lg 
+      shadow-[inset_0_-4px_8px_rgba(255,255,255,0.04),inset_0_4px_12px_rgba(0,0,0,0.55)]"
+    >
       <form onSubmit={handleSubmit} className="space-y-3">
         {/* NAME + EMAIL */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -87,7 +91,11 @@ const ContactForm = () => {
                 placeholder="Your Name"
                 value={form.name}
                 onChange={handleChange}
-                className="w-full pl-11 pr-4 py-3 rounded-lg bg-[#F8FAFB] text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-none focus:ring-blue-100 transition-all shadow-lg border border-gray-200/50"
+                // className="w-full pl-11 pr-4 py-3 rounded-lg bg-[#F8FAFB] text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-none focus:ring-blue-100 transition-all shadow-lg border border-gray-200/50"
+                className={cn(
+                  "p-2.5 pl-11 rounded-md backdrop-blur-md focus:outline-0 shadow-[0_4px_14px_rgba(0,0,0,0.12),_inset_0_1px_1.5px_rgba(255,255,255,0.35)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.18)]",
+                  "bg-white dark:bg-zinc-900/50 dark:text-gray-200 focus:border-blue-500 focus:ring-none focus:ring-blue-100 text-gray-800 placeholder-gray-400"
+                )}
               />
             </div>
           </div>
@@ -174,7 +182,6 @@ const ContactForm = () => {
             hoverBubbleColor="bg-[linear-gradient(135deg,#60A5FA_0%,#2563EB_100%)]"
             minWidth="min-w-full w-full sm:w-fit sm:min-w-40"
           />
-          
         </div>
       </form>
     </div>

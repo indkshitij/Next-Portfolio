@@ -14,7 +14,7 @@ export default function ThemeToggler() {
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className={`sm:w-16 sm:h-16 rounded-xl flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 ${!isDark && "sm:border-2 border-gray-200"} cursor-pointer bg-transparent ${isDark ? "sm:bg-[#1a1c1d]" : "sm:bg-[#f4f5f6]"}`}
+      className={`sm:w-16 sm:h-16 rounded-xl flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 sm:border sm:dark:border-zinc-800 ${!isDark && "sm:border-2 border-gray-200 "} cursor-pointer bg-transparent ${isDark ? "sm:bg-black" : "sm:bg-[#f4f5f6]"}`}
     >
       {/* KEEP WRAPPER FIXED TO PREVENT MOBILE SHIFT */}
       <div className="relative w-8 h-8 flex items-center justify-center">

@@ -22,7 +22,7 @@ const LinkButton = ({
   path = "#",
   icon,
   bgColor = "bg-white",
-  textColor = "text-custom-black",
+  textColor = "text-black",
   hoverTextColor = "#ffffff",
   hoverBubbleColor = "bg-[linear-gradient(180deg,#498DE6_0%,#2C62B9_50%,#103893_100%)]",
   borderColor = "border-transparent",
@@ -38,7 +38,7 @@ const LinkButton = ({
           style={{
             color: hovered ? hoverTextColor : undefined,
           }}
-          className={` group relative ${bgColor} px-4 py-2.5 rounded-md flex items-center gap-3 cursor-pointer overflow-hidden transition-all duration-300 ease-in-out shadow-[0_4px_12px_rgba(0,0,0,0.25)] hover:scale-[1.02] hover:shadow-[0_5px_14px_rgba(0,0,0,0.4)] border-0 hover:${borderColor} `}
+          className={` group relative ${bgColor} px-4 py-2.5 rounded-md flex items-center gap-3 cursor-pointer overflow-hidden transition-all duration-300 ease-in-out shadow-[0_4px_12px_rgba(0,0,0,0.25)] dark:hover:brightness-85 hover:scale-[1.02] hover:shadow-[0_5px_14px_rgba(0,0,0,0.4)] border-0 hover:${borderColor} `}
         >
           {/* Expanding bubble */}
           <span

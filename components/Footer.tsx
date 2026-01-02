@@ -31,7 +31,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full text-white/85 relative overflow-hidden bg-custom-black ">
+    <footer className="w-full text-white/85 relative overflow-hidden bg-black">
       <div className="pt-5 sm:pt-10 pb-36 sm:pb-52">
         <SectionContainer>
           <div className="flex flex-col md:flex-row justify-between items-start gap-10 sm:gap-20">
@@ -74,7 +74,7 @@ const Footer = () => {
                   path="/contact"
                   icon={<Icons icon="circle-right" size={20} />}
                   bgColor="bg-white"
-                  textColor="text-custom-black"
+                  textColor="text-black"
                   hoverTextColor="#ffffff"
                   hoverBubbleColor="bg-[linear-gradient(135deg,#60A5FA_0%,#2563EB_100%)]"
                 />
@@ -92,7 +92,7 @@ const Footer = () => {
                       />
                     }
                     bgColor="bg-white"
-                    textColor="text-custom-black"
+                    textColor="text-black"
                     hoverTextColor="#ffffff"
                     hoverBubbleColor="bg-[linear-gradient(135deg,#60A5FA_0%,#2563EB_100%)]"
                   />
@@ -100,14 +100,14 @@ const Footer = () => {
 
                 {/* BOTTOM FULL-WIDTH ROW */}
                 <div className="col-span-2 flex items-center gap-4 bg-gray-100 rounded-lg py-1.5 pl-3 pr-1.5 sm:py-2 sm:pl-4 sm:pr-2">
-                  <p className="w-full text-md sm:text-lg text-gray-500 whitespace-nowrap overflow-hidden border-r-2 border-blue-font select-none">
+                  <p className="w-full text-md sm:text-lg text-gray-500 whitespace-nowrap overflow-hidden border-r-2 border-blue-600 select-none">
                     <Typewriter text={email} />
                   </p>
 
                   <OnClickButton
                     onClick={copyEmail}
                     content="Copy"
-                    minWidth="min-w-0"
+                    minWidth="min-w-28"
                   />
                 </div>
               </div>

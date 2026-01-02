@@ -19,12 +19,12 @@ const SectionHeading = ({
   icon,
   heading = "",
   className = "",
-  textColor = "text-custom-black",
+  textColor = "text-black",
   description,
   badge,
-  badgeColor = "bg-custom-black",
+  badgeColor = "bg-black",
   badgePosition = "-rotate-12",
-  descriptionColor = "text-light-gray",
+  descriptionColor = "text-gray-500",
 }: SectionHeadingProps) => {
   const ref = useRef(null);
 
@@ -43,7 +43,7 @@ const SectionHeading = ({
       {/* ICON */}
       {icon && (
         <div className="text-white flex items-center bg-blue-500/10 rounded-full p-3.5">
-          <span className="text-blue-font">{icon}</span>
+          <span className="text-blue-600">{icon}</span>
         </div>
       )}
 
@@ -57,7 +57,7 @@ const SectionHeading = ({
             repeatType: "loop",
             ease: "easeInOut",
           }}
-          className={`${badgeColor} mb-1.5 font-medium text-[14px] px-2.5 py-1.5 rounded-md ${badgePosition} hover:rotate-0 hover:scale-110 hover:shadow-lg transition-all duration-300 cursor-pointer`}
+          className={`${badgeColor} mb-1.5 font-medium text-[14px] px-2.5 py-1.5 rounded-md ${badgePosition} hover:rotate-0 hover:scale-110 hover:shadow-lg transition-all duration-300 cursor-pointer dark:brightness-75`}
         >
           <p className="text-white text-xs">{badge}</p>
         </motion.div>
@@ -68,7 +68,7 @@ const SectionHeading = ({
         initial={{ opacity: 0, y: 10 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ delay: 0.1, duration: 0.8 }}
-        className={`font-semibold text-center leading-[1.1] tracking-tight text-4xl dark:text-white transition-transform duration-300 ${textColor}`}
+        className={`font-semibold text-center leading-[1.1] tracking-tight text-3xl md:text-4xl dark:text-white/80 transition-transform duration-300 ${textColor}`}
       >
         <motion.span
           initial="hidden"

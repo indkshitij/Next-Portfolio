@@ -18,7 +18,7 @@ const page = () => {
         subheading="A collection of thoughtfully engineered projects  
           built with a focus on real-world impact and clean execution."
       />
-      <div className="bg-[#F8FAFB]">
+      <div className="bg-[#F8FAFB] dark:bg-black">
         <SectionContainer>
           {/* <div className="grid grid-cols-1 md:grid-cols-1 gap-6 md:gap-5 md:px-15"> */}
           <div className="relative flex flex-col items-center gap-[500px]  mt-50 -mb-36">

@@ -6,14 +6,14 @@ import { getColorByName } from "@/lib/HelperFunctions";
 export const SocialHandle = () => {
   return (
     <>
-      <div className=" flex justify-end gap-2 p-2 rounded-xl bg-gray-150 text-white shadow-[0_0_7px_rgba(0,0,0,0.25)] w-fit bg-white">
+      <div className=" flex justify-end gap-2 p-2 rounded-xl bg-gray-150 text-white shadow-[0_0_7px_rgba(0,0,0,0.25)] w-fit bg-white dark:bg-black ">
         {SOCIAL_LINKS.filter((s) => s.url).map((s, index) => (
           <Link key={index} href={s?.url || "#"} target="_blank">
             <div
               style={{
                 ["--bg" as string]: getColorByName(s.name.toLowerCase()),
               }}
-              className="group relative flex items-center gap-0 px-2 hover:px-3 py-2.5 rounded-lg cursor-pointer bg-white dark:border-zinc-400 text-custom-black dark:text-gray-200 overflow-hidden transition-all duration-300 ease-in-out hover:text-white hover:shadow-lg "
+              className="group relative flex items-center gap-0 px-2 hover:px-3 py-2.5 rounded-lg cursor-pointer bg-white dark:bg-black dark:brightness-90 dark:border-zinc-800 text-black dark:text-gray-200 overflow-hidden transition-all duration-400 ease-in-out hover:text-white hover:shadow-lg "
             >
               <span
                 className="absolute inset-0 rounded-lg scale-0 opacity-0 transition-all duration-0 group-hover:scale-110 group-hover:opacity-100"

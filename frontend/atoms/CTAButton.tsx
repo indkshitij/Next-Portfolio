@@ -1,6 +1,5 @@
 "use client";
 
-import CursorWrapper from "@/lib/Wrapper/CursorWrapper";
 import Link from "next/link";
 import { ReactNode, useState } from "react";
 
@@ -20,7 +19,7 @@ const CTAButton = ({
   path = "#",
   icon,
   bgColor = "bg-white",
-  textColor = "text-custom-black",
+  textColor = "text-black",
   hoverTextColor = "#ffffff",
   hoverBubbleColor = "bg-[linear-gradient(180deg,#498DE6_0%,#2C62B9_50%,#103893_100%)]",
   borderColor = "border-transparent",
@@ -39,7 +38,7 @@ const CTAButton = ({
           group relative ${bgColor} min-w-60 px-6 py-3 rounded-lg flex justify-center items-center gap-3
           cursor-pointer overflow-hidden transition-all duration-300 ease-out
           shadow-[0_4px_12px_rgba(0,0,0,0.25)]
-          hover:shadow-[0_5px_14px_rgba(0,0,0,0.4)]
+          hover:shadow-[0_5px_14px_rgba(0,0,0,0.4)] dark:hover:brightness-85  
           hover:scale-[1.02] border-0  hover:${borderColor}
         `}
       >

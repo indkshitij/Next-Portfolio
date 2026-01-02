@@ -25,14 +25,14 @@ interface PointsBlockProps {
 const PointsBlock = ({
   title,
   Icon,
-  bg = " hover:bg-white/10",
+  bg = "dark:bg-zinc-900/50 hover:bg-white/10",
   items,
   text,
   dotVisible = true,
-  textColor = "text-gray-700",
-  headingColor = "text-gray-900",
+  textColor = "text-gray-700 dark:text-gray-400",
+  headingColor = "text-gray-900 dark:text-gray-200",
   bgIconColor = "bg-white/30 dark:bg-white/10 ",
-  dotColor = "bg-gray-700",
+  dotColor = "bg-gray-700 dark:text-gray-400",
   bordered = false,
   animated = true,
   techStack,
@@ -43,16 +43,15 @@ const PointsBlock = ({
       initial={animated ? { opacity: 0, y: 15 } : {}}
       animate={animated ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.45, ease: "easeOut" }}
-      className={`group relative ${bg} ${textColor} w-full h-full rounded-2xl p-7 sm:p-10 ${bordered ? "border border-gray-200" : ""}
-      shadow-[inset_-10px_-3px_10px_rgba(0,0,0,0.15),inset_0px_4px_8px_1px_rgba(0,0,0,0.25)]
-        transition-all duration-300
+      className={`group relative ${bg} ${textColor} w-full h-full rounded-2xl p-7 sm:p-10 ${bordered ? "border border-gray-200 dark:border-zinc-800" : ""}
+      shadow-[inset_0_-4px_8px_rgba(255,255,255,0.04),inset_0_4px_12px_rgba(0,0,0,0.55)] transition-all duration-300
      `}
     >
       {/* Header */}
       <div className="flex items-center gap-3 mb-5">
         <div
           className={cn(
-            "relative flex items-center gap-2 p-3 rounded-lg select-none group overflow-hidden backdrop-blur-lg border border-white/40 dark:border-white/20 shadow-[0_4px_14px_rgba(0,0,0,0.12),_inset_0_1px_1.5px_rgba(255,255,255,0.35)] transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-[0_8px_20px_rgba(0,0,0,0.18)]",
+            "relative flex items-center gap-2 p-3 rounded-lg select-none group overflow-hidden backdrop-blur-lg border border-white/40 dark:border-white/20 shadow-[0_4px_14px_rgba(0,0,0,0.12),_inset_0_1px_1.5px_rgba(255,255,255,0.35)]   transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-[0_8px_20px_rgba(0,0,0,0.18)]",
             bgIconColor
           )}
         >
@@ -146,7 +145,7 @@ const PointsBlock = ({
                         alt={tech}
                         width={22}
                         height={22}
-                        className="object-contain rounded-sm"
+                        className="object-contain rounded-sm  p-0.5 dark:bg-gray-100/15 dark:brightness-90"
                       />
                     )}
                     <p className="font-medium tracking-wide">{tech}</p>

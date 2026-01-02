@@ -39,11 +39,11 @@ export default function MobileNavbar() {
 
   return (
     <>
-      <div className="h-fit flex items-center justify-between w-[97vw] px-5 py-3 rounded-xl bg-custom-black text-white  shadow-xl backdrop-blur-xl">
+      <div className="h-fit flex items-center justify-between w-[97vw] px-5 py-3 rounded-xl bg-black text-white  shadow-xl backdrop-blur-xl border dark:border-zinc-800">
         {/* Logo */}
         <motion.div whileTap={{ scale: 0.9 }} className="w-fit h-auto">
           <div
-            className="mb-1.5 font-logo text-4xl sm:text-5xl font-bold tracking-tight text-white tracking-relaxed sm:text-custom-black dark:text-white relative"
+            className="mb-1.5 font-logo text-4xl sm:text-5xl font-bold tracking-tight text-white tracking-relaxed sm:text-black dark:text-gray-100 relative"
           >
             KS
           </div>
@@ -69,7 +69,7 @@ export default function MobileNavbar() {
             exit="closed"
             variants={menuVariants}
             transition={{ duration: 0.25 }}
-            className="w-full max-w-[95vw] rounded-2xl bg-custom-black dark:bg-custom-black text-white shadow-xl backdrop-blur-xl px-4 py-5 space-y-2"
+            className="w-full max-w-[97vw] rounded-2xl bg-black dark:bg-black text-white shadow-xl backdrop-blur-xl px-4 py-5 space-y-2 dark:border dark:border-zinc-800"
           >
             {NAV_ITEMS.map((item, index) => (
               <Link
@@ -78,7 +78,7 @@ export default function MobileNavbar() {
                 className="flex justify-center items-center gap-3 px-3 py-2 rounded-xl hover:bg-white/10 transition-all text-center "
                 onClick={() => setOpen(false)}
               >
-                <span className="text-center text-3xl font-bold uppercase">
+                <span className="text-center text-3xl font-bold uppercase dark:text-gray-300">
                   {item.name}
                 </span>
               </Link>
@@ -90,9 +90,9 @@ export default function MobileNavbar() {
                   <Link
                     key={index}
                     href={social.url}
-                    className="text-2xl bg-white rounded-full p-2"
+                    className="text-2xl bg-white dark:bg-gray-200 dark:brightness-95 rounded-full p-2"
                   >
-                    <div className="text-custom-black">{social.icon}</div>{" "}
+                    <div className="text-black">{social.icon}</div>{" "}
                   </Link>
                 );
               })}

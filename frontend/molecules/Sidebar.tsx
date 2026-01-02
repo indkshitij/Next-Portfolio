@@ -85,7 +85,7 @@ export default function Sidebar() {
                   className={`relative flex items-center p-4 rounded-xl cursor-pointer transition-colors duration-300
                     ${
                       active
-                        ? "bg-blue-font text-white shadow-md"
+                        ? "bg-blue-600 text-white shadow-md"
                         : "hover:bg-neutral-200/50 dark:hover:bg-neutral-800"
                     }`}
                 >

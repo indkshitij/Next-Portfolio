@@ -115,7 +115,7 @@ export default function EducationDetailTemplate() {
           </SectionContainer>
         </div>
       </div>
-      {/* <div className="min-h-screen w-full bg-gray-50 dark:bg-custom-black py-10 px-4">
+      {/* <div className="min-h-screen w-full bg-gray-50 dark:bg-black py-10 px-4">
 
       <div className="mb-6">
         <BackButton />
@@ -126,7 +126,7 @@ export default function EducationDetailTemplate() {
 
         <div className="relative z-10 flex flex-col md:flex-row gap-10">
           <div className="flex-1 space-y-5">
-            <h1 className="text-4xl font-bold text-custom-black dark:text-white leading-tight">
+            <h1 className="text-4xl font-bold text-black dark:text-white leading-tight">
               {edu.degree}
             </h1>
 
@@ -175,7 +175,7 @@ export default function EducationDetailTemplate() {
 
       {edu.longDescription && (
         <section className="max-w-6xl mx-auto mt-16">
-          <h2 className="text-3xl font-bold text-custom-black dark:text-white">
+          <h2 className="text-3xl font-bold text-black dark:text-white">
             Overview
           </h2>
 
@@ -187,7 +187,7 @@ export default function EducationDetailTemplate() {
 
       {edu.highlights?.length > 0 && (
         <section className="max-w-6xl mx-auto mt-16">
-          <h2 className="text-3xl font-bold text-custom-black dark:text-white">
+          <h2 className="text-3xl font-bold text-black dark:text-white">
             Highlights
           </h2>
 
@@ -207,7 +207,7 @@ export default function EducationDetailTemplate() {
 
       {edu.keywords?.length > 0 && (
         <section className="max-w-6xl mx-auto mt-16 mb-20">
-          <h2 className="text-3xl font-bold text-custom-black dark:text-white">
+          <h2 className="text-3xl font-bold text-black dark:text-white">
             Skills & Keywords
           </h2>
 

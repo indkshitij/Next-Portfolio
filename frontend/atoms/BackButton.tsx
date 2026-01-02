@@ -31,7 +31,7 @@ const BackButton = ({
 
       {/* Text + Icon */}
       <span
-        className={`flex justify-center items-center gap-2.5 px-2 sm:px-5 relative z-20 font-medium text-[14px] sm:text-[16px] transition-all duration-500 text-custom-black `}
+        className={`flex justify-center items-center gap-2.5 px-2 sm:px-5 relative z-20 font-medium text-[14px] sm:text-[16px] transition-all duration-500 text-black `}
         style={{
           color: hovered ? "#ffffff" : undefined,
         }}

@@ -22,7 +22,7 @@ export default function OpenBadge() {
           <div className="flex items-center gap-4 p-0.5">
             {/* Pulse Dot */}
             <motion.span
-              className="relative w-3 h-3 rounded-full bg-green-font"
+              className="relative w-3 h-3 rounded-full bg-green-600"
               animate={{ scale: [1, 1.1, 1] }}
               transition={{
                 duration: 1.2,
@@ -31,7 +31,7 @@ export default function OpenBadge() {
               }}
             >
               <motion.span
-                className="absolute inset-0 rounded-full bg-green-font opacity-40"
+                className="absolute inset-0 rounded-full bg-green-600 opacity-40"
                 animate={{ scale: [1, 2, 1], opacity: [0.5, 0] }}
                 transition={{
                   duration: 0.8,

@@ -26,15 +26,15 @@ export default function SkillsSection() {
             ))}
           </div>
           
-          <div className="absolute bottom-0 bg-gradient-to-t from-[#F8FAFB] from-60% to-transparent to-100% flex justify-center items-center h-40 w-full">
+          <div className="absolute bottom-0 bg-gradient-to-t from-[#F8FAFB] dark:from-black from-60% to-transparent to-100% flex justify-center items-center h-40 w-full">
             <LinkButton
               content="See My Full Skillset"
               path="/skills"
               icon={
                 <Icons icon="circle-right" className="-rotate-45" size={20} />
               }
-              bgColor="bg-white"
-              textColor="text-custom-black"
+              bgColor="bg-white dark:bg-gray-300"
+              textColor="text-black"
               hoverTextColor="#ffffff"
               hoverBubbleColor="bg-[linear-gradient(135deg,#60A5FA_0%,#2563EB_100%)]"
             />

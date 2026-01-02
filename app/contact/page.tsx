@@ -18,7 +18,7 @@ const page = () => {
         heading="Let’s Build Something Great"
         subheading="Whether you have a question or a project idea, I’m always open to collaboration and new opportunities."
       />
-      <div className="bg-[#F8FAFB] pt-5 pb-10">
+      <div className="bg-[#F8FAFB] dark:bg-black pt-5 pb-10">
         <SectionContainer>
           <div className="relative flex flex-col-reverse sm:flex-row gap-10 items-start">
             <div className="w-full -mb-28 sm:mb-0">

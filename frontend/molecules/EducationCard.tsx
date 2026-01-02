@@ -99,24 +99,24 @@ const EducationCard = ({
         whileHover={{ scale: 1.015 }}
         transition={{ duration: 0.4, ease: "easeInOut" }}
         className={cn(
-          `m-1 group min-h-fit sm:min-h-full relative overflow-hidden rounded-xl bg-white dark:bg-custom-black shadow-xl border border-gray-200 dark:border-white/10 transition-all hover:shadow-2xl perspective-distant transform-3d flex flex-col justify-between`
+          `m-1 group min-h-fit sm:min-h-full relative overflow-hidden rounded-xl bg-white dark:bg-gray-100/10 shadow-xl border border-gray-200 dark:border-zinc-800 transition-all hover:shadow-2xl perspective-distant transform-3d flex flex-col justify-between`
         )}
       >
         <Link href={`/education/education-detail/${edu._id}`}>
           <div className="h-fit px-5 sm:px-10 pt-5 sm:pt-8 pb-4">
-            <div className="relative space-y-1.5 transition-all ">
+            <div className="relative space-y-2 transition-all ">
               {/* DEGREE */}
-              <h1 className="mb-2.5 text-2xl font-medium leading-tight text-custom-black dark:text-white">
+              <h1 className="mb-2.5 text-2xl font-medium leading-tight text-black dark:text-gray-200">
                 {edu.degree}
               </h1>
 
               {/* SPECIALIZATION */}
-              <p className="text-md sm:text-md font-medium text-custom-black dark:text-gray-300">
+              <p className="text-md font-medium text-black dark:text-gray-200">
                 {edu.specialization}
               </p>
 
               {/* INSTITUTE */}
-              <p className="text-md sm:text-md font-medium text-light-gray">
+              <p className="text-md font-medium text-gray-500 dark:text-gray-400">
                 {edu.institute}
               </p>
 
@@ -139,12 +139,12 @@ const EducationCard = ({
           </div>
           <div className="p-2 md:p-3 h-70 sm:h-80">
             <div
-              className="relative overflow-hidden h-full w-full rounded-xl p-2.5 md:p-5 "
+              className="relative overflow-hidden h-full w-full rounded-xl p-2.5 md:p-5 dark:brightness-65 dark:border border-zinc-800"
               style={{ background: gradient }}
             >
               {/* DESCRIPTION */}
-              <div className="opacity-100 md:opacity-0 md:translate-y-70 group-hover:opacity-100 text-white group-hover:translate-y-0 transition-all ease-in-out duration-700">
-                <span className="text-sm md:text-base leading-relaxed text-white font-medium">
+              <div className="opacity-100 md:opacity-0 md:translate-y-70 group-hover:opacity-100 group-hover:translate-y-0 transition-all ease-in-out duration-700">
+                <span className="text-base leading-relaxed text-white dark:text-gray-200 font-medium">
                   {edu.shortDescription}
                 </span>
               </div>

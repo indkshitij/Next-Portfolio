@@ -4,7 +4,7 @@ export default function Logo() {
       <div
         className="
         font-logo text-4xl sm:text-5xl font-bold tracking-tight 
-        text-custom-black tracking-relaxed sm:text-custom-black dark:text-white
+        text-black tracking-relaxed sm:text-black dark:text-gray-100
         relative
       "
       >
@@ -12,7 +12,7 @@ export default function Logo() {
         {/* Underline Hover Bar */}
         <span
           className="
-          absolute left-0 -bottom-1.5 h-1 w-0 bg-custom-black rounded-full transition-all  duration-400 group-hover:w-full"
+          absolute left-0 -bottom-1.5 h-1 w-0 bg-black rounded-full transition-all  duration-400 group-hover:w-full"
         ></span>
       </div>
     </div>

@@ -17,7 +17,7 @@ const CursorWrapper = ({
   startIcon,
   description = "View More",
   endIcon,
-  bgColor = "bg-custom-black",
+  bgColor = "bg-black",
   textColor = "text-white",
   textSize = "text-md",
 }: CursorWrapperProps) => {

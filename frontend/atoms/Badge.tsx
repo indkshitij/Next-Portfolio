@@ -16,7 +16,7 @@ const Badge = ({ icon, content, className }: BadgeProps) => {
         className={cn(
           "relative flex items-center gap-2 px-3 py-1.5 rounded-md select-none group overflow-hidden",
           // Glass background
-          "bg-white/15 dark:bg-white/10 backdrop-blur-lg",
+          "bg-white/15 dark:bg-white/5 backdrop-blur-lg",
           // Premium border
           "border border-white/40 dark:border-white/20",
           // Soft shadows
@@ -28,14 +28,14 @@ const Badge = ({ icon, content, className }: BadgeProps) => {
       >
         {/* ICON */}
         {icon && (
-          <span className="w-5 h-5 flex items-center drop-shadow-[0_1px_2px_rgba(0,0,0,0.25)]">
+          <span className="w-5 h-5 flex items-center dark:text-gray-300 drop-shadow-[0_1px_2px_rgba(0,0,0,0.25)]">
             {icon}
           </span>
         )}
 
         {/* TEXT */}
         {content && (
-          <span className="text-sm font-medium text-black dark:text-white tracking-wide">
+          <span className="text-sm font-medium text-black dark:text-gray-300 tracking-wide">
             {content}
           </span>
         )}

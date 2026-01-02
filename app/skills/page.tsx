@@ -14,7 +14,7 @@ const page = () => {
   return (
     <div className="h-screen">
       <Navbar />
-      <div className="bg-[#F8FAFB]">
+      <div className="bg-[#F8FAFB] dark:bg-black ">
         {" "}
         <PageHeading
           heading="Skills & Expertise"

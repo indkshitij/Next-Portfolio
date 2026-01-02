@@ -20,7 +20,7 @@ export default function Tooltip({
   children,
   position = "top",
   className,
-  background="bg-custom-black",
+  background="bg-black",
 }: TooltipProps) {
   const [coords, setCoords] = useState({ top: 0, left: 0 });
   const [show, setShow] = useState(false);

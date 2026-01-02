@@ -18,7 +18,7 @@ export const metadata = {
 
 const page = () => {
   return (
-  <div className="bg-[#F8FAFB]">
+  <div className="bg-[#F8FAFB] dark:bg-black">
       <Navbar />
       <EducationDetailTemplate /> 
       <Footer />

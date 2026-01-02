@@ -11,7 +11,7 @@ export const metadata = {
 const Page = () => {
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-custom-black flex">
+    <div className="min-h-screen bg-gray-100 dark:bg-black flex">
       <Sidebar />
 
       <div className="flex flex-col w-full">

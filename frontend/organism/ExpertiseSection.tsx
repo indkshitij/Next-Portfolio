@@ -18,7 +18,7 @@ const ANIMATIONS = [
 
 export default function ExpertiseSection() {
   return (
-    <div className="bg-custom-black">
+    <div className="bg-[#000]">
       <SectionContainer>
         <SectionHeading
           badge="Expertise"
@@ -66,18 +66,18 @@ function ExpertiseCard({ item, idx }: ExpertiseCardProps) {
           !isEven ? { scale: 1.2, rotate: 6, y: -6 } : { scale: 1.15, y: -4 }
         }
         style={{ color }}
-        className="p-0 md:p-4 flex justify-center items-center mt-18 sm:mt-10 group-hover:mt-0 group-hover:py-0 transition-all duration-300"
+        className="p-0 md:p-4 flex justify-center items-center mt-18 sm:mt-10 group-hover:mt-0 group-hover:py-0 transition-all duration-300 dark:brightness-75"
       >
         <Icons icon={item.slug} size={40} />
       </motion.div>
 
       {/* TITLE */}
-      <h3 className="text-white text-sm md:text-md font-medium leading-tight text-center select-none">
+      <h3 className="text-white dark:text-gray-200 text-sm md:text-md font-medium leading-tight text-center select-none">
         {item.title}
       </h3>
 
       {/* DESCRIPTION */}
-      <p className="opacity-0 translate-y-16 group-hover:translate-y-0 group-hover:opacity-100 text-white text-[12px] transition-all duration-300 ease-in-out px-1 text-center">
+      <p className="opacity-0 translate-y-16 group-hover:translate-y-0 group-hover:opacity-100 text-white dark:text-gray-300 text-sm transition-all duration-300 ease-in-out px-1 text-center">
         {item.desc}
       </p>
     </div>

@@ -49,7 +49,7 @@ export const LampContainer = ({
   return (
     <div
       className={cn(
-        "relative flex min-h-[55vh] flex-col items-center justify-center overflow-hidden bg-custom-black w-full z-0",
+        "relative flex min-h-[55vh] flex-col items-center justify-center overflow-hidden bg-black w-full z-0",
         className
       )}
     >
@@ -72,9 +72,9 @@ export const LampContainer = ({
                      [--conic-position:from_70deg_at_center_top]"
         >
           {/* Fades to dark smoothly */}
-          <div className="absolute inset-x-0 bottom-0 h-36 bg-custom-black 
+          <div className="absolute inset-x-0 bottom-0 h-36 bg-black 
                           [mask-image:linear-gradient(to_top,white,transparent)]"></div>
-          <div className="absolute left-0 top-0 h-full w-32 bg-custom-black 
+          <div className="absolute left-0 top-0 h-full w-32 bg-black 
                           [mask-image:linear-gradient(to_right,white,transparent)]"></div>
         </motion.div>
 
@@ -90,14 +90,14 @@ export const LampContainer = ({
                      from-transparent via-transparent to-cyan-400
                      [--conic-position:from_290deg_at_center_top]"
         >
-          <div className="absolute inset-x-0 bottom-0 h-36 bg-custom-black 
+          <div className="absolute inset-x-0 bottom-0 h-36 bg-black 
                           [mask-image:linear-gradient(to_top,white,transparent)]"></div>
-          <div className="absolute right-0 top-0 h-full w-32 bg-custom-black 
+          <div className="absolute right-0 top-0 h-full w-32 bg-black 
                           [mask-image:linear-gradient(to_left,white,transparent)]"></div>
         </motion.div>
 
         {/* DARK BASE BLUR */}
-        <div className="absolute bottom-0 h-40 w-full bg-custom-black/80 blur-2xl"></div>
+        <div className="absolute bottom-0 h-40 w-full bg-black/80 blur-2xl"></div>
 
         {/* CENTER GLOW */}
         <div className="absolute top-[42%] h-36 w-[26rem] rounded-full 

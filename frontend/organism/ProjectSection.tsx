@@ -15,9 +15,9 @@ const ProjectSection = () => {
           badgePosition="-rotate-3"
         />
 
-        <div className="relative flex flex-col items-center gap-[500px]  mt-80 -mb-52">
+        <div className="relative flex flex-col items-center gap-5 sm:gap-50 sm:mt-80 sm:-mb-52">
           {PROJECT_DATA.map((p, index) => (
-            <div className="sticky top-[50%] translate-y-[-50%]" key={index}>
+            <div className="sm:sticky sm:top-[50%] sm:translate-y-[-50%]" key={index}>
               <ProjectCard project={p} />
             </div>
           ))}

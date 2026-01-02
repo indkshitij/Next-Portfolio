@@ -43,7 +43,7 @@ const PageHeading = ({
   return (
     <section
       className={cn(
-        "cursor-default relative w-full flex justify-center items-center bg-[#F8FAFB] dark:bg-custom-black px-4 sm:px-6 md:px-10",
+        "cursor-default relative w-full flex justify-center items-center bg-[#F8FAFB] dark:bg-black px-4 sm:px-6 md:px-10",
         className
       )}
     >
@@ -71,7 +71,7 @@ const PageHeading = ({
             className={cn(
               "font-semibold leading-[1.2] tracking-tight select-none",
               "text-4xl sm:text-5xl md:text-6xl",
-              "text-custom-black dark:text-white"
+              "text-black dark:text-gray-300"
             )}
           >
             {typeof heading === "string"
@@ -105,8 +105,8 @@ const PageHeading = ({
           {subheading && (
             <div
               className={cn(
-                "max-w-4xl mt-3 text-base sm:text-lg md:text-xl",
-                "text-light-gray dark:text-gray-300 font-medium leading-relaxed"
+                "max-w-4xl mt-3 text-base sm:text-md md:text-lg",
+                "text-gray-500 dark:text-gray-400 font-normal leading-relaxed"
               )}
             >
               {subheading}
